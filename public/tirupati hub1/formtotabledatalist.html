@@ -22,14 +22,14 @@
     </div>
     <hr>
     <div id="sname" style="margin-top: 12px;">
-        <table rules="all" border="1" width="750">
-                <tr align="center" style="border: 1px solid black;">
-                    <th>
+        <table rules="all" border="1" width="750" align="center">
+                <tr align="center" style="border: 1px solid black;text-align: center;">
+                    <th align="center">
                         <h5>SET MEMO</h5>
                     </th>
                 </tr>
-                <tr align="center" style="border: 1px solid black;">
-                    <th>
+                <tr align="center" style="border: 1px solid black;text-align: center;">
+                    <th align="center">
                         <h5 id="setTable">&nbsp;</h5>
                     </th>
                 </tr>
@@ -58,6 +58,8 @@
                         <div>
                             <input type="text" name="MSA" id="MSA" placeholder="MSA" class="mt-3 form-control" list="emp">
                         </div>
+
+
                         <div>
                             <input type="text" name="SPSA1" id="SPSA1" placeholder="SPSA-1" class="mt-3 form-control"
                             list="emp">
@@ -80,16 +82,9 @@
                         </div>
                         <div>
                             <input type="text" name="SPSA6" id="SPSA6" placeholder="SPSA-6" class="mt-3 form-control"
-                            list="emp" readonly>
+                            list="emp" >
                         </div>
-                        <div>
-                            <input type="text" name="SPSA7" id="SPSA7" placeholder="SPSA-7" class="mt-3 form-control"
-                            list="emp" readonly>
-                        </div>
-                        <div>
-                            <input type="text" name="SPSA8" id="SPSA8" placeholder="SPSA-8" class="mt-3 form-control"
-                            list="emp" readonly>
-                        </div>
+                        
 
                         <div>
                             <input type="text" name="PSA1" id="PSA1" placeholder="PSA-1" class="mt-3 form-control" list="emp">
@@ -104,7 +99,7 @@
                     <div class="col-6">
 
                         <div>
-                            <input type="text" name="MTS1" id="MTS1" placeholder="MTS-1" class="mt-3 form-control" list="emp">
+                            <input type="text" name="MTS1" id="MTS1" placeholder="MTS-1" class="form-control" list="emp">
                         </div>
                         <div>
                             <input type="text" name="MTS2" id="MTS2" placeholder="MTS-2" class="mt-3 form-control" list="emp">
@@ -118,9 +113,7 @@
                         <div>
                             <input type="text" name="MTS5" id="MTS5" placeholder="MTS-5" class="mt-3 form-control" list="emp">
                         </div>
-                        <div>
-                            <input type="text" name="MTS6" id="MTS6" placeholder="MTS-6" class="mt-3 form-control" list="emp">
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -151,6 +144,14 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
                         <td id="rightAlign">HSA &nbsp;</td>
                         <td id="hsatest" class="indent"></td>
                         <td id="rightAlign">MTS-1 &nbsp;</td>
@@ -159,7 +160,7 @@
                         <td align="center">06:00:00</td>
                     </tr>
                     <tr>
-                        <td id="rightAlign">MSA &nbsp;</td>
+                        <td id="rightAlign">MSA-1 &nbsp;</td>
                         <td id="msatest" class="indent"></td>
                         <td id="rightAlign">MTS-2 &nbsp;</td>
                         <td id="mts2test" class="indent"></td>
@@ -167,8 +168,8 @@
                         <td align="center">06:00:00</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td id="rightAlign">MSA-2 &nbsp;</td>
+                        <td id="" class="indent">N/A</td>
                         <td id="rightAlign">MTS-3 &nbsp;</td>
                         <td id="mts3test" class="indent"></td>
                         <td align="center">17:30:00</td>
@@ -218,113 +219,84 @@
                         <td id="rightAlign">SPSA-5 &nbsp;</td>
                         <td id="spsa5test" class="indent"></td>
                         <td id="rightAlign">GDS-1 &nbsp;</td>
-                        <td id="" class="indent"></td>
-                        <td align="center">08:45<br>11:45</td>
-                        <td align="center">09:30<br>12:30</td>
+                        <td id="" class="indent">O/S Arranged</td>
+                        <td align="center">08:45:00<br>11:45:00</td>
+                        <td align="center">09:30:00<br>12:30:00</td>
                     </tr>
                     <tr>
                         <td id="rightAlign">SPSA-6 &nbsp;</td>
                         <td id="spsa6test" class="indent"></td>
-                        <td id="rightAlign">GDS-1 &nbsp;</td>
-                        <td id="" class="indent"></td>
-                        <td align="center">14:00<br>16:00</td>
-                        <td align="center">14:30<br>16:30</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-7 &nbsp;</td>
-                        <td id="spsa7test" class="indent"></td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <!-- <td id="rightAlign">Extra MTS-7 &nbsp;</td>
-                        <td id="mts5test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td> -->
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-8 &nbsp;</td>
-                        <td id="spsa8test" class="indent"></td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <!-- <td id="rightAlign">Extra MTS-7 &nbsp;</td>
-                        <td id="mts5test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td> -->
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td id="rightAlign">GDS-1 &nbsp;</td>
-                        <td class="indent">O/S Arranged</td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">20:30:00</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
                         <td id="rightAlign">GDS-2 &nbsp;</td>
-                        <td class="indent">O/S Arranged</td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">20:30:00</td>
+                        <td id="" class="indent">O/S Arranged</td>
+                        <td align="center">14:00:00<br>16:00:00</td>
+                        <td align="center">14:30:00<br>16:30:00</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td id="rightAlign">GDS-3 &nbsp;</td>
-                        <td class="indent">J DILLI BABU</td>
-                        <td align="center">18:00:00</td>
-                        <td align="center">23:00:00</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
                     </tr>
+
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    
                     <tr>
                         <td id="rightAlign">PSA-1 &nbsp;</td>
                         <td id="psa1test" class="indent"></td>
-                        <td id="rightAlign">GDS-4 &nbsp;</td>
-                        <td class="indent">O/S Arranged</td>
-                        <td align="center">20:00:00</td>
-                        <td align="center">01:00:00</td>
+                        <td id="rightAlign">&nbsp;</td>
+                        <td id="rightAlign">&nbsp;</td>
+                        <td id="rightAlign">&nbsp;</td>
+                        <td id="rightAlign">&nbsp;</td>
                     </tr>
                     <tr>
                         <td id="rightAlign">PSA-2 &nbsp;</td>
                         <td id="psa2test" class="indent"></td>
-                        <td id="rightAlign">GDS-5 &nbsp;</td>
-                        <td class="indent">O/S Arranged</td>
-                        <td align="center">01:00:00</td>
-                        <td align="center">06:00:00</td>
+                        <td id="rightAlign">&nbsp;</td>
+                        <td id="rightAlign">&nbsp;</td>
+                        <td id="rightAlign">&nbsp;</td>
+                        <td id="rightAlign">&nbsp;</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td id="rightAlign">GDS-6 &nbsp;</td>
-                        <td class="indent">O/S Arranged</td>
-                        <td align="center">01:00:00</td>
-                        <td align="center">06:00:00</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td id="rightAlign">GDS-7 &nbsp;</td>
-                        <td class="indent">O/S Arranged<br> &nbsp;&nbsp;( 04:00 To 07:00 TMO-1 )</td>
-                        <td align="center">02:00:00<br>04:00:00</td>
-                        <td align="center">04:00:00<br>07:00:00</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td id="rightAlign">GDS-8 &nbsp;</td>
-                        <td class="indent">O/S Arranged<br> &nbsp;&nbsp;( 04:00 To 08:00 TMO-1 )</td>
-                        <td align="center">03:00:00<br>04:00:00</td>
-                        <td align="center">04:00:00<br>08:00:00</td>
-                    </tr>
-                    <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td id="rightAlign">GDS-9 &nbsp;</td>
-                        <td class="indent">O/S Arranged <br> &nbsp;&nbsp;( 04:00 To 08:00 TMO-1 )</td>
-                        <td align="center">03:00:00<br>04:00:00</td>
-                        <td align="center">04:00:00<br>08:00:00</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
                     </tr>
 
                 </tbody>
@@ -355,7 +327,7 @@
             var today=new Date();
             var mdate=`${today.getDate()+1} / ${today.getMonth()+1} / ${today.getFullYear()}` ;
             
-            document.getElementById("setTable").innerHTML=`TIRUPATI HUB/2A Dated : ${mdate} Working Hours From 17:30 To 06:00`;
+            document.getElementById("setTable").innerHTML=`TIRUPATI HUB/1 Dated : ${mdate} Working Hours From 08:45 To 16:45`;
 
             var tdhsa = document.getElementById("HSA").value;
             var tdmsa = document.getElementById("MSA").value;
@@ -366,21 +338,16 @@
             var spsa4 = document.getElementById("SPSA4").value;
             var spsa5 = document.getElementById("SPSA5").value;
             var spsa6 = document.getElementById("SPSA6").value;
-            var spsa7 = document.getElementById("SPSA7").value;
-            var spsa8 = document.getElementById("SPSA8").value;
 
             var psa1 = document.getElementById("PSA1").value;
             var psa2 = document.getElementById("PSA2").value;
 
-            var mg1 = document.getElementById("MG1").value;
-            var mg2 = document.getElementById("MG2").value;
 
             var mts1 = document.getElementById("MTS1").value;
             var mts2 = document.getElementById("MTS2").value;
             var mts3 = document.getElementById("MTS3").value;
             var mts4 = document.getElementById("MTS4").value;
             var mts5 = document.getElementById("MTS5").value;
-            var mts6 = document.getElementById("MTS6").value;
 
             document.getElementById("hsatest").innerHTML = tdhsa;
             document.getElementById("msatest").innerHTML = tdmsa;
@@ -391,21 +358,16 @@
             document.getElementById("spsa4test").innerHTML = spsa4;
             document.getElementById("spsa5test").innerHTML = spsa5;
             document.getElementById("spsa6test").innerHTML = spsa6;
-            document.getElementById("spsa7test").innerHTML = spsa7;
-            document.getElementById("spsa8test").innerHTML = spsa8;
 
             document.getElementById("psa1test").innerHTML = psa1;
             document.getElementById("psa2test").innerHTML = psa2;
 
-            document.getElementById("mg1test").innerHTML = mg1;
-            document.getElementById("mg2test").innerHTML = mg2;
 
             document.getElementById("mts1test").innerHTML = mts1;
             document.getElementById("mts2test").innerHTML = mts2;
             document.getElementById("mts3test").innerHTML = mts3;
             document.getElementById("mts4test").innerHTML = mts4;
             document.getElementById("mts5test").innerHTML = mts5;
-            document.getElementById("mts6test").innerHTML = mts6;
 
         }
 
@@ -419,21 +381,16 @@
             SPSA4.value="";
             SPSA5.value="";
             SPSA6.value="";
-            SPSA7.value="";
-            SPSA8.value="";
 
             PSA1.value="";
             PSA2.value="";
 
-            MG1.value="";
-            MG2.value="";
 
             MTS1.value="";
             MTS2.value="";
             MTS3.value="";
             MTS4.value="";
             MTS5.value="";
-            MTS6.value="";
 
         }
 
