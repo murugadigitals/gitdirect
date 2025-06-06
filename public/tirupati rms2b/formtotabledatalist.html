@@ -15,7 +15,7 @@
 
 </head>
 
-<body contenteditable="true">
+<body >
     <div class="row text-center">
         <h5>भारतीय डाक विभाग<br>Department of Posts :: India <br>प्रधान अभिलेख अधिकारी रेल डाक सेवा टि. पि. मंडल तिरुपति
             कार्यालय - 517501<br>Head Record Office, RMS TP Division., Tirupati - 517501 </h5>
@@ -55,78 +55,32 @@
                         <div class="">
                             <input type="text" name="HSA" id="HSA" placeholder="HSA" class="form-control" list="emp">
                         </div>
-                        <div>
-                            <input type="text" name="MSA" id="MSA" placeholder="MSA" class="mt-3 form-control" list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="SPSA1" id="SPSA1" placeholder="SPSA-1" class="mt-3 form-control"
-                            list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="SPSA2" id="SPSA2" placeholder="SPSA-2" class="mt-3 form-control"
-                            list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="SPSA3" id="SPSA3" placeholder="SPSA-3" class="mt-3 form-control"
-                            list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="SPSA4" id="SPSA4" placeholder="SPSA-4" class="mt-3 form-control"
-                            list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="SPSA5" id="SPSA5" placeholder="SPSA-5" class="mt-3 form-control"
-                            list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="SPSA6" id="SPSA6" placeholder="SPSA-6" class="mt-3 form-control"
-                            list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="SPSA7" id="SPSA7" placeholder="SPSA-7" class="mt-3 form-control"
-                            list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="SPSA8" id="SPSA8" placeholder="SPSA-8" class="mt-3 form-control"
-                            list="emp">
-                        </div>
 
-                        <div>
-                            <input type="text" name="PSA1" id="PSA1" placeholder="PSA-1" class="mt-3 form-control" list="emp">
+                        <div class="">
+                            <input type="text" name="MG" id="MG" placeholder="TMO2 MG" class="mt-3 form-control" list="emp">
                         </div>
-
+                       
                         <div>
-                            <input type="text" name="PSA2" id="PSA2" placeholder="PSA-2" class="mt-3 form-control" list="emp">
+                            <input type="text" name="SA1" id="SA1" placeholder="SA-1" class="mt-3 form-control"
+                            list="emp">
                         </div>
-
+                        <div>
+                            <input type="text" name="SA2" id="SA2" placeholder="SA-2" class="mt-3 form-control"
+                            list="emp">
+                        </div>
+                        <div>
+                            <input type="text" name="SA3" id="SA3" placeholder="SA-3" class="mt-3 form-control"
+                            list="emp">
+                        </div>
+                        
                     </div>
 
                     <div class="col-6">
+                        
                         <div>
-                            <input list="emp" type="text" name="MG1" id="MG1" placeholder="MG1" class="form-control">
+                            <input type="text" name="MTS1" id="MTS1" placeholder="MTS-1" class="form-control" list="emp">
                         </div>
-                        <div>
-                            <input type="text" name="MG2" id="MG2" placeholder="MG2" class="mt-3 form-control" list="emp">
-                        </div>
-
-                        <div>
-                            <input type="text" name="MTS1" id="MTS1" placeholder="MTS-1" class="mt-3 form-control" list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="MTS2" id="MTS2" placeholder="MTS-2" class="mt-3 form-control" list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="MTS3" id="MTS3" placeholder="MTS-3" class="mt-3 form-control" list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="MTS4" id="MTS4" placeholder="MTS-4" class="mt-3 form-control" list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="MTS5" id="MTS5" placeholder="MTS-5" class="mt-3 form-control" list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="MTS6" id="MTS6" placeholder="MTS-6" class="mt-3 form-control" list="emp">
-                        </div>
+                       
                     </div>
                 </div>
 
@@ -135,203 +89,101 @@
                 <button class="btn btn-success w-25 mt-3" onclick="bodyLoad()">Preview</button>
                 <button class="btn btn-success w-25 mt-3" id="print" onclick="javascript:print()"><span class="bi bi-printer"></span> Print</button>
                 <button class="btn btn-success w-25 mt-3" onclick="ValueReset()" type="reset">Reset</button>
-                <a href="./index.html">
+                <a href="../index.html">
                     <button class="btn btn-success w-25 mt-3"><span class="bi bi-house-fill">Home</span></button>
                 </a>
             </form>
         </div>
         <div class="col-6 mainTable">
-            <table class="table-bordered mt-1" width="750">
+            <table class="table-bordered mt-1" width="720" contenteditable="true">
                 <thead>
                     <tr class="toprow">
-                        <th rowspan="2" width="120">Designation</th>
+                        <th rowspan="2" width="110">Designation</th>
                         <th rowspan="2" width="290px">Name of the Official<br>( Shri/Smt/Kum )</th>
-                        <th rowspan="2" width="120">Designation</th>
+                        <th rowspan="2" width="110">Designation</th>
                         <th rowspan="2" width="290px">Name of the Official<br>( Shri/Smt/Kum )</th>
                         <th colspan="2" width="120">Working Hours</th>
                     </tr>
                     <tr class="toprow">
-                        <th width="110">From</th>
-                        <th width="110">To</th>
+                        <th width="100">From</th>
+                        <th width="100">To</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td id="rightAlign">HSA &nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">HSA/MSA &nbsp;</td>
                         <td id="hsatest" class="indent"></td>
-                        <td id="rightAlign">MG-1 &nbsp;</td>
-                        <td id="mg1test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">MSA &nbsp;</td>
-                        <td id="msatest" class="indent"></td>
-                        <td id="rightAlign">MG-2 &nbsp;</td>
-                        <td id="mg2test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-1 &nbsp;</td>
-                        <td id="spsa1test" class="indent"></td>
                         <td id="rightAlign">MTS-1 &nbsp;</td>
                         <td id="mts1test" class="indent"></td>
                         <td align="center">17:30:00</td>
                         <td align="center">06:00:00</td>
                     </tr>
+                    
                     <tr>
-                        <td id="rightAlign">SPSA-2 &nbsp;</td>
-                        <td id="spsa2test" class="indent"></td>
-                        <td id="rightAlign">MTS-2 &nbsp;</td>
-                        <td id="mts2test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-3 &nbsp;</td>
-                        <td id="spsa3test" class="indent"></td>
-                        <td id="rightAlign">MTS-3 &nbsp;</td>
-                        <td id="mts3test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-4 &nbsp;</td>
-                        <td id="spsa4test" class="indent"></td>
-                        <td id="rightAlign">MTS-4 &nbsp;</td>
-                        <td id="mts4test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-5 &nbsp;</td>
-                        <td id="spsa5test" class="indent"></td>
-                        <td id="rightAlign">MTS-5 &nbsp;</td>
-                        <td id="mts5test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-6 &nbsp;</td>
-                        <td id="spsa6test" class="indent"></td>
-                        <td id="rightAlign">MTS-6 &nbsp;</td>
-                        <td id="mts6test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-7 &nbsp;</td>
-                        <td id="spsa7test" class="indent"></td>
+                        <td id="rightAlign">TMO2 MG &nbsp;</td>
+                        <td id="tmo2mg" class="indent"></td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <!-- <td id="rightAlign">Extra MTS-7 &nbsp;</td>
-                        <td id="mts5test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td> -->
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-8 &nbsp;</td>
-                        <td id="spsa8test" class="indent"></td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <!-- <td id="rightAlign">Extra MTS-7 &nbsp;</td>
-                        <td id="mts5test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td> -->
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">SA-1 &nbsp;</td>
+                        <td id="spsa1test" class="indent"></td>
                         <td id="rightAlign">GDS-1 &nbsp;</td>
-                        <td class="indent">O/S Arranged</td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">20:30:00</td>
+                        <td class="indent">N Hari Prasad</td>
+                        <td align="center">19:30:00</td>
+                        <td align="center">00:30:00</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td id="rightAlign">SA-2 &nbsp;</td>
+                        <td id="spsa2test" class="indent"></td>
                         <td id="rightAlign">GDS-2 &nbsp;</td>
                         <td class="indent">O/S Arranged</td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">20:30:00</td>
+                        <td align="center">01:00:00</td>
+                        <td align="center">06:00:00</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td id="rightAlign">SA-3 &nbsp;</td>
+                        <td id="spsa3test" class="indent"></td>
                         <td id="rightAlign">GDS-3 &nbsp;</td>
-                        <td class="indent">J DILLI BABU</td>
-                        <td align="center">18:00:00</td>
-                        <td align="center">23:00:00</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">PSA-1 &nbsp;</td>
-                        <td id="psa1test" class="indent"></td>
-                        <td id="rightAlign">GDS-4 &nbsp;</td>
                         <td class="indent">O/S Arranged</td>
+                        <td align="center">17:30:00</td>
                         <td align="center">20:00:00</td>
-                        <td align="center">01:00:00</td>
                     </tr>
-                    <tr>
-                        <td id="rightAlign">PSA-2 &nbsp;</td>
-                        <td id="psa2test" class="indent"></td>
-                        <td id="rightAlign">GDS-5 &nbsp;</td>
-                        <td class="indent">O/S Arranged</td>
-                        <td align="center">01:00:00</td>
-                        <td align="center">06:00:00</td>
-                    </tr>
+                    
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td id="rightAlign">GDS-6 &nbsp;</td>
-                        <td class="indent">O/S Arranged</td>
-                        <td align="center">01:00:00</td>
-                        <td align="center">06:00:00</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td id="rightAlign">GDS-7 &nbsp;</td>
-                        <td class="indent">O/S Arranged<br> &nbsp;&nbsp;( 04:00 To 07:00 TMO-1 )</td>
-                        <td align="center">02:00:00<br>04:00:00</td>
-                        <td align="center">04:00:00<br>07:00:00</td>
-                    </tr>
-                    <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td id="rightAlign">GDS-8 &nbsp;</td>
-                        <td class="indent">O/S Arranged<br> &nbsp;&nbsp;( 04:00 To 08:00 TMO-1 )</td>
-                        <td align="center">03:00:00<br>04:00:00</td>
-                        <td align="center">04:00:00<br>08:00:00</td>
-                    </tr>
-                    <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td id="rightAlign">GDS-9 &nbsp;</td>
-                        <td class="indent">O/S Arranged <br> &nbsp;&nbsp;( 04:00 To 08:00 TMO-1 )</td>
-                        <td align="center">03:00:00<br>04:00:00</td>
-                        <td align="center">04:00:00<br>08:00:00</td>
-                    </tr>
+                    </tr>                    
 
                 </tbody>
             </table>
@@ -361,85 +213,37 @@
             var today=new Date();
             var mdate=`${today.getDate()} / ${today.getMonth()+1} / ${today.getFullYear()}` ;
             
-            document.getElementById("setTable").innerHTML=`TIRUPATI HUB/2B Dated : ${mdate} Working Hours From 17:30 To 06:00`;
+            document.getElementById("setTable").innerHTML=`TIRUPATI RMS/2B Dated : ${mdate} Working Hours From 17:30 To 06:00`;
 
             var tdhsa = document.getElementById("HSA").value;
-            var tdmsa = document.getElementById("MSA").value;
+            var tdmsa = document.getElementById("MG").value;
 
-            var spsa1 = document.getElementById("SPSA1").value;
-            var spsa2 = document.getElementById("SPSA2").value;
-            var spsa3 = document.getElementById("SPSA3").value;
-            var spsa4 = document.getElementById("SPSA4").value;
-            var spsa5 = document.getElementById("SPSA5").value;
-            var spsa6 = document.getElementById("SPSA6").value;
-            var spsa7 = document.getElementById("SPSA7").value;
-            var spsa8 = document.getElementById("SPSA8").value;
-
-            var psa1 = document.getElementById("PSA1").value;
-            var psa2 = document.getElementById("PSA2").value;
-
-            var mg1 = document.getElementById("MG1").value;
-            var mg2 = document.getElementById("MG2").value;
+            var spsa1 = document.getElementById("SA1").value;
+            var spsa2 = document.getElementById("SA2").value;
+            var spsa3 = document.getElementById("SA3").value;
 
             var mts1 = document.getElementById("MTS1").value;
-            var mts2 = document.getElementById("MTS2").value;
-            var mts3 = document.getElementById("MTS3").value;
-            var mts4 = document.getElementById("MTS4").value;
-            var mts5 = document.getElementById("MTS5").value;
-            var mts6 = document.getElementById("MTS6").value;
 
             document.getElementById("hsatest").innerHTML = tdhsa;
-            document.getElementById("msatest").innerHTML = tdmsa;
+            document.getElementById("tmo2mg").innerHTML = tdmsa;
 
             document.getElementById("spsa1test").innerHTML = spsa1;
             document.getElementById("spsa2test").innerHTML = spsa2;
             document.getElementById("spsa3test").innerHTML = spsa3;
-            document.getElementById("spsa4test").innerHTML = spsa4;
-            document.getElementById("spsa5test").innerHTML = spsa5;
-            document.getElementById("spsa6test").innerHTML = spsa6;
-            document.getElementById("spsa7test").innerHTML = spsa7;
-            document.getElementById("spsa8test").innerHTML = spsa8;
-
-            document.getElementById("psa1test").innerHTML = psa1;
-            document.getElementById("psa2test").innerHTML = psa2;
-
-            document.getElementById("mg1test").innerHTML = mg1;
-            document.getElementById("mg2test").innerHTML = mg2;
 
             document.getElementById("mts1test").innerHTML = mts1;
-            document.getElementById("mts2test").innerHTML = mts2;
-            document.getElementById("mts3test").innerHTML = mts3;
-            document.getElementById("mts4test").innerHTML = mts4;
-            document.getElementById("mts5test").innerHTML = mts5;
-            document.getElementById("mts6test").innerHTML = mts6;
 
         }
 
         function ValueReset(){
             HSA.value="";
-            MSA.value="";
+            MG.value="";
             
-            SPSA1.value="";
-            SPSA2.value="";
-            SPSA3.value="";
-            SPSA4.value="";
-            SPSA5.value="";
-            SPSA6.value="";
-            SPSA7.value="";
-            SPSA8.value="";
-
-            PSA1.value="";
-            PSA2.value="";
-
-            MG1.value="";
-            MG2.value="";
+            SA1.value="";
+            SA2.value="";
+            SA3.value="";
 
             MTS1.value="";
-            MTS2.value="";
-            MTS3.value="";
-            MTS4.value="";
-            MTS5.value="";
-            MTS6.value="";
 
         }
 

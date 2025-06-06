@@ -70,7 +70,7 @@ h5{
     .mainTable{
         position: relative;
         margin-top: 10px;
-        background-image: url(../assests/logo.png);
+        /* background-image: url(../assests/logo.png); */
         background-repeat: no-repeat;
         background-position: 150px 50%;
     }
