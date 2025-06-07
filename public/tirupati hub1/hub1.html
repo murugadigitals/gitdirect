@@ -22,7 +22,7 @@
     </div>
     <hr>
     <div id="sname" style="margin-top: 12px;">
-        <table rules="all" border="1" width="750" align="center" contenteditable="true">
+        <table rules="all" border="1" width="720" align="center" contenteditable="true">
                 <tr align="center" style="border: 1px solid black;text-align: center;">
                     <th align="center">
                         <h5>SET MEMO</h5>
@@ -56,9 +56,11 @@
                             <input type="text" name="HSA" id="HSA" placeholder="HSA" class="form-control" list="emp">
                         </div>
                         <div>
-                            <input type="text" name="MSA" id="MSA" placeholder="MSA" class="mt-3 form-control" list="emp">
+                            <input type="text" name="MSA1" id="MSA1" placeholder="MSA1" class="mt-3 form-control" list="emp">
                         </div>
-
+                        <div>
+                            <input type="text" name="MSA2" id="MSA2" placeholder="MSA2" value="N/A" class="mt-3 form-control" readonly list="emp">
+                        </div>
 
                         <div>
                             <input type="text" name="SPSA1" id="SPSA1" placeholder="SPSA-1" class="mt-3 form-control"
@@ -113,33 +115,32 @@
                         <div>
                             <input type="text" name="MTS5" id="MTS5" placeholder="MTS-5" class="mt-3 form-control" list="emp">
                         </div>
+                        <button class="btn btn-success w-50 mt-3" onclick="bodyLoad()"><span class="bi bi-arrow-right fs-5"> Transfer</span></button>
+                        <button class="btn btn-success w-50 mt-3" id="print" onclick="javascript:print()"><span class="bi bi-printer fs-5"> Print</span></button>
+                        <button class="btn btn-success w-50 mt-3" onclick="ValueReset()" type="reset"><span class="bi bi-x-lg fs-5"> Clear</span></button></button>
+                        <a href="../../index.html">
+                            <button class="btn btn-success w-50 mt-3"><span class="bi bi-house-door fs-5"> Home</span></button>
+                        </a>
                         
                     </div>
                 </div>
 
-                <!-- <input type="submit" value="Submit Data" class="mt-3" onclick="bodyLoad()"> -->
-                <!-- <input type="reset" value="Cancel" class="mt-3"> -->
-                <button class="btn btn-success w-25 mt-3" onclick="bodyLoad()">Preview</button>
-                <button class="btn btn-success w-25 mt-3" id="print" onclick="javascript:print()"><span class="bi bi-printer"></span> Print</button>
-                <button class="btn btn-success w-25 mt-3" onclick="ValueReset()" type="reset">Reset</button>
-                <a href="./index.html">
-                    <button class="btn btn-success w-25 mt-3"><span class="bi bi-house-fill">Home</span></button>
-                </a>
+                
             </form>
         </div>
         <div class="col-6 mainTable">
-            <table class="table-bordered mt-1" width="750" contenteditable="true">
+            <table class="table-bordered mt-1" width="720" contenteditable="true">
                 <thead>
                     <tr class="toprow">
-                        <th rowspan="2" width="120">Designation</th>
+                        <th rowspan="2" width="110">Designation</th>
                         <th rowspan="2" width="290px">Name of the Official<br>( Shri/Smt/Kum )</th>
-                        <th rowspan="2" width="120">Designation</th>
+                        <th rowspan="2" width="110">Designation</th>
                         <th rowspan="2" width="290px">Name of the Official<br>( Shri/Smt/Kum )</th>
                         <th colspan="2" width="120">Working Hours</th>
                     </tr>
                     <tr class="toprow">
-                        <th width="110">From</th>
-                        <th width="110">To</th>
+                        <th width="100">From</th>
+                        <th width="100">To</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -161,7 +162,7 @@
                     </tr>
                     <tr>
                         <td id="rightAlign">MSA-1 &nbsp;</td>
-                        <td id="msatest" class="indent"></td>
+                        <td id="msa1test" class="indent"></td>
                         <td id="rightAlign">MTS-2 &nbsp;</td>
                         <td id="mts2test" class="indent"></td>
                         <td align="center">17:30:00</td>
@@ -169,7 +170,7 @@
                     </tr>
                     <tr>
                         <td id="rightAlign">MSA-2 &nbsp;</td>
-                        <td id="" class="indent">N/A</td>
+                        <td id="msa2test" class="indent"></td>
                         <td id="rightAlign">MTS-3 &nbsp;</td>
                         <td id="mts3test" class="indent"></td>
                         <td align="center">17:30:00</td>
@@ -320,6 +321,7 @@
     </div>
 
     <script>
+        HSA.focus();
         function bodyLoad() {
             alert(`జంబుగోళం డిల్లీ బాబు ఈ కిందివి సరిగ్గా ఉన్నాయో లేడో చూసుకోమని చెబుతున్నాడు....
                     1. మీ ప్రింటర్ పవర్ ఆన్ చేసి ఉన్నాడో లేదో చూసుకోండి.
@@ -330,7 +332,8 @@
             document.getElementById("setTable").innerHTML=`TIRUPATI HUB/1 Dated : ${mdate} Working Hours From 08:45 To 16:45`;
 
             var tdhsa = document.getElementById("HSA").value;
-            var tdmsa = document.getElementById("MSA").value;
+            var tdmsa1 = document.getElementById("MSA1").value;
+            var tdmsa2 = document.getElementById("MSA2").value;
 
             var spsa1 = document.getElementById("SPSA1").value;
             var spsa2 = document.getElementById("SPSA2").value;
@@ -350,7 +353,8 @@
             var mts5 = document.getElementById("MTS5").value;
 
             document.getElementById("hsatest").innerHTML = tdhsa;
-            document.getElementById("msatest").innerHTML = tdmsa;
+            document.getElementById("msa1test").innerHTML = tdmsa1;
+            document.getElementById("msa2test").innerHTML = tdmsa2;
 
             document.getElementById("spsa1test").innerHTML = spsa1;
             document.getElementById("spsa2test").innerHTML = spsa2;
@@ -373,7 +377,8 @@
 
         function ValueReset(){
             HSA.value="";
-            MSA.value="";
+            MSA1.value="";
+            MSA2.value="";
             
             SPSA1.value="";
             SPSA2.value="";

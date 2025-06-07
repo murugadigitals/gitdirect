@@ -47,6 +47,7 @@
             <option value="A Purusotham Raju">A Purusotham Raju</option>
             <option value="G Ganesh">G Ganesh</option>
             <option value="V Rajesh">V Rajesh</option>
+            <option value="S Pravallika Jeevan">S Pravallika Jeevan</option>
         </datalist>
 
         <div class="col-5 text-center">
@@ -72,7 +73,7 @@
             </form>
         </div>
 
-        <div class="col-6 mainTable">
+        <div class="col-6 mainTable" id="tableBlock">
             <table class="table-bordered mt-1" width="720" contenteditable="true">
                 <thead>
                     <tr class="toprow">
@@ -168,12 +169,14 @@
                     2. ప్రింటింగ్ కి పేపర్ లోడ్ చేసి ఉన్నాడో లేదో చూసుకోండి.`);
             var today=new Date();
             var mdate=`${today.getDate()+1} / ${today.getMonth()+1} / ${today.getFullYear()}` ;
+
             
             document.getElementById("setTable").innerHTML=`Renigunta TMO/1 Dated : ${mdate} Working Hrs From 06:00 To 09:30 & 14:30 To 18:00 Hrs.`;
 
             var tdmg = document.getElementById("MG").value;
 
             document.getElementById("mgtest").innerHTML = tdmg;
+            
 
         }
 

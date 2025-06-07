@@ -15,14 +15,14 @@
 
 </head>
 
-<body contenteditable="true">
+<body>
     <div class="row text-center">
         <h5>भारतीय डाक विभाग<br>Department of Posts :: India <br>प्रधान अभिलेख अधिकारी रेल डाक सेवा टि. पि. मंडल तिरुपति
             कार्यालय - 517501<br>Head Record Office, RMS TP Division., Tirupati - 517501 </h5>
     </div>
     <hr>
     <div id="sname" style="margin-top: 12px;">
-        <table rules="all" border="1" width="750">
+        <table rules="all" border="1" width="750" contenteditable="true">
                 <tr align="center" valign="center" style="border: 1px solid black;">
                     <th>
                         <h5>SET MEMO</h5>
@@ -132,21 +132,20 @@
                         <div>
                             <input type="text" name="MTS6" id="MTS6" placeholder="MTS-6" class="mt-3 form-control" list="emp">
                         </div>
+                        <button class="mt-3 btn btn-success w-50 " onclick="bodyLoad()"><span class="bi bi-arrow-right fs-5"> Transfer</span></button>
+                        <button class="btn btn-success w-50 mt-3" id="print" onclick="javascript:print()"><span class="bi bi-printer fs-5"></span> Print</button>
+                        <button class="btn btn-success w-50 mt-3" onclick="ValueReset()" type="reset"><span class="bi bi-x-lg fs-5"> Clear</span></button>
+                        <a href="../../index.html">
+                            <button class="btn btn-success w-50 mt-3"><span class="bi bi-house-door fs-5"> Home</span></button>
+                        </a>
                     </div>
                 </div>
 
-                <!-- <input type="submit" value="Submit Data" class="mt-3" onclick="bodyLoad()"> -->
-                <!-- <input type="reset" value="Cancel" class="mt-3"> -->
-                <button class="btn btn-success w-25 mt-3" onclick="bodyLoad()">Preview</button>
-                <button class="btn btn-success w-25 mt-3" id="print" onclick="javascript:print()"><span class="bi bi-printer"></span> Print</button>
-                <button class="btn btn-success w-25 mt-3" onclick="ValueReset()" type="reset">Reset</button>
-                <a href="../../index.html">
-                    <button class="btn btn-success w-25 mt-3"><span class="bi bi-house-fill">Home</span></button>
-                </a>
+                
             </form>
         </div>
         <div class="col-6 mainTable">
-            <table class="table-bordered mt-1" width="720">
+            <table class="table-bordered mt-1" width="720" contenteditable="true">
                 <thead>
                     <tr class="toprow">
                         <th rowspan="2" width="110">Designation</th>
@@ -278,7 +277,7 @@
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td id="rightAlign">GDS-3 &nbsp;</td>
-                        <td class="indent">J DILLI BABU</td>
+                        <td class="indent">J Dilli Babu</td>
                         <td align="center">18:00:00</td>
                         <td align="center">23:00:00</td>
                     </tr>
@@ -339,15 +338,7 @@
                         <td>&nbsp;</td>
                         
                     </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        
-                    </tr>
+                    
 
                 </tbody>
             </table>
