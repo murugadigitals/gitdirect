@@ -311,13 +311,16 @@
 
     <script>
         function bodyLoad() {
-            alert(`జంబుగోళం డిల్లీ బాబు ఈ కిందివి సరిగ్గా ఉన్నాయో లేడో చూసుకోమని చెబుతున్నాడు....
-                    1. మీ ప్రింటర్ పవర్ ఆన్ చేసి ఉన్నాడో లేదో చూసుకోండి.
-                    2. ప్రింటింగ్ కి పేపర్ లోడ్ చేసి ఉన్నాడో లేదో చూసుకోండి.`);
+            // alert(`జంబుగోళం డిల్లీ బాబు ఈ కిందివి సరిగ్గా ఉన్నాయో లేడో చూసుకోమని చెబుతున్నాడు....
+            //         1. మీ ప్రింటర్ పవర్ ఆన్ చేసి ఉన్నాడో లేదో చూసుకోండి.
+            //         2. ప్రింటింగ్ కి పేపర్ లోడ్ చేసి ఉన్నాడో లేదో చూసుకోండి.`);
+            alert("Data Transfer Success...!");
             var today=new Date();
-            var mdate=`${today.getDate()+1} / ${today.getMonth()+1} / ${today.getFullYear()}` ;
+            let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
+            let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+            var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
             
-            document.getElementById("setTable").innerHTML=`TIRUPATI RMS/1 Dated : ${mdate} Working Hours From 17:30 To 06:00`;
+            document.getElementById("setTable").innerHTML=`Tirupati RMS/1 Dated : ${mdate} & Working Hours From 17:30 To 06:00`;
 
             var tdhsa = document.getElementById("HSA").value;
             // var tdmsa = document.getElementById("MG").value;

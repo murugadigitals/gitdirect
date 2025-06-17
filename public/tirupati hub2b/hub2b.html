@@ -255,7 +255,7 @@
             <table class="table-bordered mt-1" width="720" contenteditable="true">
                 <thead>
                     <tr class="toprow">
-                        <th rowspan="2" width="110">Designation</th>
+                        <th rowspan="2" width="125">Designation</th>
                         <th rowspan="2" width="290px">Name of the Official<br>( Shri/Smt/Kum )</th>
                         <th rowspan="2" width="110">Designation</th>
                         <th rowspan="2" width="330px">Name of the Official<br>( Shri/Smt/Kum )</th>
@@ -373,7 +373,7 @@
                         <td align="center">20:30:00</td>
                     </tr>
                     <tr>
-                        <td id="rightAlign">SPSA-8 &nbsp;</td>
+                        <td id="rightAlign">BNPL/SPSA-8 &nbsp;</td>
                         <td id="spsa8test" class="indent"></td>
                         <td id="rightAlign">GDS-2 &nbsp;</td>
                         <td class="indent">O/S Arranged</td>
@@ -468,13 +468,16 @@
 
     <script>
         function bodyLoad() {
-            alert(`జంబుగోళం డిల్లీ బాబు ఈ కిందివి సరిగ్గా ఉన్నాయో లేడో చూసుకోమని చెబుతున్నాడు....
-                    1. మీ ప్రింటర్ పవర్ ఆన్ చేసి ఉన్నాడో లేదో చూసుకోండి.
-                    2. ప్రింటింగ్ కి పేపర్ లోడ్ చేసి ఉన్నాడో లేదో చూసుకోండి.`);
+            // alert(`జంబుగోళం డిల్లీ బాబు ఈ కిందివి సరిగ్గా ఉన్నాయో లేడో చూసుకోమని చెబుతున్నాడు....
+            //         1. మీ ప్రింటర్ పవర్ ఆన్ చేసి ఉన్నాడో లేదో చూసుకోండి.
+            //         2. ప్రింటింగ్ కి పేపర్ లోడ్ చేసి ఉన్నాడో లేదో చూసుకోండి.`);
+            alert("Data Transfer Success...!");
             var today=new Date();
-            var mdate=`${today.getDate()} / ${today.getMonth()+1} / ${today.getFullYear()}` ;
+            let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
+            let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+            var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
             
-            document.getElementById("setTable").innerHTML=`TIRUPATI HUB/2B Dated : ${mdate} Working Hours From 17:30 To 06:00`;
+            document.getElementById("setTable").innerHTML=`TIRUPATI HUB/2B Dated : ${mdate} & Working Hours From 17:30 To 06:00`;
 
             var tdhsa = document.getElementById("HSA").value;
             var tdsup = document.getElementById("SUP").value;

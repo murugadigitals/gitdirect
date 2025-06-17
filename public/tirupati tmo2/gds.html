@@ -18,10 +18,12 @@
     <div style="text-align:center;">
         <script>
             var today = new Date();
-            var mdate = `${today.getDate()+1} / ${today.getMonth() + 1} / ${today.getFullYear()}`;
-            
+           let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
+            let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+            var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
+           
             document.write(`<h4 style="line-height:20px">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
-            GDS Annexure Tirupati TMO/2 Dated ${mdate}</h4>`)
+            GDS Annexure Tirupati TMO/2 Dated : ${mdate}</h4>`)
 
         </script>
     </div>

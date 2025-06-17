@@ -4,103 +4,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTS Annexure Tirupati RMS/2B</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>MTS Annexure Tirupati RMS-2B</title>
     <style>
         @media print{
-            #print{
+            .col-3 {
                 display: none;
+
             }
+           .col-9{
+                /* display: block; */
+                width: 720px;
+                
+           }
+           .col-9 table{
+            width: 700px;
+
+           }
+        }
+        tr,td,th{
+            border: 1px solid black;
         }
     </style>
+
 </head>
 
-<body contenteditable="true">
-    <div style="text-align: center;">
-        <script>
-            var today = new Date();
-            var mdate = `${today.getDate()} / ${today.getMonth() + 1} / ${today.getFullYear()}`;
-            document.write(`<h4 style="line-height:20px">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
-            MTS Annexure TIRUPATI RMS/2B Dated ${mdate}</h4>`)
-        </script>
-    </div>
-    <hr>
-    <br>
-    <div style="display: flex;justify-content: center; padding-top: 20px;">
-        <table border width="720" cellspacing="0">
-            <thead>
-                <tr style="background-color: yellow;">
-                    <th>S.NO</th>
-                    <th>Name of the Outsider<br>worked in Vacant<br>Post</th>
-                    <th>Duty<br>From</th>
-                    <th>Duty<br>To</th>
-                    <th>Total<br>Hrs</th>
-                    <th>Nature of <br>Work<br>Allotted</th>
-                    <th>Signature of<br>the<br>Outsider</th>
-                    <th>Remarks</th>
-                </tr>
-            </thead>
-            <tbody align="center">
-                <script>
-                    let i, n;
-                    let osanames = [];
-                    n = +prompt("Enter No of MTS Required For the SET  : ")
-                    for (i = 1; i <= n; i++) {
-                        document.write(`
+<body onload="PageLoad()">
+    <div class="row">
+        <div class="col-3 mt-5 p-4" style="border-right: 5px solid red;" >
+            <input type="text" name="" id="osa" list="emplist" class="form-control ms-3" placeholder="Enter OSA Name">
+            
+            <datalist id="emplist">
+                    <option value="M HARISH">M HARISH</option>
+                    <option value="M GURAVAIAH">M GURAVAIAH</option>
+                    <option value="K SRINIVASULU">K SRINIVASULU</option>
+                    <option value="K RAKESH">K RAKESH</option>
+                    <option value="K CHINNAIAH">K CHINNAIAH</option>
+                    <option value="G JEEVA">G JEEVA</option>
+                    <option value="G BALA KRISHNA">G BALA KRISHNA</option>
+                    <option value="E MURALI">E MURALI</option>
+                    <option value="CH REDDY">CH REDDY</option>
+                    <option value="C RUPESH CHANDRA">C RUPESH CHANDRA</option>
+                    <option value="C NIRMALA">C NIRMALA</option>
+                    <option value="C DORASWAMY">C DORASWAMY</option>
+                    <option value="BV REDDY">BV REDDY</option>
+                    <option value="BLN REDDY">BLN REDDY</option>
+                    <option value="B SRINIVASULU">B SRINIVASULU</option>
+                    <option value="V SUBRAMANYAM">V SUBRAMANYAM</option>
+                    <option value="V DILLI SEKHAR">V DILLI SEKHAR</option>
+                    <option value="T MANOJ">T MANOJ</option>
+                    <option value="T DILIP KUMAR">T DILIP KUMAR</option>
+                    <option value="SVT REDDY">SVT REDDY</option>
+                    <option value="SKMD BASHA">SKMD BASHA</option>
+                    <option value="SKM BASHA">SKM BASHA</option>
+                    <option value="SA KHADER BASHA">SA KHADER BASHA</option>
+                    <option value="S USMAN">S USMAN</option>
+                    <option value="S SUBRAMANYAM">S SUBRAMANYAM</option>
+                    <option value="R RAJENDRAN">R RAJENDRAN</option>
+                    <option value="P VENKATASWAMY">P VENKATASWAMY</option>
+                    <option value="P VARALAKSHMI">P VARALAKSHMI</option>
+                    <option value="P UMA MAHESHWAR">P UMA MAHESHWAR</option>
+                    <option value="P JAYAMMA">P JAYAMMA</option>
+                    <option value="N VANI">N VANI</option>
+                    <option value="N MURALI PRASAD">N MURALI PRASAD</option>
+                    <option value="MV RAMANA MURTHY">MV RAMANA MURTHY</option>
+                    <option value="M MUNI REDDY">M MUNI REDDY</option>
+            </datalist>
+            <br>
+            
+            <button onclick="ClickPush()" class="btn btn-warning ms-3 w-100 my-2">Push</button><br>
+            <button onclick="genTable()" class="btn btn-warning ms-3 w-100 my-2">Print</button>
+            <button onclick="Clearr()" class="btn btn-warning ms-3 w-100 my-2">Show</button>
+            <ol>
+
+            </ol>
+        </div>
+        <div  style="margin:auto;"class="col-9">
+            <div style="text-align:center;">
+                    <script>
+                        var today = new Date();
+                        let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
+                        let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+                        
+                        var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
+                        
+                        
+                        document.write(`<h6 style="text-align:center">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
+                                    MTS Annexure <ins><strong>Tirupati RMS/2B</strong></ins> Dated : ${mdate}</h6>`)
+                    </script>
+                </div>
+                <hr>
+            <table border="1" cellspacing="0" align="center"  contenteditable="true">
+                
+                <thead align="center">
+                    <tr style="background-color: yellow;">
+                        <th>S.NO</th>
+                        <th width="200">Name of the Outsider<br>worked in Vacant<br>Post</th>
+                        <th>Duty<br>From</th>
+                        <th>Duty<br>To</th>
+                        <th>Total<br>Hrs</th>
+                        <th>Nature of <br>Work<br>Allotted</th>
+                        <th>Signature of<br>the<br>Outsider</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+
+                <tbody align="center">
+                    <script>
+                        function PageLoad() {
+                            osa.focus();
+                        }
+
+                        var items = [];
+                        function ClickPush() {
+                            items.push(osa.value);
+                            let li=document.createElement("li");
+                            li.innerHTML+=osa.value;
+                            document.querySelector("ol").appendChild(li);
+
+                            osa.value = "";
+                            osa.focus();
+                        }
+
+                        function genTable() {
+                            items.sort();
+                            for (let i = 0; i <= items.length - 1; i++) {
+
+                                var tr = document.createElement("tr");
+
+                                var tdname = document.createElement("td");
+                                var tdsno = document.createElement("td");
+                                var tddf = document.createElement("td");
+                                var tddt = document.createElement("td");
+                                var tdth = document.createElement("td");
+                                var tdnw = document.createElement("td");
+                                var tdsign = document.createElement("td");
+                                var tdrem = document.createElement("td");
+
+                                tdsno.innerHTML = i + 1;
+                                tdname.innerHTML = items[i];
+
+                                tdname.style.textAlign = "Left";
+                                tdname.style.textIndent = "15px";
+
+                                tr.appendChild(tdsno);
+                                tr.appendChild(tdname);
+                                tr.appendChild(tddf);
+                                tr.appendChild(tddt);
+                                tr.appendChild(tdth);
+                                tr.appendChild(tdnw);
+                                tr.appendChild(tdsign);
+                                tr.appendChild(tdrem);
+
+                                document.querySelector("tbody").appendChild(tr);
+                            }
+                            window.print();
+                        }
+                        function show(){
+                                // for(let i=0;i<items.length;i++){
+                                //     var li=document.createElement("li");
+                                //     li.innerHTML=items[i];
+                                //     document.querySelector("ol").appendChild(li);
+                                // }
+                            items=[];
+                        }
+
+                    </script>
+                </tbody>
+                <tfoot align="center">
                     <tr>
-                        <td>${i}</td>
-                        <td style="text-align:left;text-indent:10px">${osanames[i] = prompt("Enter Name of the MTS - "+ i)}</td>
+                        <td colspan="4">Total</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>`)
-                    }
-                    
-                </script>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </tbody>
-            <tfoot align="center">
-                <tr>
-                    <td colspan="4">Total</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
+                    </tr>
+                </tfoot>
+            </table>
 
-    <div class="logo">
-        <div style="position:fixed;top:15px;right:0px">
-            <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
+            <div class="logo">
+                <div style="position:fixed;top:5px;right:0px;z-index: -1;">
+                    <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
+                </div>
+            </div>
+
+            <br><br>
+
+            <div style="display: flex;justify-content:space-between;">
+                <div>
+                    <h6>Head Record Officer<br> RMS TP Dn.,Tirupati</h6>
+                </div>
+
+                <div class="text-center">
+                    <h6>Signature of the HSA<br> Tirupati RMS/2B</h6>
+                </div>
+            </div>
+
         </div>
     </div>
-    <br>
-    <div style="display: flex;justify-content: space-between;">
-        <div style="text-align: center;">
-            <h4>Head Record Officer<br> RMS TP Dn.,Tirupati</h4>
-        </div>
-
-        <div style="text-align: center;">
-            <h4>Signature of the HSA<br> Tirupati RMS/2B</h4>
-        </div>
-    </div>
-    <DIV style="text-align: end;">
-        <button style=" width: 150px;height: 40px;font-size: 20px;background-color: orange;color:white;" id="print" onclick="javascript:print()">Print</button>
-    </DIV>
-
 
 </body>
 
