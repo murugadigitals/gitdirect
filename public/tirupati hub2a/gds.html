@@ -11,11 +11,15 @@
                 display: none;
             }
         }
+        *{
+            margin: 0px;
+        }
+        
     </style>
 </head>
 
 <body contenteditable="true">
-    <div style="text-align:center;">
+    <div style="text-align:center;margin-top: -5px;">
         <script>
             var today = new Date();
             let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
@@ -23,10 +27,10 @@
             var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
                         
             document.write(`<h4 style="line-height:20px">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
-            GDS Annexure Tirupati HUB/2A Dated : ${mdate}</h4>`)
+            <u>GDS Annexure Tirupati HUB | 2A Dated : ${mdate}</u></h4>`)
         </script>
     </div>
-    <hr>
+    <!-- <hr> -->
     <br>
     <table border width="720" cellspacing="0" align="center">
         <thead>
@@ -136,7 +140,7 @@
     </table>
 
     <div class="logo">
-        <div style="position:fixed;top:15px;right:0px">
+        <div style="position:fixed;top:-3px;right:0px">
             <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
         </div>
     </div>

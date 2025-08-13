@@ -5,153 +5,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Set Memos Home</title>
-    <STYle>
-        button {
-            /* background-color: rgb(239, 209, 11); */
-            background-image: linear-gradient(to left,green,yellow);
-            display: inline-block;
-            justify-content: center;
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        details{
+            font-family: Arial;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: aqua;
             width: 200px;
+            padding: 10px;
+            margin-bottom: 20px;
             border-radius: 10px;
-            font-size: 18px;
+            transition-duration: 2s;
+            box-shadow: 2px 2px 12px red;
+        }
+        details:hover{
+            /* background-color: transparent; */
+            /* color: red; */
+            transform: translateY(-30px);
+            /* transform: scale(1.05); */
+            transition-duration: 1s;
+        }
+        span{
+            display: inline-block;
+            padding-top: 10px;
+            margin-left: 20px;
+        }
+        span:hover{
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+            text-shadow: 0px 0px 12px  white;
+            cursor: pointer;
+        }
+        header{
+            background-color:white;
+            color: black;
             padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        body{
+            background-image: linear-gradient(red,yellow);
+            /* background-image: url('./assests/logo.png'); */
+            /* background-color: red; */
+            /* background-position: 50% 50%;
+            background-size: 50% 80%; */
+            background-repeat: no-repeat;
+        }
+        marquee a{
+            display: inline-block;
+            margin-top: 20px;
             color:white;
-            margin: 10px;
-            transition: 1s;
-            font-weight: 700;
+            /* background-color: greenyellow; */
+            text-decoration: none;
         }
-        div a button:hover{
-            /* text-decoration: underline; */
-            color: orange;
-            background-color: black;
-            font-weight: 700;
-            transform: scale(1.1);
-            text-shadow: 0 0 10px red;
+        hr{
+            height: 5px;
+            color: red;
         }
-        button:hover{
-            /* background-image: #f20587; */
-            /* background-color: #f20587; */
-            /* background-image: linear-gradient(orange); */
-            background-image: linear-gradient(#f20587);
+        .whatsapp{
+            position:fixed;
+            bottom: 30px;
+            margin-left: -10px;
+            transition-duration: 2s;
+            /* background-color: red; */
         }
-        fieldset{
-            color:red;
-            /* text-align: center; */
-            /* height: 250px; */
-            border-radius: 20px;
-            margin:10px;
+        .whatsapp img{
+            border-radius: 30px;
+            transition-duration: 2s;
         }
-        fieldset:hover{
-            box-shadow: 0 0 5px lightcoral;
+        .whatsapp img:hover{
+            /* transform: scale(1.3); */
+            transform:translateX(100px);
+            transition-duration: 2s;
         }
-        legend{
-            font-size: 25px;
-        }
-    </STYle>
+    </style>
+    
 </head>
 
-<body>
-    <fieldset>
-        <legend>TIRUPATI HUB/2</legend>
+<body class="container-fluid">
+    <header>
+        <div>
+            <img src="./assests/ashok.png" alt="" width="150" height="100">
+        </div>
+        <div>
+            <h2>Office of the Head Record Officer,<br> RMS TP Dn.,Tirupati-517501</h2>
+        </div>
+        <div>
+            <img src="./assests/logo.png" alt="" width="200" height="100">
+        </div>
+    </header>
+    <div>
+        <marquee behavior="" direction="left" onmousemove="stop()" onmouseleave="start()">
+            <a href="#"><h3 > **** Best Viewed in Laptop or Desktops only | For Double SET Memos Click Here ****</h3></a>
+        </marquee>
+    </div>
+    <div class="d-flex flex-row flex-wrap justify-content-center align-items-center  py-5">
+        <div class="col">
+            <details open>
+                <summary>Tirupati HUB|2A</summary>
+                <hr>
+                <dl>
+                    <dt></dt>   
+                    <dd>
+                        <span onclick="javascript:window.open('./public/tirupati hub2a/hub2a.html','Tirupati HUB|2A','width=1400 height=800')" >Tirupati HUB|2A</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati hub2a/osa.html','OSA Annexure','width=1400 height=800')">OSA Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati hub2a/mts.html','MTS Annexure','width=1400 height=800')">MTS Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati hub2a/gds.html','GDS Annexure','width=1400 height=800')">GDS Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati hub2a/ota.html','OTA Annexure','width=1400 height=800')">OTA Annexure</span><br>
+                    </dd>
+                </dl>
+                
+            </details>
+        </div>
+
+        <div class="col">
+            <details open>
+                <summary>Tirupati HUB|2B</summary>
+                <hr>
+                <dl>
+                    <dt></dt>
+                    <dd>
+                        <span onclick="javascript:window.open('./public/tirupati hub2b/hub2b.html','Tirupati HUB|2B','width=1400 height=800')" >Tirupati HUB|2B</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati hub2b/osa.html','OSA Annexure','width=1400 height=800')">OSA Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati hub2b/mts.html','MTS Annexure','width=1400 height=800')">MTS Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati hub2b/gds.html','GDS Annexure','width=1400 height=800')">GDS Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati hub2b/ota.html','OTA Annexure','width=1400 height=800')">OTA Annexure</span><br>
+                    </dd>
+                </dl>
+                
+            </details>
+        </div>
+
+        <div class="col">
+            <details open>
+                <summary>Tirupati RMS|2A</summary>
+                <hr>
+                <dl>
+                    <dt></dt>
+                    <dd>
+                        <span onclick="javascript:window.open('./public/tirupati rms2a/rms2a.html','Tirupati RMS|2A','width=1400 height=800')" >Tirupati RMS|2A</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati rms2a/osa.html','OSA Annexure','width=1400 height=800')">OSA Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati rms2a/mts.html','MTS Annexure','width=1400 height=800')">MTS Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati rms2a/gds.html','GDS Annexure','width=1400 height=800')">GDS Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati rms2a/ota.html','OTA Annexure','width=1400 height=800')">OTA Annexure</span><br>
+                        
+                    </dd>
+                </dl>
+                
+            </details>
+        </div>
         
-        <div align="center" style="padding: 10px;">
-            <a href="./public/tirupati hub2a/hub2a.html" target="_blank"><button>TIRUPATI HUB/2A</button></a>
-            <a href="./public/tirupati hub2a/osa.html" target="_blank"><button>OSA ANNEXURE</button></a>
-            <a href="./public/tirupati hub2a/mts.html" target="_blank"><button>MTS ANNEXURE</button></a>
-            <a href="./public/tirupati hub2a/gds.html" target="_blank"><button>GDS ANNEXURE</button></a>
-            <a href="./public/tirupati hub2a/ota.html" target="_blank"><button>OTA ANNEXURE</button></a>
+        <div class="col">
+            <details open>
+                <summary>Tirupati RMS|2B</summary>
+                <hr>
+                <dl>
+                    <dt></dt>
+                    <dd>
+                        <span onclick="javascript:window.open('./public/tirupati rms2b/rms2b.html','Tirupati RMS|2B','width=1400 height=800')" >Tirupati RMS|2B</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati rms2b/osa.html','OSA Annexure','width=1400 height=800')">OSA Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati rms2b/mts.html','MTS Annexure','width=1400 height=800')">MTS Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati rms2b/gds.html','GDS Annexure','width=1400 height=800')">GDS Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati rms2b/ota.html','OTA Annexure','width=1400 height=800')">OTA Annexure</span><br>
 
+                    </dd>
+                </dl>                
+            </details>
         </div>
 
-        <div align="center" style="padding: 10px;">
-            <a href="./public/tirupati hub2b/hub2b.html" target="_blank"><button>TIRUPATI HUB/2B</button></a>
-            <a href="./public/tirupati hub2b/osa.html" target="_blank"><button>OSA ANNEXURE</button></a>
-            <a href="./public/tirupati hub2b/mts.html" target="_blank"><button>MTS ANNEXURE</button></a>
-            <a href="./public/tirupati hub2b/gds.html" target="_blank"><button>GDS ANNEXURE</button></a>
-            <a href="./public/tirupati hub2b/ota.html" target="_blank"><button>OTA ANNEXURE</button></a>
+        <div class="col">
+            <details open>
+                <summary>Tirupati TMO|1</summary>
+                <hr>
+                <dl>
+                    <dt></dt>
+                    <dd>
+                        <span onclick="javascript:window.open('./public/tirupati tmo1/tmo1.html','Tirupati TMO|1','width=1400 height=800')" >Tirupati TMO|1</span><br>
+                        <span title="Not Required At Now - Hence Disabled">OSA Annexure</span><br>
+                        <span title="Not Required At Now - Hence Disabled">MTS Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati tmo1/gds.html','Tirupati TMO|1','width=1400 height=800')" >GDS Annexure</span><br>
+                        <span title="Not Required At Now - Hence Disabled">OTA Annexure</span><br>
+                    </dd>
+                </dl>
+            </details>
         </div>
+        <div class="col">
+            <details open>
+                <summary>Tirupati TMO|2</summary>
+                <hr>
+                <dl>
+                    <dt></dt>
+                    <dd>
+                        <span onclick="javascript:window.open('./public/tirupati tmo2/tmo2.html','Tirupati TMO|2','width=1400 height=800')" >Tirupati TMO|2</span><br>
+                        <span title="Not Required At Now - Hence Disabled">OSA Annexure</span><br>
+                        <span title="Not Required At Now - Hence Disabled">MTS Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/tirupati tmo2/gds.html','Tirupati TMO|2','width=1400 height=800')" >GDS Annexure</span><br>
+                        <span title="Not Required At Now - Hence Disabled">OTA Annexure</span><br>
 
-    </fieldset>
-
-
-    <fieldset>
-        <legend>TIRUPATI RMS/2</legend>
-        
-        <div align="center" style="padding: 10px;">
-            <a href="./public/tirupati rms2a/rms2a.html" target="_blank"><button>TIRUPATI RMS/2A</button></a>
-            <a href="./public/tirupati rms2a/osa.html" target="_blank"><button>OSA ANNEXURE</button></a>
-            <a href="./public/tirupati rms2a/mts.html" target="_blank"><button>MTS ANNEXURE</button></a>
-            <a href="./public/tirupati rms2a/gds.html" target="_blank"><button>GDS ANNEXURE</button></a>
-            <a href="./public/tirupati rms2a/ota.html" target="_blank"><button>OTA ANNEXURE</button></a>
+                    </dd>
+                </dl>
+            </details>
         </div>
+        <div class="col">
+            <details style="width: 210px;" open>
+                <summary>Renigunta TMO|1</summary>
+                <hr>
+                <dl>
+                    <dt>
+                        <dd>
+                        <span onclick="javascript:window.open('./public/renigunta tmo1/renigunta.html','Renigunta TMO|1','width=1400 height=800')" >Renigunta TMO|1</span><br>
+                        <span title="Not Required At Now - Hence Disabled">OSA Annexure</span><br>
+                        <span title="Not Required At Now - Hence Disabled">MTS Annexure</span><br>
+                        <span onclick="javascript:window.open('./public/renigunta tmo1/gds.html','Renigunta TMO|1','width=1400 height=800')" >GDS Annexure</span><br>
+                        <span title="Not Required At Now - Hence Disabled">OTA Annexure</span><br>
 
-        <div align="center" style="padding: 10px;">
-            <a href="./public/tirupati rms2b/rms2b.html" target="_blank"><button>TIRUPATI RMS/2B</button></a>
-            <a href="./public/tirupati rms2b/osa.html" target="_blank"><button>OSA ANNEXURE</button></a>
-            <a href="./public/tirupati rms2b/mts.html" target="_blank"><button>MTS ANNEXURE</button></a>
-            <a href="./public/tirupati rms2b/gds.html" target="_blank"><button>GDS ANNEXURE</button></a>
-            <a href="./public/tirupati rms2b/ota.html" target="_blank"><button>OTA ANNEXURE</button></a>
+                        </dd>
+                    </dt>
+                </dl>
+            </details>
         </div>
-
-    </fieldset>
-
-    <fieldset>
-        <legend>TIRUPATI HUB/1</legend>
-        
-        <div align="center" style="padding: 10px;">
-            <a href="./public/tirupati hub1/hub1.html" target="_blank"><button>TIRUPATI HUB/1</button></a>
-            <a href="./public/tirupati hub1/osa.html" target="_blank"><button>OSA ANNEXURE</button></a>
-            <a href="./public/tirupati hub1/mts.html" target="_blank"><button>MTS ANNEXURE</button></a>
-            <a href="./public/tirupati hub1/gds.html" target="_blank"><button>GDS ANNEXURE</button></a>
-            <a href="./public/tirupati hub1/ota.html" target="_blank"><button>OTA ANNEXURE</button></a>
-        </div>
-
-    </fieldset>
-    <fieldset>
-        <legend>TIRUPATI RMS/1</legend>
-        
-        <div align="center" style="padding: 10px;">
-            <a href="./public/tirupati rms1/rms1.html" target="_blank"><button>TIRUPATI RMS/1</button></a>
-            <a href="./public/tirupati rms1/osa.html" target="_blank"><button>OSA ANNEXURE</button></a>
-            <a href="./public/tirupati rms1/mts.html" target="_blank"><button>MTS ANNEXURE</button></a>
-            <a href="./public/tirupati rms1/gds.html" target="_blank"><button>GDS ANNEXURE</button></a>
-            <a href="./public/tirupati rms1/ota.html" target="_blank"><button>OTA ANNEXURE</button></a>
-        </div>
-
-    </fieldset>
-    <div style="display: flex;">
-    <fieldset>
-        <legend>RENIGUNTA TMO/1</legend>
-        
-        <div align="center" style="padding: 10px;">
-            <a href="./public/renigunta tmo1/renigunta.html" target="_blank"><button>RENIGUNTA TMO/1</button></a>
-            <a href="./public/renigunta tmo1/gds.html" target="_blank"><button>GDS ANNEXURE</button></a>
-            <!-- <a href="./public/tirupati rms1/ota.html" target="_blank"><button>OTA ANNEXURE</button></a> -->
-        </div>
-
-    </fieldset>
-    <fieldset>
-        <legend>TIRUPATI TMO/1</legend>
-        
-        <div align="center" style="padding: 10px;">
-            <a href="./public/tirupati tmo1/tmo1.html" target="_blank"><button>TIRUPATI TMO/1</button></a>
-            <a href="./public/tirupati tmo1/gds.html" target="_blank"><button>GDS ANNEXURE</button></a>
-            <!-- <a href="./public/tirupati rms1/ota.html" target="_blank"><button>OTA ANNEXURE</button></a> -->
-        </div>
-
-    </fieldset>
-    <fieldset>
-        <legend>TIRUPATI TMO/2</legend>
-        
-        <div align="center" style="padding: 10px;">
-            <a href="./public/tirupati tmo2/tmo2.html" target="_blank"><button>TIRUPATI TMO/2</button></a>
-            <a href="./public/tirupati tmo2/gds.html" target="_blank"><button>GDS ANNEXURE</button></a>
-            <!-- <a href="./public/tirupati rms1/ota.html" target="_blank"><button>OTA ANNEXURE</button></a> -->
-        </div>
-
-    </fieldset>
     </div>
 
+    <div class="social" >
+        <div class="whatsapp" >
+            <a href="https://wa.me/9398038584" target="_blank"><img src="./assests/what.png" alt="" width="50" height="50"></a>
+        </div>
+    </div>
+
+    <footer style="text-align: center;" class="mb-4">
+        <h2>Design and Developed by <b>Dilli Babu</b> <span style="background-color: red;display: inline-block; width: 250px;">Jambugolam</span></h2>
+    </footer>
+    
+    
 </body>
 
 </html>
