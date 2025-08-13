@@ -73,7 +73,7 @@
             height: 5px;
             color: red;
         }
-        .whatsapp{
+        .social{
             position:fixed;
             bottom: 30px;
             margin-left: -10px;
@@ -89,19 +89,62 @@
             transform:translateX(100px);
             transition-duration: 2s;
         }
+        .whatsapp{
+            border-radius: 30%;
+            transition-duration: 2s;
+        }
+        .call img{
+            border-radius: 50%;
+            transition-duration: 2s;
+        }
+        .call img:hover{
+            transition-duration: 2s;
+            transform:translateX(100px);
+
+        }
+        @media screen and (orientation: portrait){
+            .ashok{
+                display: none;
+            }
+            .logo{
+                position:absolute;
+                top:10px;
+                right:10px
+            }
+            header{
+                margin-top: 150px;
+            }
+            details{
+                /* display: block; */
+                width: 250px;
+                margin: auto;
+            }
+            details:hover{
+                transform: scale(1.1);
+                transition: 2s;
+            }
+            
+            .col{
+                text-align: center;
+                margin-top: 20px;
+            }
+            footer span{
+                text-align: center;
+            }
+        }
     </style>
     
 </head>
 
 <body class="container-fluid">
     <header>
-        <div>
+        <div class="ashok">
             <img src="./assests/ashok.png" alt="" width="150" height="100">
         </div>
-        <div>
+        <div class="hro">
             <h2>Office of the Head Record Officer,<br> RMS TP Dn.,Tirupati-517501</h2>
         </div>
-        <div>
+        <div class="logo">
             <img src="./assests/logo.png" alt="" width="200" height="100">
         </div>
     </header>
@@ -218,7 +261,7 @@
             </details>
         </div>
         <div class="col">
-            <details style="width: 210px;" open>
+            <details open>
                 <summary>Renigunta TMO|1</summary>
                 <hr>
                 <dl>
@@ -240,6 +283,10 @@
     <div class="social" >
         <div class="whatsapp" >
             <a href="https://wa.me/9398038584" target="_blank"><img src="./assests/what.png" alt="" width="50" height="50"></a>
+        </div>
+        <br>
+        <div class="call" >
+            <a href="tel:9398038584" target="_blank"><img src="./assests/mobile.webp" alt="" width="50" height="50"></a>
         </div>
     </div>
 
