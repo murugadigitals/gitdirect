@@ -6,35 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDS Annexure Tirupati TMO/1</title>
     <style>
-        @media print{
-            #print{
+        * {
+            margin: 0px;
+            font-family: Arial !important;
+            font-weight: bold !important;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+
+        }
+
+        .logo {
+            display: none;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(255, 255, 0, 0.435));
+        }
+
+        #title,
+        #lhro,
+        #designation {
+            display: none;
+        }
+
+        @media print {
+
+            #print,
+            header {
                 display: none;
             }
-        }
-        *{
-            margin: 0px;
-            /* padding: 0px; */
-            /* text-align: center; */
+
+            .logo {
+                display: block;
+            }
+
+            body {
+                background-image: none;
+            }
+
+            #title,
+            #lhro,
+            #designation {
+                display: block;
+            }
+
+
         }
     </style>
 </head>
 
 <body>
-    <div style="text-align:center;">
+    <header style="border: 1px solid black;margin-bottom: 40px;">
+        <div class="ashok">
+            <img src="../../assests/ashok.png" alt="" width="150" height="100">
+        </div>
+        <div class="hro">
+            <h2>Office of the Head Record Officer,<br> RMS TP Dn.,Tirupati-517501</h2>
+        </div>
+        <div class="logoo">
+            <img src="../../assests/logo.png" alt="" width="200" height="100">
+        </div>
+    </header>
+
+    <div style="text-align:center;" id="title">
         <script>
             var today = new Date();
-            let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
-            let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-            var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
-            
+            var detailDay = today.getDay() + 1;
+            if (detailDay === 7) {
+                detailDay = 0;
+            }
+
+            let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            var mdate = `${days[detailDay]}, ${today.getDate() + 1} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
+
             document.write(`<h4 style="line-height:20px;margin-top:0px;">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
-            GDS Annexure Tirupati TMO/1 Dated : ${mdate}</h4>`)
+            <u>GDS Annexure Tirupati TMO-1 Dated : ${mdate}</u></h4>`)
 
         </script>
         <br>
     </div>
-    <hr>
-    <br>
     <table border width="720" cellspacing="0" style="margin:auto;" contenteditable="true">
         <thead>
             <tr style="background-color: yellow;">
@@ -111,7 +174,7 @@
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
-            
+
         </tbody>
         <tfoot align="center">
             <tr style="height: 30px;">
@@ -124,23 +187,24 @@
     </table>
 
     <div class="logo">
-        <div style="position:fixed;top:0px;right:0px">
+        <div style="position:fixed;top:0px;right:-5px">
             <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
         </div>
     </div>
     <br>
     <br>
-    <div style="display: flex;justify-content: space-between;">
-        <div style="text-align: center;">
+    <div style="display: flex;justify-content: space-between;" >
+        <div style="text-align: center;" id="lhro">
             <h4>Head Record Officer<br> RMS TP Dn.,Tirupati</h4>
         </div>
-    
-        <div style="text-align: center;">
-            <h4>Signature of the MG<br>Tirupati TMO/1</h4>
+
+        <div style="text-align: center;" id="designation">
+            <h4>Signature of the MG<br>Tirupati TMO-1</h4>
         </div>
     </div>
     <DIV style="text-align: end;">
-        <button style=" width: 150px;height: 40px;font-size: 20px;background-color: orange;color:white;" id="print" onclick="javascript:print()">Print</button>
+        <button style=" width: 150px;height: 40px;font-size: 20px;background-color: red;color:white;border-radius: 10px;" id="print"
+            onclick="javascript:print()">Print</button>
     </DIV>
 
 

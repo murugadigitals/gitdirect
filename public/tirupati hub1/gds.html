@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDS Annexure Tirupati HUB/1</title>
+    <title>GDS Annexure Tirupati HUB-1</title>
     <style>
         @media print{
             #print{
@@ -18,32 +18,34 @@
     <div style="text-align:center;">
         <script>
             var today = new Date();
+
+            var detailDay=today.getDay()+1;
+            if(detailDay===7){
+                detailDay=0;
+            }
+
             let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
             let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-            var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
-           
-            
+            var mdate = `${days[detailDay]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
             
             document.write(`<h4 style="line-height:20px">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
-            GDS Annexure Tirupati HUB/1 Dated : ${mdate}</h4>`)
+            <u>GDS Annexure Tirupati HUB-1 Dated : ${mdate}</u></h4>`)
         </script>
     </div>
-    <hr>
-    <br>
-    <table border width="720" cellspacing="0" align="center" contenteditable="true">
+    <table border width="720" cellspacing="0" align="center" contenteditable="true" style="border-radius: 10px;">
         <thead>
             <tr style="background-color: yellow;">
-                <th>S.NO</th>
+                <th style="border-top-left-radius: 10px;">S.NO</th>
                 <th>Name of the Outsider<br>worked in Vacant<br>Post</th>
                 <th>Duty<br>From</th>
                 <th>Duty<br>To</th>
                 <th>Total<br>Hrs</th>
                 <th>Signature of the<br>Outsider</th>
-                <th>Remarks</th>
+                <th style="border-top-right-radius: 10px;">Remarks</th>
             </tr>
         </thead>
         <tbody align="center">
-            <tr>
+            <tr style="height: 30px;">
                 <td>1</td>
                 <td style="text-align:left;text-indent:10px">B Srinivasulu</td>
                 <td>08:45 To 11:45</td>
@@ -52,7 +54,7 @@
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
-            <tr>
+            <tr style="height: 30px;">
                 <td>2</td>
                 <td style="text-align:left;text-indent:10px">B Srinivasulu</td>
                 <td>09:30 To 12:30</td>
@@ -66,10 +68,10 @@
         </tbody>
         <tfoot align="center">
             <tr style="height: 30px;">
-                <td colspan="4">Total</td>
+                <td colspan="4" style="border-bottom-left-radius: 10px;">Total</td>
                 <td>10</td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td style="border-bottom-right-radius: 10px;">&nbsp;</td>
             </tr>
         </tfoot>
     </table>
@@ -86,7 +88,7 @@
         </div>
     
         <div style="text-align: center;">
-            <h4>Signature of the HSA<br> Tirupati HUB/1</h4>
+            <h4>Signature of the HSA<br> Tirupati HUB-1</h4>
         </div>
     </div>
     <DIV style="text-align: end;">

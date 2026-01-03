@@ -21,7 +21,7 @@
             कार्यालय - 517501<br>Head Record Office, RMS TP Division., Tirupati - 517501 </h5>
     </div>
     <hr>
-    <div id="sname" style="margin-top: 12px;">
+    <div id="sname" style="margin-top: 22px;">
         <table rules="all" border="1" width="720" align="center" contenteditable="true">
                 <tr align="center" style="border: 1px solid black;text-align: center;">
                     <th align="center">
@@ -35,6 +35,7 @@
                 </tr>
         </table>
     </div>
+    <br>
     <div class="row mt-1">
         <datalist id="emp">
             <option value="A Anuradha">A Anuradha</option>
@@ -488,9 +489,7 @@
     <script>
         HSA.focus();
         function bodyLoad() {
-            // alert(`జంబుగోళం డిల్లీ బాబు ఈ కిందివి సరిగ్గా ఉన్నాయో లేడో చూసుకోమని చెబుతున్నాడు....
-            //         1. మీ ప్రింటర్ పవర్ ఆన్ చేసి ఉన్నాడో లేదో చూసుకోండి.
-            //         2. ప్రింటింగ్ కి పేపర్ లోడ్ చేసి ఉన్నాడో లేదో చూసుకోండి.`);
+
             alert("Data Transfer Success...!");
             var today=new Date();
             
@@ -498,7 +497,7 @@
             let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
             var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
            
-            document.getElementById("setTable").innerHTML=`Tirupati HUB/1 Dated : ${mdate} & Working Hours From 08:45 To 16:45`;
+            document.getElementById("setTable").innerHTML=`Tirupati HUB-1 Dated : ${mdate} & Working Hours From 08:45 To 16:45`;
 
             var tdhsa = document.getElementById("HSA").value;
             var tdmsa1 = document.getElementById("MSA1").value;

@@ -10,6 +10,13 @@
 
     <title>OSA Annexure Tirupati HUB-2B</title>
     <style>
+        #osaAnnexure{
+            display: none;
+        }
+        .col-3{
+            position: relative;
+            left: 320px;
+        }
         @media print{
             .col-3 {
                 display: none;
@@ -24,6 +31,9 @@
             width: 700px;
 
            }
+           #osaAnnexure{
+            display: block;
+           }
         }
         tr,td,th{
             border: 1px solid black;
@@ -34,10 +44,13 @@
 
 <body onload="PageLoad()">
     <div class="row">
-        <div class="col-3 mt-5 p-4" style="border-right: 5px solid red;" >
-            <input type="text" name="" id="osa" list="emplist" class="form-control ms-3" placeholder="Enter OSA Name">
+        <div class="col-3 mt-5 p-4 bg-success position-relative w-50 p-5 rounded rounded-5" style="height: 80vh;">
+            <h1 class="text-center fw-bold bg-danger text-white p-2 rounded rounded-3">OSA ANNEXURE Tirupati HUB-2B</h1>
+            <div style="display: flex;flex-direction: row;justify-content: space-between; align-items: center;">
+            <input type="text" name="" id="osa" list="emplist" class="form-control  w-75 my-3" placeholder="Enter OSA Name">
+            
             <datalist id="emplist">
-                <option value="A Anuradha">A Anuradha</option>
+            <option value="A Anuradha">A Anuradha</option>
             <option value="A Mani">A Mani</option>
             <option value="A Purusotham Raju">A Purusotham Raju</option>
             <option value="AP Subbarayudu">AP Subbarayudu</option>
@@ -213,28 +226,39 @@
             <option value="Y Sathish">Y Sathish</option>
             <option value="O/S Arranged">O/S Arranged</option>
             </datalist>
-            <br>
             
-            <button onclick="ClickPush()" class="btn btn-warning ms-3 w-100 my-2">Push</button><br>
-            <button onclick="genTable()" class="btn btn-warning ms-3 w-100 my-2">Print</button>
-            <button onclick="Clearr()" class="btn btn-warning ms-3 w-100 my-2">Show</button>
-            <ol>
+            <button onclick="ClickPush()" class="btn btn-warning w-25 ">Push</button>
+            </div>
+            <br>
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-6 bg-success">
+                    <button onclick="genTable()" class="btn btn-warning  w-75 my-2">Print</button>
+                    <button onclick="Clearr()" disabled class="btn btn-warning  w-75 my-2">Reset</button>
+                    <button onclick="Clearr()" disabled class="btn btn-warning  w-75 my-2">Preview</button>
+                    <button onclick="Clearr()" disabled class="btn btn-warning  w-75 my-2">Home</button>
+                </div>
+            
+                <div class="col-6 text-white fw-bold">
+                    <ol>
 
-            </ol>
+                    </ol>
+                </div>
+            </div>
+            
         </div>
-        <div  style="margin:auto;"class="col-9">
+        <div  style="margin:auto;"class="col-9" id="osaAnnexure">
             <div style="text-align:center;">
                     <script>
                         var today = new Date();
                         let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
                         let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
                         
-                        var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
-                        document.write(`<h6 style="text-align:center">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
-                                    OSA Annexure <ins><strong>Tirupati HUB/2B</strong></ins> Dated : ${mdate}</h6>`)
+                        var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
+                        document.write(`<h6 style="text-align:center;line-height:22px;"><strong>Department of Posts :: India <br>Head Record Office, RMS TP Dn., Tirupati - 517501 <br>
+                                    <u>OSA Annexure Tirupati HUB-2B Dated : ${mdate}</u></strong></h6>`)
                     </script>
                 </div>
-                <hr>
+                <br>
             <table border="1" cellspacing="0" align="center"  contenteditable="true">
                 
                 <thead align="center">
@@ -258,6 +282,7 @@
 
                         var items = [];
                         function ClickPush() {
+                            // items=[];
                             items.push(osa.value);
                             let li=document.createElement("li");
                             li.innerHTML+=osa.value;
@@ -281,6 +306,7 @@
                                 var tdnw = document.createElement("td");
                                 var tdsign = document.createElement("td");
                                 var tdrem = document.createElement("td");
+
 
                                 tdsno.innerHTML = i + 1;
                                 tdname.innerHTML = items[i];
@@ -314,6 +340,16 @@
                 </tbody>
                 <tfoot align="center">
                     <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
                         <td colspan="4">Total</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -324,7 +360,7 @@
             </table>
 
             <div class="logo">
-                <div style="position:fixed;top:5px;right:0px;z-index: -1;">
+                <div style="position:fixed;top:5px;right:-10px;z-index: -1;">
                     <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
                 </div>
             </div>
@@ -333,11 +369,11 @@
 
             <div style="display: flex;justify-content:space-between;">
                 <div>
-                    <h6>Head Record Officer<br> RMS TP Dn.,Tirupati</h6>
+                    <h6><strong>Head Record Officer<br> RMS TP Dn.,Tirupati</strong></h6>
                 </div>
 
-                <div class="text-center">
-                    <h6>Signature of the HSA<br> Tirupati HUB/2B</h6>
+                <div class="text-end">
+                    <h6><strong>Signature of the HSA<br> Tirupati HUB-2B</strong></h6>
                 </div>
             </div>
 

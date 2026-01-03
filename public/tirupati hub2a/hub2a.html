@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tirupati HUB/2A</title>
+    <title>Tirupati HUB-2A</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -13,17 +13,55 @@
 
     <link rel="stylesheet" href="../../src/fromtotable.css">
 
+    <style>
+        * {
+            font-family: Arial;
+            font-weight: bold !important;
+        }
+
+        #mainTable,
+        #sname {
+            display: none !important;
+        }
+
+        #keepCenter {
+            position: relative;
+            left: 320px;
+        }
+
+        @media print {
+
+            #mainTable,
+            #sname {
+                display: block !important;
+            }
+
+            #keepCenter {
+                display: none;
+            }
+
+            .logo {
+                display: block !important;
+            }
+
+            #hrosign,
+            #head {
+                display: block !important;
+            }
+        }
+    </style>
+
 
 </head>
 
 <body>
-    <div class="row text-center">
+    <div class="row text-center" style="display: none;" id="head">
         <h5>भारतीय डाक विभाग<br>Department of Posts :: India <br>प्रधान अभिलेख अधिकारी रेल डाक सेवा टि. पि. मंडल तिरुपति
-            कार्यालय - 517501<br>Head Record Office, RMS TP Division., Tirupati - 517501 </h5>
+            कार्यालय - 517501<br>Head Record Office, RMS TP Dn., Tirupati - 517501 </h5>
     </div>
-    <hr>
-    <div id="sname" style="margin-top: 12px;">
-        <table rules="all" border="1" width="720" contenteditable="true">
+
+    <div id="sname" style="margin-top: 25px;">
+        <table rules="all" border="1" width="730" contenteditable="true">
             <tr align="center" valign="center" style="border: 1px solid black;">
                 <th>
                     <h5>SET MEMO</h5>
@@ -36,6 +74,7 @@
             </tr>
         </table>
     </div>
+    <br>
     <div class="row mt-1">
         <datalist id="emp">
             <option value="A Anuradha">A Anuradha</option>
@@ -217,10 +256,10 @@
 
 
         </datalist>
-        <div class="col-5 text-center">
+        <div class="col-10 text-center" id="keepCenter">
             <formm>
-                <div class="d-flex">
-                    <div class="col-6">
+                <div class="d-flex gap-5">
+                    <div class="col-3">
                         <div class="">
                             <input type="text" name="HSA" id="HSA" placeholder="HSA" class="form-control" list="emp">
                         </div>
@@ -271,7 +310,7 @@
 
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-3">
                         <div>
                             <input type="text" name="PSA1" id="PSA1" placeholder="PSA-1" class="form-control"
                                 list="emp">
@@ -314,15 +353,18 @@
                             <input type="text" name="MTS6" id="MTS6" placeholder="MTS-6" class="mt-3 form-control"
                                 list="emp">
                         </div>
-                        <button class="mt-3 btn btn-success w-50 " onclick="bodyLoad()"><span
+                    </div>
+                    <div class="col-3">
+                        <button class=" btn btn-success w-50 " onclick="bodyLoad()"><span
                                 class="bi bi-arrow-right fs-5"> Transfer</span></button>
                         <button class="btn btn-success w-50 mt-3" id="print" onclick="javascript:print()"><span
                                 class="bi bi-printer fs-5"></span> Print</button>
                         <button class="btn btn-success w-50 mt-3" onclick="ValueReset()" type="reset"><span
                                 class="bi bi-x-lg fs-5"> Clear</span></button>
                         <a href="../../index.html">
-                            <button class="btn btn-success w-50 mt-3"><span class="bi bi-house-door fs-5">
-                                    Home</span></button>
+                            <button class="btn btn-success w-50 mt-3" onclick="PreviewClick()" disabled><span
+                                    class="bi bi-house-door fs-5">
+                                    Preview</span></button>
                         </a>
                     </div>
                 </div>
@@ -330,7 +372,7 @@
 
                 </form>
         </div>
-        <div class="col-6 mainTable">
+        <div class="col-2" id="mainTable">
             <table class="table-bordered mt-1" width="730" contenteditable="true">
                 <thead>
                     <tr class="toprow">
@@ -452,7 +494,7 @@
                         <td align="center">20:30:00</td>
                     </tr>
                     <tr>
-                        <td id="rightAlign">BNPL/SPSA-8 &nbsp;</td>
+                        <td id="rightAlign">BNPL|SPSA8 &nbsp;</td>
                         <td id="spsa8test" class="indent"></td>
                         <td id="rightAlign">GDS-2 &nbsp;</td>
                         <td class="indent">O/S Arranged</td>
@@ -463,7 +505,7 @@
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td id="rightAlign">GDS-3 &nbsp;</td>
-                        <td class="indent">J Dilli Babu</td>
+                        <td class="indent">B Raja Naik</td>
                         <td align="center">18:00:00</td>
                         <td align="center">23:00:00</td>
                     </tr>
@@ -471,7 +513,7 @@
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td id="rightAlign">GDS-4 &nbsp;</td>
-                        <td class="indent">O/S Arranged</td>
+                        <td class="indent">J Dilli Babu</td>
                         <td align="center">20:00:00</td>
                         <td align="center">01:00:00</td>
                     </tr>
@@ -532,7 +574,7 @@
         </div>
     </div>
 
-    <div class="logo">
+    <div class="logo" style="display: none;">
         <div class="leftlogo">
             <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
         </div>
@@ -541,23 +583,21 @@
 
         </div>
     </div>
-    <div style="text-align: end;margin-right: 15px;">
+    <div style="text-align: end;margin-right: 15px;display: none;" id=hrosign>
         <h5>प्रधान अभिलेख अधिकारी <br> रेल डाक सेवा टि.पि. मंडल तिरुपति-517 501 <br>Head Record Officer<br> RMS TP Dn.,
             Tirupati - 517501</h5>
     </div>
 
     <script>
         function bodyLoad() {
-            // // alert(`జంబుగోళం డిల్లీ బాబు ఈ కిందివి సరిగ్గా ఉన్నాయో లేడో చూసుకోమని చెబుతున్నాడు....
-            //         1. మీ ప్రింటర్ పవర్ ఆన్ చేసి ఉన్నాడో లేదో చూసుకోండి.
-            //         2. ప్రింటింగ్ కి పేపర్ లోడ్ చేసి ఉన్నాడో లేదో చూసుకోండి.`);
-            alert("Data Transfer Success...!");
+            alert("Data Transfer Success...!\n\n\nChoose Print Option to Print SET Memo");
+
             var today = new Date();
             let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
             let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-            var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
+            var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
 
-            document.getElementById("setTable").innerHTML = `Tirupati HUB/2A Dated : ${mdate} & Working Hours From 17:30 To 06:00`;
+            document.getElementById("setTable").innerHTML = `Tirupati HUB-2A Dated : ${mdate} & Working Hours From 17:30 To 06:00`;
 
             var tdhsa = document.getElementById("HSA").value;
             var tdsup = document.getElementById("SUP").value;
@@ -618,33 +658,37 @@
         }
 
         function ValueReset() {
-            HSA.value = "";
-            SUP.value = "";
+            var ch = confirm("Do you want to reset all fields...?");
+            if (ch === true) {
+                HSA.value = "";
+                SUP.value = "";
 
-            MSA1.value = "";
-            MSA2.value = "";
+                MSA1.value = "";
+                MSA2.value = "";
 
-            SPSA1.value = "";
-            SPSA2.value = "";
-            SPSA3.value = "";
-            SPSA4.value = "";
-            SPSA5.value = "";
-            SPSA6.value = "";
-            SPSA7.value = "";
-            SPSA8.value = "";
+                SPSA1.value = "";
+                SPSA2.value = "";
+                SPSA3.value = "";
+                SPSA4.value = "";
+                SPSA5.value = "";
+                SPSA6.value = "";
+                SPSA7.value = "";
+                SPSA8.value = "";
 
-            PSA1.value = "";
-            PSA2.value = "";
+                PSA1.value = "";
+                PSA2.value = "";
 
-            MG1.value = "";
-            MG2.value = "";
+                MG1.value = "";
+                MG2.value = "";
 
-            MTS1.value = "";
-            MTS2.value = "";
-            MTS3.value = "";
-            MTS4.value = "";
-            MTS5.value = "";
-            MTS6.value = "";
+                MTS1.value = "";
+                MTS2.value = "";
+                MTS3.value = "";
+                MTS4.value = "";
+                MTS5.value = "";
+                MTS6.value = "";
+                alert("All Fields are Cleared Successfully.........");
+            }
 
         }
 

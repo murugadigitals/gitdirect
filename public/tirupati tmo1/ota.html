@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTA Annexure Tirupati HUB - 1</title>
+    <title>OTA Annexure Tirupati TMO - 1</title>
     <style>
         *{
             font-family: Arial;
@@ -30,12 +30,19 @@
     <div style="text-align: center;">
         <script>
             var today = new Date();
+            
+            var detailDay=today.getDay()+1;
+            if(detailDay===7){
+                detailDay=0;
+            }
+
+
             let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
             let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-            var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
+             var mdate = `${days[detailDay]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
             
             document.write(`<h4 style="line-height:20px"><strong>Department of Posts :: India <br>Head Record Office, RMS TP Dn., Tirupati - 517501 <br>
-            <u>OTA Annexure Tirupati HUB - 1 Dated : ${mdate}</u></strong></h4>`)
+            <u>OTA Annexure Tirupati TMO - 1 Dated : ${mdate}</u></strong></h4>`)
         </script>
     </div>
     <br>
@@ -120,11 +127,11 @@
         </div>
     
         <div style="text-align: end;">
-            <h4>Signature of the HSA<br> Tirupati HUB - 1</h4>
+            <h4>Signature of the MG<br> Tirupati TMO - 1</h4>
         </div>
     </div>
     <DIV style="text-align: end;">
-        <button style=" width: 150px;height: 40px;font-size: 20px;background-color: orange;color:white;" id="print" onclick="javascript:print()">Print</button>
+        <button style=" width: 150px;height: 40px;font-size: 20px;background-color: red;border-radius:10px;color:white;" id="print" onclick="javascript:print()">Print</button>
     </DIV>
 </body>
 

@@ -218,7 +218,7 @@
             
             <button onclick="ClickPush()" class="btn btn-warning ms-3 w-100 my-2">Push</button><br>
             <button onclick="genTable()" class="btn btn-warning ms-3 w-100 my-2">Print</button>
-            <button onclick="Clearr()" class="btn btn-warning ms-3 w-100 my-2">Show</button>
+            <button onclick="Clearr()" class="btn btn-warning ms-3 w-100 my-2" disabled>Show</button>
             <ol>
 
             </ol>
@@ -227,27 +227,34 @@
             <div style="text-align:center;">
                     <script>
                         var today = new Date();
+
+                        var detailDay=today.getDay()+1;
+                        if(detailDay===7){
+                            detailDay=0;
+                        }
+
                         let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
                         let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
                         
-                        var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
+                        var mdate = `${days[detailDay]}, ${today.getDate()+1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
                         document.write(`<h6 style="text-align:center">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
-                                    MTS Annexure <ins><strong>Tirupati HUB/1</strong></ins> Dated : ${mdate}</h6>`)
+                                    <u>MTS Annexure Tirupati HUB-1 Dated : ${mdate}</u></h6>`)
                     </script>
                 </div>
-                <hr>
-            <table border="1" cellspacing="0" align="center"  contenteditable="true">
+                
+                
+            <table border="1" cellspacing="0" align="center"  contenteditable="true" style="margin-top: 30px;">
                 
                 <thead align="center">
                     <tr style="background-color: yellow;">
-                        <th>S.NO</th>
+                        <th style="border-top-left-radius: 15px;">S.NO</th>
                         <th width="200">Name of the Outsider<br>worked in Vacant<br>Post</th>
                         <th>Duty<br>From</th>
                         <th>Duty<br>To</th>
                         <th>Total<br>Hrs</th>
                         <th>Nature of <br>Work<br>Allotted</th>
                         <th>Signature of<br>the<br>Outsider</th>
-                        <th>Remarks</th>
+                        <th style="border-top-right-radius: 15px;">Remarks</th>
                     </tr>
                 </thead>
 
@@ -288,6 +295,7 @@
 
                                 tdname.style.textAlign = "Left";
                                 tdname.style.textIndent = "15px";
+                                tr.style.height="10px";
 
                                 tr.appendChild(tdsno);
                                 tr.appendChild(tdname);
@@ -338,7 +346,7 @@
                 </div>
 
                 <div class="text-center">
-                    <h6>Signature of the HSA<br> Tirupati HUB/1</h6>
+                    <h6>Signature of the HSA<br> Tirupati HUB-1</h6>
                 </div>
             </div>
 

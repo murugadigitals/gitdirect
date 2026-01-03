@@ -40,7 +40,7 @@
 .toprow{
     text-align: center;
     background-color: greenyellow;
-    height: 35px;
+    height: 30px;
 }
 
 #sname{
@@ -54,26 +54,16 @@
 h5{
     font-size: 16px;
 }
-@media print{
-    .col-5{
-        display: none;
-    }
-    #sname{
+
+    /* #sname{
         width: 720px;
         display: flex;
         align-items: center;
         justify-content: center;
         
-    }
+    } */
     hr{
         display: none;
     }
-    .mainTable{
-        position: relative;
-        margin-top: 10px;
-        /* background-image: url(../assests/logo.png); */
-        background-repeat: no-repeat;
-        background-position: 150px 50%;
-    }
     
-}
+    

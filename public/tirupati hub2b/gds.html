@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDS Annexure Tirupati HUB/2B</title>
+    <title>GDS Annexure Tirupati HUB/2A</title>
     <style>
+        *{
+            font-family: Arial !important;
+            font-weight: bold !important;
+        }
         @media print{
             #print{
                 display: none;
             }
         }
+        
+        
     </style>
 </head>
 
@@ -21,15 +27,12 @@
             let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
             let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
             var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
-           
-            
-            
-            document.write(`<h4 style="line-height:20px">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
-            GDS Annexure Tirupati HUB/2B Dated : ${mdate}</h4>`)
+                        
+            document.write(`<h4 style="line-height:20px;margin-top:-13px;">Department of Posts :: India <br>Head Record Office, RMS TP Dn., Tirupati - 517501 <br>
+            <u>GDS Annexure Tirupati HUB-2B Dated : ${mdate}</u></h4>`)
         </script>
     </div>
-    <hr>
-    <br>
+    <!-- <hr> -->
     <table border width="720" cellspacing="0" align="center">
         <thead>
             <tr style="background-color: yellow;">
@@ -72,10 +75,10 @@
             </tr>
             <tr>
                 <td>4</td>
-                <td style="text-align:left;text-indent:10px">G Bala Krishna</td>
+                <td style="text-align:left;text-indent:10px">N/A</td>
                 <td>20:00:00</td>
                 <td>01:00:00</td>
-                <td>5</td>
+                <td>-</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
@@ -128,9 +131,9 @@
             
         </tbody>
         <tfoot align="center">
-            <tr>
+            <tr style="height: 30px;">
                 <td colspan="4">Total</td>
-                <td>36</td>
+                <td>31</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
@@ -138,7 +141,7 @@
     </table>
 
     <div class="logo">
-        <div style="position:fixed;top:15px;right:0px">
+        <div style="position:fixed;top:-3px;right:-15px;z-index: -100;">
             <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
         </div>
     </div>
@@ -148,12 +151,12 @@
             <h4>Head Record Officer<br> RMS TP Dn.,Tirupati</h4>
         </div>
     
-        <div style="text-align: center;">
-            <h4>Signature of the HSA<br> Tirupati HUB/2B</h4>
+        <div style="text-align:end;">
+            <h4>Signature of the HSA<br> Tirupati HUB-2B</h4>
         </div>
     </div>
     <DIV style="text-align: end;">
-        <button style=" width: 150px;height: 40px;font-size: 20px;background-color: orange;color:white;" id="print" onclick="javascript:print()">Print</button>
+        <button style=" width: 150px;height: 40px;font-size: 20px;background-color: red;color:white;border-radius: 10px;" id="print" onclick="javascript:print()">Print</button>
     </DIV>
 
 
