@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDS Annexure Tirupati TMO-2</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
     <style>
         * {
             font-family: Arial !important;
@@ -37,14 +40,21 @@
 
         #title,
         #lhro,
-        #designation {
+        #designation,
+        #outputContainer {
             display: none;
+        }
+
+        td,
+        th,
+        tr {
+            border: 1px solid black;
         }
 
         @media print {
 
             #print,
-            header {
+            header,#setname {
                 display: none;
             }
 
@@ -77,99 +87,151 @@
         <div class="hro">
             <h2>Office of the Head Record Officer,<br> RMS TP Dn.,Tirupati-517501</h2>
         </div>
-        <div class="logpo" style="z-index: -100;">
+        <div style="z-index: 100;">
             <img src="../../assests/logo.png" alt="" width="200" height="100">
         </div>
     </header>
 
-    <div style="text-align:center;" id="title">
-        <script>
-            var today = new Date();
-            var detailDay = today.getDay() + 1;
-            if (detailDay === 7) {
-                detailDay = 0;
-            }
-            let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-            var mdate = `${days[detailDay]}, ${today.getDate() + 1} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
+    <h1 class="text-center text-warning" id="setname">Tirupati TMO - 2</h1>
+    <div class="row">
+        <div id="inputContainer" class="col-3 p-5">
+            <div>
+                <label for="ipgds1" class="form-label text-white">GDS-1</label>
+                <input type="text" id="ipgds1" value="B Srinivasulu" class="form-control mb-3">
+            </div>
+            <div>
+                <label for="ipgds2" class="form-label text-white">GDS-2</label>
+                <input type="text" id="ipgds2" value="S Subramanyam" class="form-control mb-3">
+            </div>
+            <div>
+                <label for="ipgds3" class="form-label text-white">GDS-3</label>
+                <input type="text" id="ipgds3" value="C Rupesh Chandra" class="form-control mb-4">
+            </div>
+            <input type="button" value="Print SET Memo" onclick=addEmp() class="btn btn-danger w-100 mb-2">
 
-            document.write(`<h4 style="line-height:20px">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
-            <u>GDS Annexure Tirupati TMO-2 Dated : ${mdate}</u></h4>`)
+            <script>
+                var emp = []
+                function addEmp() {
+                    document.getElementById('gds1').innerHTML = document.getElementById('ipgds1').value
+                    document.getElementById('gds2').innerHTML = document.getElementById('ipgds2').value
+                    document.getElementById('gds3').innerHTML = document.getElementById('ipgds3').value
 
-        </script>
-    </div>
-    <table border width="720" cellspacing="0" align="center" contenteditable="true">
-        <thead>
-            <tr style="background-color: yellow;">
-                <th>S.NO</th>
-                <th>Name of the Outsider<br>worked in Vacant<br>Post</th>
-                <th>Duty<br>From</th>
-                <th>Duty<br>To</th>
-                <th>Total<br>Hrs</th>
-                <th>Signature of the<br>Outsider</th>
-                <th>Remarks</th>
-            </tr>
-        </thead>
-        <tbody align="center">
-            <tr>
-                <td>1</td>
-                <td style="text-align:left;text-indent:10px">B Srinivasulu</td>
-                <td>15:00:00</td>
-                <td>17:30:00</td>
-                <td>2.5</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td style="text-align:left;text-indent:10px">S Subramanyam</td>
-                <td>15:00:00</td>
-                <td>17:30:00</td>
-                <td>2.5</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td style="text-align:left;text-indent:10px">K Rakesh</td>
-                <td>15:00:00</td>
-                <td>17:30:00</td>
-                <td>2.5</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
+                    document.getElementById('inputContainer').style.display = 'none';
+                    document.getElementById('outputContainer').style.display = 'block';
+                    document.getElementById('outputContainer').classList.add('col-12')
 
-        </tbody>
-        <tfoot align="center">
-            <tr style="height: 30px;">
-                <td colspan="4">Total</td>
-                <td>7.5</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </tfoot>
-    </table>
+                    window.print()
+                    printSet()
 
-    <div>
-        <div class="logo">
-            <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
-        </div>
-    </div>
-    <br>
-    <div style="display: flex;justify-content: space-between;">
-        <div style="text-align: center;" id="lhro">
-            <h4>Head Record Officer<br> RMS TP Dn.,Tirupati</h4>
+                }
+                function printSet() {
+                    document.getElementById('inputContainer').style.display = 'block';
+                    document.getElementById('outputContainer').style.display = 'none';
+                }
+                function dataPreview() {
+                    // addEmp()
+                    document.getElementById("inputContainer").style.display = 'none'
+                    document.getElementById("outputContainer").style.display = 'block'
+                    document.getElementById("outputContainer").classList.add('col-12')
+                    location.href('./gds.html')
+
+
+                }
+            </script>
         </div>
 
-        <div style="text-align: center;" id="designation">
-            <h4>Signature of the MG<br> Tirupati TMO-2</h4>
-        </div>
-    </div>
-    <DIV style="text-align: end;">
-        <button
-            style=" width: 150px;height: 40px;font-size: 20px;background-color: red;border-radius:10px;color: white;"
-            id="print" onclick="javascript:print()">Print</button>
-    </DIV>
+        <main id="outputContainer" class="col-9 text-center">
+
+            <div style="text-align:center;" id="title">
+                <script>
+                    var today = new Date();
+                    var detailDay = today.getDay() + 1;
+                    if (detailDay === 7) {
+                        detailDay = 0;
+                    }
+
+                    let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                    var mdate = `${days[detailDay]}, ${today.getDate() + 1} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
+
+                    document.write(`<p style="line-height:25px">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
+            <u>GDS Annexure Tirupati TMO - 2 Dated : ${mdate} </u></p>`)
+
+                </script>
+            </div>
+            <br>
+            <table width="720" cellspacing="0" align="center" contenteditable="true" style="border-collapse: separate;">
+                <thead>
+                    <tr style="background-color: yellow;">
+                        <th style="border-top-left-radius: 5px;">S.NO</th>
+                        <th>Name of the Outsider<br>worked in Vacant<br>Post</th>
+                        <th>Duty<br>From</th>
+                        <th>Duty<br>To</th>
+                        <th>Total<br>Hrs</th>
+                        <th>Signature of the<br>Outsider</th>
+                        <th style="border-top-right-radius: 5px;">Remarks</th>
+                    </tr>
+                </thead>
+                <tbody align="center">
+                    <tr>
+                        <td>1</td>
+                        <td style="text-align:left;text-indent:10px" id="gds1">B Srinivasulu</td>
+                        <td>15:00:00</td>
+                        <td>17:30:00</td>
+                        <td>2.5</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td style="text-align:left;text-indent:10px" id="gds2">S Subramanyam</td>
+                        <td>15:00:00</td>
+                        <td>17:30:00</td>
+                        <td>2.5</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td style="text-align:left;text-indent:10px" id="gds3">K Rakesh</td>
+                        <td>15:00:00</td>
+                        <td>17:30:00</td>
+                        <td>2.5</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                </tbody>
+                <tfoot align="center">
+                    <tr style="height: 30px;">
+                        <td colspan="4" style="border-bottom-left-radius: 5px;">Total</td>
+                        <td>7.5</td>
+                        <td>&nbsp;</td>
+                        <td style="border-bottom-right-radius: 5px;">&nbsp;</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div>
+                <div class="logo">
+                    <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
+                </div>
+            </div>
+            <br><br>
+            <div style="display: flex;justify-content: space-between;">
+                <div style="text-align: center;" id="lhro">
+                    <p>Head Record Officer<br> RMS TP Dn.,Tirupati</p>
+                </div>
+
+                <div style="text-align: center;" id="designation">
+                    <p>Signature of the MG<br> Tirupati TMO-2</p>
+                </div>
+            </div>
+            <DIV style="text-align: end;">
+                <button
+                    style=" width: 150px;height: 40px;font-size: 20px;background-color: red;border-radius:10px;color: white;"
+                    id="print" onclick="javascript:print()">Print</button>
+            </DIV>
 
 
 </body>
