@@ -28,6 +28,9 @@
             position: relative;
             left: 320px;
         }
+        td,th,tr{
+            border: 1px solid black;
+        }
 
         @media print {
 
@@ -61,14 +64,14 @@
     </div>
 
     <div id="sname" style="margin-top: 25px;">
-        <table rules="all" border="1" width="730" contenteditable="true">
-            <tr align="center" valign="center" style="border: 1px solid black;">
-                <th>
+        <table cellspacing='0' width="720" style="border-collapse:separate!important;">
+            <tr style="border: 1px solid black;">
+                <th style="border-top-left-radius: 5px;border-top-right-radius: 5px;">
                     <h5>SET MEMO</h5>
                 </th>
             </tr>
-            <tr align="center" valign="center" style="border: 1px solid black;">
-                <th>
+            <tr style="border: 1px solid black;">
+                <th style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
                     <h5 id="setTable">&nbsp;</h5>
                 </th>
             </tr>
