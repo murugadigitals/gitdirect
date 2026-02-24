@@ -74,6 +74,10 @@
 
         function printClick() {
 
+            if(document.getElementById('MA').value==''){
+                alert("please select employee name")
+            }else{
+
             var today = new Date();
             let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
             let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -99,6 +103,7 @@
             
             location.reload()
             // document.getElementById('outputContainer').style.display = 'none';
+            }
         }
     </script>
 </head>
