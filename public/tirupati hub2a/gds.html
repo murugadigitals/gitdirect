@@ -44,6 +44,7 @@
 
             #outputContainer {
                 display: inline;
+                margin-top: -5px;
             }
         }
     </style>
@@ -230,7 +231,7 @@
     </datalist>
 
     <div class="row">
-        <div style="text-align:center;height: 50vh;" id="inputContainer" class="col-6 d-flex justify-content-center">
+        <div style="text-align:center;height: 50vh;margin-top: 0px;" id="inputContainer" class="col-6 mx-5">
 
             <table class="w-75">
                 <caption class="caption-top text-center fs-2 text-danger">Select GDS Names</caption>
@@ -314,7 +315,7 @@
                 document.write(`<p style="line-height:23px;text-align:center">Department of Posts :: India <br>Head Record Office, RMS TP Dn., Tirupati - 517501 <br>
             <u>GDS Annexure Tirupati HUB - 2A Dated : ${mdate}</u></p>`)
             </script>
-            <table width="750" style="border-collapse: separate;border-spacing: 0px;">
+            <table width="750" style="border-collapse: separate;border-spacing: 0px;" >
                 <thead>
                     <tr style="background-color: yellow;" class="text-center">
                         <th style="border-top-left-radius: 7px;">S.NO</th>
@@ -459,6 +460,7 @@
                     document.getElementById('outputContainer').classList.add('col-12', 'text-center')
 
                     window.print()
+                    document.getElementById('inputContainer').style.display = "block"
                 }
             </script>
         </div>
