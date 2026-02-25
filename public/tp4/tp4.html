@@ -91,7 +91,9 @@
             .leftlogo {
                 right: -10px;
             }
-
+            span{
+                display: inline-block;
+            }
             #title,
             #lhro,
             #designation {
@@ -119,26 +121,12 @@
 
     <div style="margin-bottom: 200px;" id="preview">
         <div class="row text-center" id="hro">
-            <h5 style="line-height: 25px;"><u>भारतीय डाक विभाग<br>Department of Posts :: India <br>प्रधान अभिलेख अधिकारी
+            <h5 style="line-height: 25px;"><u>भारतीय डाक विभाग<br><span style="margin-bottom: 10px;text-decoration: underline;">Department of Posts :: India</span><br>प्रधान अभिलेख अधिकारी
                     रेल डाक सेवा टि. पि. मंडल
                     तिरुपति
                     कार्यालय - 517501<br>Head Record Office, RMS TP Division., Tirupati - 517501</u> </h5>
         </div>
         <br>
-        <!-- <div id="sname" style="margin-top: 12px;">
-            <table width="720" style="border-collapse: separate;" cellspacing="0">
-                <tr style="font-size: 20px;text-align: center;">
-                    <th style="border-top-left-radius: 5px;border-top-right-radius: 5px;">
-                        <h5 style="padding-top: 5px;">SET MEMO</h5>
-                    </th>
-                </tr>
-                <tr style="text-align: center;">
-                    <th style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
-                        <h5 style="padding-top:5px;" id="setTable">&nbsp;</h5>
-                    </th>
-                </tr>
-            </table>
-        </div> -->
         <div class="row mt-1">
             <datalist id="emp">
                 <option value="A Anuradha">A Anuradha</option>
@@ -330,8 +318,13 @@
                                 class="form-control" list="emp">
                         </div>
 
+                        <div class="mb-3">
+                            <input type="text" name="MTS1" id="MTS1"  placeholder="Choose MTS - 1"
+                                class="form-control" list="emp">
+                        </div>
+
                         <div class="">
-                            <input type="text" name="MTS" id="MTS"  placeholder="Choose MTS"
+                            <input type="text" name="MTS2" id="MTS2"  placeholder="Choose MTS - 2"
                                 class="form-control" list="emp">
                         </div>
 
@@ -380,8 +373,12 @@
                             <td id="tableMa" style="text-align: start;text-indent: 30px;">N Ashok Kumar</td>
                         </tr>
                         <tr>
-                            <td style="text-align: end;padding: 10px;border-bottom-left-radius: 5px;">MTS</td>
-                            <td id="tableMts" style="text-align: start;text-indent: 30px;border-bottom-right-radius: 5px;">RS Chandra Sekhar</td>
+                            <td style="text-align: end;padding: 10px;">MTS - 1</td>
+                            <td id="tableMts1" style="text-align: start;text-indent: 30px;">RS Chandra Sekhar</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: end;padding: 10px;border-bottom-left-radius: 5px;">MTS - 2</td>
+                            <td id="tableMts2" style="text-align: start;text-indent: 30px;border-bottom-right-radius: 5px;">RS Chandra Sekhar</td>
                         </tr>
                     </tbody>
                         
@@ -448,7 +445,8 @@
                 document.getElementById("dayname").innerHTML = ` Duty On : ${mdate}`;
 
                 document.getElementById("tableMa").innerHTML=document.getElementById('MA').value
-                document.getElementById("tableMts").innerHTML=document.getElementById('MTS').value
+                document.getElementById("tableMts1").innerHTML=document.getElementById('MTS1').value
+                document.getElementById("tableMts2").innerHTML=document.getElementById('MTS2').value
                 // var tdmg = document.getElementById("MG").value;
 
                 // document.getElementById("mgtest").innerHTML = tdmg;
