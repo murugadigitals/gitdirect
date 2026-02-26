@@ -5,17 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tirupati TMO-1</title>
-  
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../src/fromtotable.css">
 
     <style>
-        *{font-family: Arial;font-weight: bold !important;}
-        #hrosign,.mainTable,#hro,.leftlogo,.rightlogo{
+        * {
+            font-family: Arial;
+            font-weight: bold !important;
+        }
+
+        #hrosign,
+        .mainTable,
+        #hro,
+        .leftlogo,
+        .rightlogo {
             display: none;
         }
-         header {
+
+        header {
             background-color: white;
             color: black;
             padding: 10px;
@@ -26,37 +36,50 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            border-radius: 5px ;
+            border-radius: 5px;
 
         }
-        #mainDisplay{
+
+        #mainDisplay {
             position: relative;
             top: 50px;
             left: 350px;
         }
-        body{
+
+        body {
             background-image: linear-gradient(green);
         }
-        @media print{
-            #hrosign,.mainTable,#hro{
+
+        @media print {
+
+            #hrosign,
+            .mainTable,
+            #hro {
                 display: block;
             }
-            header{
+
+            header {
                 display: none;
             }
-            body{
+
+            body {
                 background-image: none;
             }
-            .leftlogo,.rightlogo,#sname{
+
+            .leftlogo,
+            .rightlogo,
+            #sname {
                 display: block;
             }
-            #mainDisplay{
+
+            #mainDisplay {
                 display: none;
             }
         }
     </style>
 </head>
-<body >
+
+<body>
     <header>
         <div class="ashok">
             <img src="../../assests/ashok.png" alt="" width="150" height="100">
@@ -76,16 +99,16 @@
     <br>
     <div id="sname" style="margin-top: 12px;">
         <table rules="all" border="1" width="720">
-                <tr align="center" valign="center" style="border: 1px solid black;">
-                    <th>
-                        <h5>SET MEMO</h5>
-                    </th>
-                </tr>
-                <tr align="center" valign="center" style="border: 1px solid black;">
-                    <th>
-                        <h5 id="setTable">&nbsp;</h5>
-                    </th>
-                </tr>
+            <tr align="center" valign="center" style="border: 1px solid black;">
+                <th>
+                    <h5>SET MEMO</h5>
+                </th>
+            </tr>
+            <tr align="center" valign="center" style="border: 1px solid black;">
+                <th>
+                    <h5 id="setTable">&nbsp;</h5>
+                </th>
+            </tr>
         </table>
     </div>
     <br>
@@ -266,6 +289,25 @@
             <option value="Y Purohit">Y Purohit</option>
             <option value="Y Sathish">Y Sathish</option>
             <option value="O/S Arranged">O/S Arranged</option>
+
+            <option value="N/A">N/A</option>
+            <option value="T Manjula">T Manjula</option>
+            <option value="I Penchalaiah">I Penchalaiah</option>
+            <option value="A Sreekanth">A Sreekanth</option>
+            <option value="Nikhil Shukla">Nikhil Shukla</option>
+            <option value="Abhishek Bairava">Abhishek Bairava</option>
+            <option value="Arushi Kumari">Arushi Kumari</option>
+            <option value="A Balaji">A Balaji</option>
+            <option value="U Rajeswari">U Rajeswari</option>
+            <option value="B Shaik Tahira">B Shaik Tahira</option>
+            <option value="A Hemalatha">A Hemalatha</option>
+            <option value="G Balu Aravind">G Balu Aravind</option>
+            <option value="N Pavani">N Pavani</option>
+            <option value="BR Rojavathi">BR Rojavathi</option>
+            <option value="M Rajeswari">M Rajeswari</option>
+            <option value="A Kamakshi">A Kamakshi</option>
+            <option value="K Sreekanth">K Sreekanth</option>
+            <option value="V Swathi">V Swathi</option>
         </datalist>
         <br>
         <div class="col-5 text-center" id="mainDisplay">
@@ -274,24 +316,29 @@
                 <br>
                 <div class="d-flex">
 
-                    
+
                     <div class="col-6 ms-5">
                         <div class="">
-                            <input type="text" name="MG" id="MG" placeholder="Mail Guard" class="form-control" list="emp">
+                            <input type="text" name="MG" id="MG" placeholder="Mail Guard" class="form-control"
+                                list="emp">
                         </div>
 
                     </div>
                     <div class="col-6">
-                        <button class="btn btn-danger w-50 " onclick="bodyLoad()"><span class="bi bi-arrow-right fs-5"> Transfer</span></button>
-                        <button class="btn btn-danger w-50 mt-3" id="print" onclick="javascript:print()"><span class="bi bi-printer fs-5"></span> Print</button>
-                        <button class="btn btn-danger w-50 mt-3" onclick="ValueReset()" type="reset"><span class="bi bi-x-lg fs-5"> Clear</span></button>
+                        <button class="btn btn-danger w-50 " onclick="bodyLoad()"><span class="bi bi-arrow-right fs-5">
+                                Transfer</span></button>
+                        <button class="btn btn-danger w-50 mt-3" id="print" onclick="javascript:print()"><span
+                                class="bi bi-printer fs-5"></span> Print</button>
+                        <button class="btn btn-danger w-50 mt-3" onclick="ValueReset()" type="reset"><span
+                                class="bi bi-x-lg fs-5"> Clear</span></button>
                         <a href="../../index.html">
-                            <button class="btn btn-danger w-50 mt-3"><span class="bi bi-house-door fs-5"> Home</span></button>
+                            <button class="btn btn-danger w-50 mt-3"><span class="bi bi-house-door fs-5">
+                                    Home</span></button>
                         </a>
                     </div>
 
                 </div>
-            </form>
+                </form>
         </div>
         <br>
         <div class="col-6 mainTable">
@@ -320,7 +367,7 @@
                         <td align="center">04:00:00</td>
                         <td align="center">11:20:00</td>
                     </tr>
-                    
+
                     <tr>
                         <td id="rightAlign">GDS-1 &nbsp;</td>
                         <td id="" class="indent">O/S Arranged</td>
@@ -375,7 +422,7 @@
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                    </tr>                    
+                    </tr>
 
                 </tbody>
             </table>
@@ -399,23 +446,23 @@
     <script>
         MG.focus();
         function bodyLoad() {
-            
+
             alert("Data Transfer Success....!");
             alert("Please make sure that A4 Size Paper is Loaded...")
 
-            var today=new Date();
+            var today = new Date();
 
-            var detailDay=today.getDay()+1;
-            if(detailDay===7){
-                detailDay=0;
+            var detailDay = today.getDay() + 1;
+            if (detailDay === 7) {
+                detailDay = 0;
             }
 
 
-            let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
-            let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-            var mdate = `${days[detailDay]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
-            
-            document.getElementById("setTable").innerHTML=`Tirupati TMO -1 Dated : ${mdate} & Working Hrs From 04:00 To 11:20 Hrs.`;
+            let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            var mdate = `${days[detailDay]}, ${today.getDate() + 1} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
+
+            document.getElementById("setTable").innerHTML = `Tirupati TMO -1 Dated : ${mdate} & Working Hrs From 04:00 To 11:20 Hrs.`;
 
             var tdmg = document.getElementById("MG").value;
 
@@ -423,8 +470,8 @@
 
         }
 
-        function ValueReset(){
-            MG.value="";
+        function ValueReset() {
+            MG.value = "";
         }
 
     </script>

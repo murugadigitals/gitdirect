@@ -14,7 +14,7 @@
 
 
 
-    <title>GDS Annexure Tirupati HUB - 2B</title>
+    <title>GDS Annexure Tirupati RMS - 2B</title>
     <style>
         * {
             font-family: Arial !important;
@@ -47,11 +47,18 @@
                 margin-top: -5px;
             }
         }
+
+        dt {
+            /* background-color: black;
+            color: white; */
+            /* text-align: center; */
+            /* padding-top: 10px; */
+        }
     </style>
 </head>
 
 <body>
-    <h1 class="bg-primary text-dark text-center p-2" id="title1">Select GDS </h1>
+    <h1 class="bg-primary text-dark text-center p-2" id="title1"> GDS Annexure - Tirupati RMS -2B </h1>
     <datalist id="emp">
         <option value="A Anuradha">A Anuradha</option>
         <option value="A Mani">A Mani</option>
@@ -250,9 +257,9 @@
     </datalist>
 
     <div class="row">
-        <div style="text-align:center;height: 50vh;margin-top: 0px;" id="inputContainer" class="col-6 mx-5">
+        <div style="text-align:center;height: 50vh;margin-top: 0px;" id="inputContainer" class="col-6 mx-5 my-5">
 
-            <table class="w-75">
+            <!-- <table class="w-75">
                 <caption class="caption-top text-center fs-2 text-danger">Select GDS Names</caption>
                 <tr class="bg-secondary text-white">
                     <th class="p-2">GDS No</th>
@@ -321,8 +328,26 @@
                 </tr>
 
 
-            </table>
+            </table> -->
+            <h1 class="bg-success rounded rounded-2 p-2 text-white mb-5">Select GDS Name Here</h1>
+            <dl style="display: grid;grid-template-columns: 6fr 6fr;gap: 10px;" class="w-75">
 
+                <dt><label for="" class="form-label bg-dark text-white p-2 px-3 rounded rounded-2">GDS1 @ 19:30</label>
+                </dt>
+                <dd><input type="text" value="N Hari Prasad" class="form-control" id="gds1" list="emp"></dd>
+
+                <dt><label for="" class="form-label bg-dark text-white p-2 px-3 rounded rounded-2">GDS2 @ 01:00</label>
+                </dt>
+                <dd><input type="text" placeholder="Select GDS" class="form-control" id="gds2" list="emp"></dd>
+
+                <dt><label for="" class="form-label bg-dark text-white p-2 px-3 rounded rounded-2">GDS1 @ 17:30</label>
+                </dt>
+                <dd><input type="text" placeholder="Select GDS" class="form-control" id="gds3" list="emp"></dd>
+
+            </dl>
+            <div class="text-end">
+                <button class="my-5 btn btn-danger bg-success" onclick="printClick()">Print Set Memo</button>
+            </div>
         </div>
         <div id="outputContainer" class="col-6">
             <script>
@@ -332,7 +357,7 @@
                 var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
 
                 document.write(`<p style="line-height:23px;text-align:center">Department of Posts :: India <br>Head Record Office, RMS TP Dn., Tirupati - 517501 <br>
-            <u>GDS Annexure Tirupati HUB - 2B Dated : ${mdate}</u></p>`)
+            <u>GDS Annexure Tirupati RMS - 2B Dated : ${mdate}</u></p>`)
             </script>
             <table width="750" style="border-collapse: separate;border-spacing: 0px;">
                 <thead>
@@ -350,110 +375,64 @@
                     <tr>
                         <td>1</td>
                         <td style="text-align:left;text-indent:10px" id="tblgds1"></td>
-                        <td>17:30:00</td>
-                        <td>20:30:00</td>
-                        <td>3</td>
+                        <td>19:30:00</td>
+                        <td>00:30:00</td>
+                        <td id="gds1hrs">-</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td style="text-align:left;text-indent:10px" id="tblgds2"></td>
-                        <td>17:30:00</td>
-                        <td>20:30:00</td>
-                        <td>3</td>
+                        <td>01:00:00</td>
+                        <td>06:00:00</td>
+                        <td>5</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td style="text-align:left;text-indent:10px" id="tblgds3"></td>
-                        <td>18:00:00</td>
-                        <td>23:00:00</td>
-                        <td>-</td>
+                        <td>17:30:00</td>
+                        <td>19:30:00</td>
+                        <td>2</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
-                    <tr>
-                        <td>4</td>
-                        <td style="text-align:left;text-indent:10px" id="tblgds4"></td>
-                        <td>20:00:00</td>
-                        <td>01:00:00</td>
-                        <td>-</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td style="text-align:left;text-indent:10px" id="tblgds5"></td>
-                        <td>01:00:00</td>
-                        <td>06:00:00</td>
-                        <td>5</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td style="text-align:left;text-indent:10px" id="tblgds6"></td>
-                        <td>01:00:00</td>
-                        <td>06:00:00</td>
-                        <td>5</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td style="text-align:left;text-indent:10px" id="tblgds7"></td>
-                        <td>02:00:00</td>
-                        <td>07:00:00</td>
-                        <td>5</td>
-                        <td>&nbsp;</td>
-                        <td> 04:00 - 07:00 <br>TMO/1</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td style="text-align:left;text-indent:10px" id="tblgds8"></td>
-                        <td>03:00:00</td>
-                        <td>08:00:00</td>
-                        <td>5</td>
-                        <td>&nbsp;</td>
-                        <td> 04:00 - 08:00 <br>TMO/1</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td style="text-align:left;text-indent:10px" id="tblgds9"></td>
-                        <td>03:00:00</td>
-                        <td>08:00:00</td>
-                        <td>5</td>
-                        <td>&nbsp;</td>
-                        <td> 04:00 - 08:00 <br>TMO/1</td>
-                    </tr>
-
 
                 </tbody>
                 <tfoot align="center">
                     <tr style="height: 30px;">
                         <td colspan="4" style="border-bottom-left-radius: 7px;">Total</td>
-                        <td>31</td>
+                        <td id='gdstotalhrs'>7</td>
                         <td>&nbsp;</td>
                         <td style="border-bottom-right-radius: 7px;">&nbsp;</td>
                     </tr>
                 </tfoot>
             </table>
-
+            <br>
             <div class="logo">
                 <div style="position:fixed;top:-3px;right:-15px;z-index: -100;">
                     <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
                 </div>
             </div>
-            <br>
+            <br><br>
             <div style="display: flex;justify-content: space-between;">
                 <div style="text-align: center;">
                     <p>Head Record Officer<br> RMS TP Dn.,Tirupati</p>
                 </div>
 
                 <div style="text-align:end;">
-                    <p>Signature of the HSA<br> Tirupati HUB-2B</p>
+                    <p>Signature of the HSA<br> Tirupati RMS - 2B</p>
                 </div>
             </div>
             <DIV style="text-align: end;">
@@ -466,19 +445,22 @@
                     document.getElementById('tblgds1').innerHTML = document.getElementById('gds1').value
                     document.getElementById('tblgds2').innerHTML = document.getElementById('gds2').value
                     document.getElementById('tblgds3').innerHTML = document.getElementById('gds3').value
-                    document.getElementById('tblgds4').innerHTML = document.getElementById('gds4').value
-                    document.getElementById('tblgds5').innerHTML = document.getElementById('gds5').value
-                    document.getElementById('tblgds6').innerHTML = document.getElementById('gds6').value
-                    document.getElementById('tblgds7').innerHTML = document.getElementById('gds7').value
-                    document.getElementById('tblgds8').innerHTML = document.getElementById('gds8').value
-                    document.getElementById('tblgds9').innerHTML = document.getElementById('gds9').value
 
                     document.getElementById('inputContainer').style.display = "none"
                     // document.getElementById('inputContainer').style.visibility='hidden'
                     // document.getElementById('inputContainer').classList.add('col-12')
                     document.getElementById('outputContainer').classList.add('col-12', 'text-center')
 
+                    if (document.getElementById('gds1').value === 'N Hari Prasad') {
+                        alert('success')
+                    }
+                    else {
+                        document.getElementById('gds1hrs').innerHTML = '5'
+                        document.getElementById('gdstotalhrs').innerHTML = '12'
+                    }
+
                     window.print()
+                    location.reload()
                     document.getElementById('inputContainer').style.display = "block"
                 }
             </script>

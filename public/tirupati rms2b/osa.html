@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
 
-    <title>MTS Annexure Tirupati HUB - 2B</title>
+    <title>OSA Annexure Tirupati RMS - 2B</title>
     <style>
         * {
             font-family: Arial !important;
@@ -27,7 +27,7 @@
             height: 15px;
         }
 
-        #MTSAnnexure {
+        #osaAnnexure {
             display: none;
         }
 
@@ -53,7 +53,7 @@
 
             }
 
-            #MTSAnnexure {
+            #osaAnnexure {
                 display: block;
             }
         }
@@ -70,11 +70,11 @@
 <body onload="PageLoad()">
     <div class="row">
         <div class="col-3 mt-5 p-4 bg-success position-relative w-50 p-5 rounded rounded-5" style="height: 80vh;">
-            <h1 class="text-center fw-bold bg-danger text-white p-2 rounded rounded-3">MTS ANNEXURE Tirupati HUB - 2B
+            <h1 class="text-center fw-bold bg-danger text-white p-2 rounded rounded-3">OSA ANNEXURE Tirupati RMS - 2B
             </h1>
             <div style="display: flex;flex-direction: row;justify-content: space-between; align-items: center;">
-                <input type="text" name="" id="MTS" list="emplist" class="form-control  w-75 my-3"
-                    placeholder="Enter MTS Name">
+                <input type="text" name="" id="osa" list="emplist" class="form-control  w-75 my-3"
+                    placeholder="Enter OSA Name">
 
                 <datalist id="emplist">
                     <option value="A Anuradha">A Anuradha</option>
@@ -271,7 +271,6 @@
                     <option value="A Kamakshi">A Kamakshi</option>
                     <option value="K Sreekanth">K Sreekanth</option>
                     <option value="V Swathi">V Swathi</option>
-
                 </datalist>
 
                 <button onclick="ClickPush()" class="btn btn-warning w-25 mx-3 ">Push</button>
@@ -293,7 +292,7 @@
             </div>
 
         </div>
-        <div style="margin:auto;" class="col-9" id="MTSAnnexure">
+        <div style="margin:auto;" class="col-9" id="osaAnnexure">
             <div style="text-align:center;">
                 <script>
                     var today = new Date();
@@ -302,7 +301,7 @@
 
                     var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
                     document.write(`<h6 style="text-align:center;line-height:22px;"><strong>Department of Posts :: India <br>Head Record Office, RMS TP Dn., Tirupati - 517501 <br>
-                                    <u>MTS Annexure Tirupati HUB - 2A Dated : ${mdate}</u></strong></h6>`)
+                                    <u>OSA Annexure Tirupati RMS - 2B Dated : ${mdate}</u></strong></h6>`)
                 </script>
             </div>
             <br>
@@ -326,23 +325,23 @@
                     <script>
                         var items = [];
                         function PageLoad() {
-                            MTS.focus();
+                            osa.focus();
                         }
 
                         function ClickPush() {
                             // items=[];
-                            if (MTS.value === '') {
+                            if (osa.value === '') {
                                 alert("please enter employee name")
-                            } else if ((items.indexOf(MTS.value) === -1)) {
+                            } else if ((items.indexOf(osa.value) === -1)) {
 
-                                items.push(MTS.value);
+                                items.push(osa.value);
 
                                 let li = document.createElement("li");
-                                li.innerHTML += MTS.value;
+                                li.innerHTML += osa.value;
                                 document.querySelector("ol").appendChild(li);
 
-                                MTS.value = "";
-                                MTS.focus();
+                                osa.value = "";
+                                osa.focus();
                             } else {
                                 alert("Emplyee already exits")
                             }
@@ -385,6 +384,7 @@
                             window.print();
                             location.reload();
                         }
+
                         function show() {
                             // for(let i=0;i<items.length;i++){
                             //     var li=document.createElement("li");
@@ -431,7 +431,7 @@
                 </div>
 
                 <div class="text-end">
-                    <h6><strong>Signature of the HSA<br> Tirupati HUB - 2B</strong></h6>
+                    <h6><strong>Signature of the HSA<br> Tirupati RMS - 2B</strong></h6>
                 </div>
             </div>
 
