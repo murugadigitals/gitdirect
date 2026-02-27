@@ -4,115 +4,470 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDS Annexure Tirupati RMS/1</title>
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+
+    <title>GDS Annexure Tirupati RMS - 1</title>
     <style>
-        @media print{
-            #print{
+        * {
+            font-family: Arial !important;
+            font-weight: bold !important;
+        }
+
+        #outputContainer {
+            display: none;
+        }
+
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        @media print {
+
+            #print,
+            #title1 {
                 display: none;
             }
+
+            #inputContainer {
+                display: none;
+            }
+
+            #outputContainer {
+                display: inline;
+                margin-top: -5px;
+            }
+        }
+
+        dt {
+            /* background-color: black;
+            color: white; */
+            /* text-align: center; */
+            /* padding-top: 10px; */
         }
     </style>
 </head>
 
 <body>
-    <div style="text-align:center;">
-        <script>
-            var today = new Date();
-           let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
-            let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-            var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
-           
-            
-            
-            document.write(`<h4 style="line-height:20px">Department of Posts :: India <br>Head Record Office, RMS TP Division., Tirupati - 517501 <br>
-            GDS Annexure Tirupati RMS/1 Dated : ${mdate}</h4>`)
-        </script>
-    </div>
-    <hr>
-    <br>
-    <table border width="720" cellspacing="0" align="center" contenteditable="true">
-        <thead>
-            <tr style="background-color: yellow;">
-                <th>S.NO</th>
-                <th>Name of the Outsider<br>worked in Vacant<br>Post</th>
-                <th>Duty<br>From</th>
-                <th>Duty<br>To</th>
-                <th>Total<br>Hrs</th>
-                <th>Signature of the<br>Outsider</th>
-                <th>Remarks</th>
-            </tr>
-        </thead>
-        <tbody align="center">
-            <tr>
-                <td>1</td>
-                <td style="text-align:left;text-indent:10px">G Geeva</td>
-                <td>09:00:00</td>
-                <td>10:30:00</td>
-                <td>1.5</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td style="text-align:left;text-indent:10px">V Subramanyam</td>
-                <td>10:30:00</td>
-                <td>01:00:00</td>
-                <td>2.5</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td style="text-align:left;text-indent:10px">C Rupesh Chandra</td>
-                <td>14:00:00</td>
-                <td>16:30:00</td>
-                <td>2.5</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            
-            
-            
-        </tbody>
-        <tfoot align="center">
-            <tr>
-                <td colspan="4">Total</td>
-                <td>6.5</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </tfoot>
-    </table>
+    <h1 class="bg-primary text-dark text-center p-2" id="title1"> GDS Annexure - Tirupati RMS -1 </h1>
+    <datalist id="emp">
+        <option value="A Anuradha">A Anuradha</option>
+        <option value="A Mani">A Mani</option>
+        <option value="A Purusotham Raju">A Purusotham Raju</option>
+        <option value="AP Subbarayudu">AP Subbarayudu</option>
+        <option value="B Devaraja">B Devaraja</option>
+        <option value="B Gangadhar">B Gangadhar</option>
+        <option value="B Kalyan Kumar">B Kalyan Kumar</option>
+        <option value="B Lokanath Reddy">B Lokanath Reddy</option>
+        <option value="B Mahesh">B Mahesh</option>
+        <option value="B Md Rafi">B Md Rafi</option>
+        <option value="B Nagamma">B Nagamma</option>
+        <option value="B Raghuram Naik">B Raghuram Naik</option>
+        <option value="B Raja Naik">B Raja Naik</option>
+        <option value="B Ramesh Raju">B Ramesh Raju</option>
+        <option value="B Sai Ganesh">B Sai Ganesh</option>
+        <option value="B Sreekanth Babu">B Sreekanth Babu</option>
+        <option value="B Srilatha">B Srilatha</option>
+        <option value="B Srinivasulu">B Srinivasulu</option>
+        <option value="B Venu">B Venu</option>
+        <option value="B Vishnu Priya">B Vishnu Priya</option>
+        <option value="BBS Reddy">BBS Reddy</option>
+        <option value="BV Reddy">BV Reddy</option>
+        <option value="C Doraswamy">C Doraswamy</option>
+        <option value="C Haridas Reddy">C Haridas Reddy</option>
+        <option value="C Nirmala">C Nirmala</option>
+        <option value="C Rupesh Chandra">C Rupesh Chandra</option>
+        <option value="CH Lakshmi Devi">CH Lakshmi Devi</option>
+        <option value="CH Sai Kiran">CH Sai Kiran</option>
+        <option value="D Aruna">D Aruna</option>
+        <option value="D Durga Prasad">D Durga Prasad</option>
+        <option value="D Nandana Kumari">D Nandana Kumari</option>
+        <option value="D Sanjith Kumar">D Sanjith Kumar</option>
+        <option value="D Srinu Naik">D Srinu Naik</option>
+        <option value="E Jyoti">E Jyoti</option>
+        <option value="E Murali">E Murali</option>
+        <option value="G Ashok Kumar">G Ashok Kumar</option>
+        <option value="G Bala Krishna">G Bala Krishna</option>
+        <option value="G Bala Surendra">G Bala Surendra</option>
+        <option value="G Ekambaram">G Ekambaram</option>
+        <option value="G Ganesh">G Ganesh</option>
+        <option value="G Geeva">G Geeva</option>
+        <option value="G Giri Prasad">G Giri Prasad</option>
+        <option value="G Karthik">G Karthik</option>
+        <option value="G Kulai Basha">G Kulai Basha</option>
+        <option value="G Roop Sekhar">G Roop Sekhar</option>
+        <option value="G Sai Madhavi">G Sai Madhavi</option>
+        <option value="G Veeresh Babu">G Veeresh Babu</option>
+        <option value="G Vijay Kumar">G Vijay Kumar</option>
+        <option value="I Naveen Reddy">I Naveen Reddy</option>
+        <option value="I Sasi Rekha">I Sasi Rekha</option>
+        <option value="J Dilli Babu">J Dilli Babu</option>
+        <option value="J Murali Babu">J Murali Babu</option>
+        <option value="K Adi Narayana">K Adi Narayana</option>
+        <option value="K Babu Reddy">K Babu Reddy</option>
+        <option value="K Bhargava Varma">K Bhargava Varma</option>
+        <option value="K Chinnaiah">K Chinnaiah</option>
+        <option value="K Ganga">K Ganga</option>
+        <option value="K Lokesh">K Lokesh</option>
+        <option value="K Nagaraju">K Nagaraju</option>
+        <option value="K Nagendra">K Nagendra</option>
+        <option value="K Pavan Singh">K Pavan Singh</option>
+        <option value="K Poorna">K Poorna</option>
+        <option value="K Poornima">K Poornima</option>
+        <option value="K Rajendran">K Rajendran</option>
+        <option value="K Rakesh">K Rakesh</option>
+        <option value="K Ramanjulu">K Ramanjulu</option>
+        <option value="K Sai Durga">K Sai Durga</option>
+        <option value="K Saravana">K Saravana</option>
+        <option value="K Shiva Kumar">K Shiva Kumar</option>
+        <option value="K Srikanth">K Srikanth</option>
+        <option value="K Srinivasulu">K Srinivasulu</option>
+        <option value="K Sunil">K Sunil</option>
+        <option value="K Suresh">K Suresh</option>
+        <option value="L Pranav">L Pranav</option>
+        <option value="M Bharath Kumar">M Bharath Kumar</option>
+        <option value="M Chandra Mouli">M Chandra Mouli</option>
+        <option value="M Guravaiah">M Guravaiah</option>
+        <option value="M Harish">M Harish</option>
+        <option value="M Jayaram">M Jayaram</option>
+        <option value="M Kishore">M Kishore</option>
+        <option value="M Kupendra Kumar Rao">M Kupendra Kumar Rao</option>
+        <option value="M Muni Reddy">M Muni Reddy</option>
+        <option value="M Nagesh">M Nagesh</option>
+        <option value="M Nirmala">M Nirmala</option>
+        <option value="M Rupesh Kumar">M Rupesh Kumar</option>
+        <option value="M Saraswathi">M Saraswathi</option>
+        <option value="M Sri Hari">M Sri Hari</option>
+        <option value="M Thej Kumar">M Thej Kumar</option>
+        <option value="M Vasanth Kumar">M Vasanth Kumar</option>
+        <option value="M Venkatesh">M Venkatesh</option>
+        <option value="MV Ramana Murthy">MV Ramana Murthy</option>
+        <option value="N Anjaneyulu">N Anjaneyulu</option>
+        <option value="N Aruna Jyoti">N Aruna Jyoti</option>
+        <option value="N Ashok Kumar">N Ashok Kumar</option>
+        <option value="N Hari Krishna">N Hari Krishna</option>
+        <option value="N Hari Prasad">N Hari Prasad</option>
+        <option value="N Manjula Reddy">N Manjula Reddy</option>
+        <option value="N Murali Prasad">N Murali Prasad</option>
+        <option value="N Neeraja">N Neeraja</option>
+        <option value="N Om Shankar">N Om Shankar</option>
+        <option value="N Pradeep">N Pradeep</option>
+        <option value="N Raja Sekhar">N Raja Sekhar</option>
+        <option value="N Shiva">N Shiva</option>
+        <option value="N Sridhar">N Sridhar</option>
+        <option value="N Subramanyam">N Subramanyam</option>
+        <option value="N Subramanyam Reddy">N Subramanyam Reddy</option>
+        <option value="N Sudharshan">N Sudharshan</option>
+        <option value="N Vani">N Vani</option>
+        <option value="P Archana">P Archana</option>
+        <option value="P Bramaiah Shetty">P Bramaiah Shetty</option>
+        <option value="P Chandraiah">P Chandraiah</option>
+        <option value="P Dheeren">P Dheeren</option>
+        <option value="P Jayamma">P Jayamma</option>
+        <option value="P Koteswara Sharma">P Koteswara Sharma</option>
+        <option value="P Mahaboob Basha">P Mahaboob Basha</option>
+        <option value="P Mahaboob Sharief">P Mahaboob Sharief</option>
+        <option value="P Muni Lakshmi">P Muni Lakshmi</option>
+        <option value="P Parthasarathy">P Parthasarathy</option>
+        <option value="P Pratap Reddy">P Pratap Reddy</option>
+        <option value="P Purnima">P Purnima</option>
+        <option value="P Ravi">P Ravi</option>
+        <option value="P Subbaiah">P Subbaiah</option>
+        <option value="P Sudharshan">P Sudharshan</option>
+        <option value="P Sunil Kumar Reddy">P Sunil Kumar Reddy</option>
+        <option value="P Uma Maheswar">P Uma Maheswar</option>
+        <option value="P Varalakshmi">P Varalakshmi</option>
+        <option value="P Venkataswamy">P Venkataswamy</option>
+        <option value="P Venkatesh">P Venkatesh</option>
+        <option value="PY Pavan Kumar Reddy">PY Pavan Kumar Reddy</option>
+        <option value="R Pedda Reddemma">R Pedda Reddemma</option>
+        <option value="R Rajendran">R Rajendran</option>
+        <option value="R Sandeep Kumar">R Sandeep Kumar</option>
+        <option value="R Suresh">R Suresh</option>
+        <option value="RS Chandra Sekhar">RS Chandra Sekhar</option>
+        <option value="S Chakrapani">S Chakrapani</option>
+        <option value="S Geetha Sri">S Geetha Sri</option>
+        <option value="S Lohitha Sri">S Lohitha Sri</option>
+        <option value="S Madhan Mohan Reddy">S Madhan Mohan Reddy</option>
+        <option value="S Mahaboob Basha">S Mahaboob Basha</option>
+        <option value="S Maruthi Prasad Reddy">S Maruthi Prasad Reddy</option>
+        <option value="S Mounika">S Mounika</option>
+        <option value="S Pravallika Jeevan">S Pravallika Jeevan</option>
+        <option value="S Subramanyam">S Subramanyam</option>
+        <option value="S Suresh Kumar">S Suresh Kumar</option>
+        <option value="S Usman">S Usman</option>
+        <option value="S Vamsi Priya">S Vamsi Priya</option>
+        <option value="SA Kadher Basha">SA Kadher Basha</option>
+        <option value="SKM Basha">SKM Basha</option>
+        <option value="SKMD Basha">SKMD Basha</option>
+        <option value="SSK Gani Reddy">SSK Gani Reddy</option>
+        <option value="SVT Reddy">SVT Reddy</option>
+        <option value="T Dilip Kumar">T Dilip Kumar</option>
+        <option value="T Kannaiah">T Kannaiah</option>
+        <option value="T Kavitha">T Kavitha</option>
+        <option value="T Manoj">T Manoj</option>
+        <option value="T Sasi Kumar">T Sasi Kumar</option>
+        <option value="T Tirumaleswari">T Tirumaleswari</option>
+        <option value="U Padmavathi">U Padmavathi</option>
+        <option value="V Dilli Sekhar">V Dilli Sekhar</option>
+        <option value="V Hari Krishna">V Hari Krishna</option>
+        <option value="V Hari Krishna">V Hari Krishna</option>
+        <option value="V Munnelu">V Munnelu</option>
+        <option value="V Nagendra Babu">V Nagendra Babu</option>
+        <option value="V Rajesh">V Rajesh</option>
+        <option value="V Ravindra">V Ravindra</option>
+        <option value="V Samba Siva Rao">V Samba Siva Rao</option>
+        <option value="V Selvi">V Selvi</option>
+        <option value="V Subramanyam">V Subramanyam</option>
+        <option value="V Suneetha">V Suneetha</option>
+        <option value="V Trilokeswar">V Trilokeswar</option>
+        <option value="VR Siva Narayana">VR Siva Narayana</option>
+        <option value="Y Maneendra Reddy">Y Maneendra Reddy</option>
+        <option value="Y Purohit">Y Purohit</option>
+        <option value="Y Sathish">Y Sathish</option>
+        <option value="O/S Arranged">O/S Arranged</option>
 
-    <div class="logo">
-        <div style="position:fixed;top:15px;right:0px">
-            <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
+        <option value="N/A">N/A</option>
+        <option value="T Manjula">T Manjula</option>
+        <option value="I Penchalaiah">I Penchalaiah</option>
+        <option value="A Sreekanth">A Sreekanth</option>
+        <option value="Nikhil Shukla">Nikhil Shukla</option>
+        <option value="Abhishek Bairava">Abhishek Bairava</option>
+        <option value="Arushi Kumari">Arushi Kumari</option>
+        <option value="A Balaji">A Balaji</option>
+        <option value="U Rajeswari">U Rajeswari</option>
+        <option value="B Shaik Tahira">B Shaik Tahira</option>
+        <option value="A Hemalatha">A Hemalatha</option>
+        <option value="G Balu Aravind">G Balu Aravind</option>
+        <option value="N Pavani">N Pavani</option>
+        <option value="BR Rojavathi">BR Rojavathi</option>
+        <option value="M Rajeswari">M Rajeswari</option>
+        <option value="A Kamakshi">A Kamakshi</option>
+        <option value="K Sreekanth">K Sreekanth</option>
+        <option value="V Swathi">V Swathi</option>
+        <option value="MTV Sai Kumar">MTV Sai Kumar</option>
+    </datalist>
+
+    <div class="row">
+        <div style="text-align:center;height: 50vh;margin-top: 0px;" id="inputContainer" class="col-6 mx-5 my-5">
+
+            <!-- <table class="w-75">
+                <caption class="caption-top text-center fs-2 text-danger">Select GDS Names</caption>
+                <tr class="bg-secondary text-white">
+                    <th class="p-2">GDS No</th>
+                    <th>Name of the GDS</th>
+                </tr>
+                <tr>
+                    <td>GDS-1 @ 17:30</td>
+                    <td>
+                        <input type="text" list="emp" value="G Bala Krishna" class="form-control" id="gds1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>GDS-2 @ 17:30</td>
+                    <td>
+                        <input type="text" list="emp" value="S Subramanyam" class="form-control" id="gds2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>GDS-3 @ 18:00</td>
+                    <td>
+                        <input type="text" list="emp" value="B Raja Naik" class="form-control" id="gds3">
+                    </td>
+                </tr>
+                <tr>
+                    <td>GDS-4 @ 20:00</td>
+                    <td>
+                        <input type="text" list="emp" value="J Dilli Babu"
+                            title="Jambugolam Dilli Babu - Central Govt Employee" class="form-control" id="gds4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>GDS-5 @ 01:00</td>
+                    <td>
+                        <input type="text" list="emp" value="T Manoj" class="form-control" id="gds5">
+                    </td>
+                </tr>
+                <tr>
+                    <td>GDS-6 @ 01:00</td>
+                    <td>
+                        <input type="text" list="emp" value="T Dilip Kumar" class="form-control" id="gds6">
+                    </td>
+                </tr>
+                <tr>
+                    <td>GDS-7 @ 02:00</td>
+                    <td>
+                        <input type="text" list="emp" value="E Murali" class="form-control" id='gds7'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>GDS-8 @ 03:00</td>
+                    <td>
+                        <input type="text" list="emp" value="MTV Sai Kumar" class="form-control" id='gds8'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>GDS-9 @ 03:00</td>
+                    <td>
+                        <input type="text" list="emp" value="SKM Basha" class="form-control" id='gds9'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transfer Data</td>
+                    <td>
+                        <button class="w-75 bg-warning p-2 " onclick="printClick()">Print Set Memo</button>
+                    </td>
+                </tr>
+
+
+            </table> -->
+            <h1 class="bg-success rounded rounded-2 p-2 text-white mb-5">Select GDS Name Here</h1>
+            <dl style="display: grid;grid-template-columns: 6fr 6fr;gap: 10px;" class="w-75">
+
+                <dt><label for="" class="form-label bg-dark text-white p-2 px-3 rounded rounded-2">GDS1 @ 09:00</label>
+                </dt>
+                <dd><input type="text" value="G Bala Krishna" class="form-control" id="gds1" list="emp"></dd>
+
+                <dt><label for="" class="form-label bg-dark text-white p-2 px-3 rounded rounded-2">GDS2 @ 10:30</label>
+                </dt>
+                <dd><input type="text" value="V Subramanyam" class="form-control" id="gds2" list="emp"></dd>
+
+                <dt><label for="" class="form-label bg-dark text-white p-2 px-3 rounded rounded-2">GDS1 @ 14:00</label>
+                </dt>
+                <dd><input type="text" value="M Muni Reddy" class="form-control" id="gds3" list="emp"></dd>
+
+            </dl>
+            <div class="text-end">
+                <button class="my-5 btn btn-danger bg-success" onclick="printClick()">Print Set Memo</button>
+            </div>
+        </div>
+        <div id="outputContainer" class="col-6">
+            <script>
+                var today = new Date();
+                let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
+
+                document.write(`<p style="line-height:23px;text-align:center">Department of Posts :: India <br>Head Record Office, RMS TP Dn., Tirupati - 517501 <br>
+            <u>GDS Annexure Tirupati RMS - 1 Dated : ${mdate}</u></p>`)
+            </script>
+            <table width="750" style="border-collapse: separate;border-spacing: 0px;">
+                <thead>
+                    <tr style="background-color: yellow;" class="text-center">
+                        <th style="border-top-left-radius: 7px;">S.NO</th>
+                        <th>Name of the Outsider<br>worked in Vacant<br>Post</th>
+                        <th>Duty<br>From</th>
+                        <th>Duty<br>To</th>
+                        <th>Total<br>Hrs</th>
+                        <th>Signature of the<br>Outsider</th>
+                        <th style="border-top-right-radius: 7px;">Remarks</th>
+                    </tr>
+                </thead>
+                <tbody align="center">
+                    <tr>
+                        <td>1</td>
+                        <td style="text-align:left;text-indent:10px" id="tblgds1"></td>
+                        <td>09:00:00</td>
+                        <td>10:30:00</td>
+                        <td id="gds1hrs">1.5</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td style="text-align:left;text-indent:10px" id="tblgds2"></td>
+                        <td>10:30:00</td>
+                        <td>13:00:00</td>
+                        <td>2.5</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>3</td>
+                        <td style="text-align:left;text-indent:10px" id="tblgds3"></td>
+                        <td>14:00:00</td>
+                        <td>16:30:00</td>
+                        <td>2.5</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                </tbody>
+                <tfoot align="center">
+                    <tr style="height: 30px;">
+                        <td colspan="4" style="border-bottom-left-radius: 7px;">Total</td>
+                        <td id='gdstotalhrs'>6.5</td>
+                        <td>&nbsp;</td>
+                        <td style="border-bottom-right-radius: 7px;">&nbsp;</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <br>
+            <div class="logo">
+                <div style="position:fixed;top:-3px;right:-15px;z-index: -100;">
+                    <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
+                </div>
+            </div>
+            <br><br>
+            <div style="display: flex;justify-content: space-between;">
+                <div style="text-align: center;">
+                    <p>Head Record Officer<br> RMS TP Dn.,Tirupati</p>
+                </div>
+
+                <div style="text-align:end;">
+                    <p>Signature of the HSA<br> Tirupati RMS - 1</p>
+                </div>
+            </div>
+            <DIV style="text-align: end;">
+                <button class="btn btn-warning bi bi-printer-fill" id="print" onclick="javascript:print()">
+                    Print</button>
+            </DIV>
+            <script>
+
+                function printClick() {
+                    document.getElementById('tblgds1').innerHTML = document.getElementById('gds1').value
+                    document.getElementById('tblgds2').innerHTML = document.getElementById('gds2').value
+                    document.getElementById('tblgds3').innerHTML = document.getElementById('gds3').value
+
+                    document.getElementById('inputContainer').style.display = "none"
+                    // document.getElementById('inputContainer').style.visibility='hidden'
+                    // document.getElementById('inputContainer').classList.add('col-12')
+                    document.getElementById('outputContainer').classList.add('col-12', 'text-center')
+
+                    // if (document.getElementById('gds1').value === 'N Hari Prasad') {
+                    //     alert('success')
+                    // }
+                    // else {
+                    //     document.getElementById('gds1hrs').innerHTML = '5'
+                    //     document.getElementById('gdstotalhrs').innerHTML = '12'
+                    // }
+
+                    window.print()
+                    location.reload()
+                    document.getElementById('inputContainer').style.display = "block"
+                }
+            </script>
         </div>
     </div>
-    <br>
-    <div style="display: flex;justify-content: space-between;">
-        <div style="text-align: center;">
-            <h4>Head Record Officer<br> RMS TP Dn.,Tirupati</h4>
-        </div>
-    
-        <div style="text-align: center;">
-            <h4>Signature of the HSA<br> Tirupati RMS/1</h4>
-        </div>
-    </div>
-    <DIV style="text-align: end;">
-        <button style=" width: 150px;height: 40px;font-size: 20px;background-color: orange;color:white;" id="print" onclick="javascript:print()">Print</button>
-    </DIV>
-
-
 </body>
 
 </html>

@@ -4,39 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tirupati RMS/1</title>
+    <title>Tirupati RMS - 1 Set Memo</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
 
     <link rel="stylesheet" href="../../src/fromtotable.css">
+
+    <style>
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        #sname,
+        #outputContainer,
+        .logo,
+        #hrosign,
+        #title {
+            display: none;
+        }
+
+        @media print {
+
+            #inputContainer,
+            #setname {
+                display: none;
+            }
+
+            #sname,
+            #outputContainer,
+            .logo,
+            #hrosign,
+            #title {
+                display: block;
+            }
+
+            #outputContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
 
 
 </head>
 
 <body>
-    <div class="row text-center">
-        <h5>भारतीय डाक विभाग<br>Department of Posts :: India <br>प्रधान अभिलेख अधिकारी रेल डाक सेवा टि. पि. मंडल तिरुपति
-            कार्यालय - 517501<br>Head Record Office, RMS TP Division., Tirupati - 517501 </h5>
-    </div>
-    <hr>
+
+    <h1 class="bg-success text-white text-center p-3 my-3" id="setname">Tirupati RMS - 1</h1>
+    <h5 class="text-center mt-2" style="font-size: 18px;" id="title">भारतीय डाक विभाग<br>Department of Posts :: India <br>प्रधान अभिलेख अधिकारी रेल
+        डाक सेवा टि. पि. मंडल तिरुपति
+        कार्यालय - 517501<br>Head Record Office, RMS TP Division., Tirupati - 517501 </h5>
+    <br>
+
     <div id="sname" style="margin-top: 12px;">
-        <table rules="all" border="1" width="720">
-            <tr align="center" valign="center" style="border: 1px solid black;">
-                <th>
-                    <h5>SET MEMO</h5>
+        <table width="720" style="border-collapse: separate;" cellspacing="0" cellpadding="10">
+            <tr style="text-align: center;">
+                <th style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                    <h5 style="padding-top: 5px;font-size: 18px;">SET MEMO</h5>
                 </th>
             </tr>
-            <tr align="center" valign="center" style="border: 1px solid black;">
-                <th>
-                    <h5 id="setTable">&nbsp;</h5>
+            <tr style="text-align: center;font-size: 20px !important;">
+                <th style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                    <h5 id="setTable" style="padding-top: 5px;font-size: 18px;">&nbsp;</h5>
                 </th>
             </tr>
         </table>
     </div>
-    <div class="row mt-1">
+    <br>
+    <div>
         <datalist id="emp">
             <option value="A Anuradha">A Anuradha</option>
             <option value="A Mani">A Mani</option>
@@ -232,65 +276,54 @@
             <option value="A Kamakshi">A Kamakshi</option>
             <option value="K Sreekanth">K Sreekanth</option>
             <option value="V Swathi">V Swathi</option>
+            <option value="N Uday Kumar">N Uday Kumar</option>
         </datalist>
-        <div class="col-5 text-center">
-            <formm>
-                <div class="d-flex">
-                    <div class="col-6">
-                        <div class="">
-                            <input type="text" name="HSA" id="HSA" placeholder="HSA/MSA" class="form-control"
-                                list="emp">
-                        </div>
+    </div>
 
 
-
-                        <div>
-                            <input type="text" name="SA1" id="SA1" placeholder="SA-1" class="mt-3 form-control"
-                                list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="SA2" id="SA2" placeholder="SA-2" class="mt-3 form-control"
-                                list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="SA3" id="SA3" placeholder="SA-3" class="mt-3 form-control"
-                                list="emp">
-                        </div>
-                        <div>
-                            <input type="text" name="MTS1" id="MTS1" placeholder="MTS-1" class="mt-3 form-control"
-                                list="emp">
-                        </div>
-
-                    </div>
-
-                    <div class="col-6">
-
-
-                        <button class="btn btn-success w-50 " onclick="bodyLoad()"><span class="bi bi-arrow-right fs-5">
-                                Transfer</span></button>
-                        <button class="btn btn-success w-50 mt-3" id="print" onclick="javascript:print()"><span
-                                class="bi bi-printer fs-5"></span> Print</button>
-                        <button class="btn btn-success w-50 mt-3" onclick="ValueReset()" type="reset"><span
-                                class="bi bi-x-lg fs-5"> Clear</span></button>
-                        <a href="../../index.html">
-                            <button class="btn btn-success w-50 mt-3"><span class="bi bi-house-door fs-5">
-                                    Home</span></button>
-                        </a>
-
-                    </div>
+    <div class="row">
+        <div id="inputContainer" class="col-6 p-5 text-center">
+            <div>
+                <h1 class="bg-success text-white text-center p-2 mb-5 rounded rounded-2">Select Official Name Here</h1>
+                <div class="w-50">
+                    <input type="text" name="HSA" id="HSA" placeholder="HSA" class="form-control border-dark"
+                        list="emp">
                 </div>
 
-                </form>
+                <div class="w-50">
+                    <input type="text" name="SA1" id="SA1" placeholder="SA-1" class="mt-3 form-control border-dark"
+                        list="emp">
+                </div>
+                <div class="w-50">
+                    <input type="text" name="SA2" id="SA2" placeholder="SA-2" class="mt-3 form-control border-dark"
+                        list="emp">
+                </div>
+                <div class="w-50">
+                    <input type="text" name="SA3" id="SA3" placeholder="SA-3" class="mt-3 form-control border-dark"
+                        list="emp">
+                </div>
+
+                <div class="w-50">
+                    <input type="text" name="MTS1" id="MTS1" placeholder="MTS-1" class="mt-3 form-control border-dark"
+                        list="emp">
+                </div>
+                <div class="w-50">
+                    <button class="btn btn-success mt-5 w-100" onclick="printClick()"><span
+                            class="bi bi-printer-fill fs-5">
+                            Print Set Memo</span></button>
+                </div>
+            </div>
         </div>
-        <div class="col-6 mainTable">
-            <table class="table-bordered mt-1" width="720" contenteditable="true">
+
+        <div class="col-6 fw-bold" id="outputContainer">
+            <table class="mt-1" width="720" style="border-collapse: separate;border-spacing: 0px;">
                 <thead>
                     <tr class="toprow">
-                        <th rowspan="2" width="110">Designation</th>
+                        <th rowspan="2" width="110" style="border-top-left-radius: 10px;">Designation</th>
                         <th rowspan="2" width="290px">Name of the Official<br>( Shri/Smt/Kum )</th>
                         <th rowspan="2" width="110">Designation</th>
                         <th rowspan="2" width="290px">Name of the Official<br>( Shri/Smt/Kum )</th>
-                        <th colspan="2" width="120">Working Hours</th>
+                        <th colspan="2" width="120" style="border-top-right-radius: 10px;">Working Hours</th>
                     </tr>
                     <tr class="toprow">
                         <th width="100">From</th>
@@ -307,22 +340,22 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td id="rightAlign">HSA/MSA &nbsp;</td>
+                        <td id="rightAlign">HSA | MSA &nbsp;</td>
                         <td id="hsatest" class="indent"></td>
                         <td id="rightAlign">MTS-1 &nbsp;</td>
                         <td id="mts1test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
+                        <td align="center">08:45:00</td>
+                        <td align="center">16:45:00</td>
                     </tr>
 
-                    <tr>
-                        <td id="rightAlign"> &nbsp;</td>
-                        <td id="" class="indent"></td>
+                    <!-- <tr>
+                        <td id="rightAlign">&nbsp;</td>
+                        <td id="tmo2mg" class="indent"></td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -336,7 +369,7 @@
                         <td id="spsa1test" class="indent"></td>
                         <td id="rightAlign">GDS-1 &nbsp;</td>
                         <td class="indent">O/S Arranged</td>
-                        <td align="center">09:30:00</td>
+                        <td align="center">09:00:00</td>
                         <td align="center">10:30:00</td>
                     </tr>
                     <tr>
@@ -365,19 +398,21 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
+                        <td style="border-bottom-left-radius: 10px;">&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td style="border-bottom-right-radius: 10px;">&nbsp;</td>
                     </tr>
 
                 </tbody>
             </table>
 
         </div>
+
     </div>
+    <hr>
 
     <div class="logo">
         <div class="leftlogo">
@@ -388,23 +423,21 @@
 
         </div>
     </div>
-    <div style="text-align: end; margin-right: 15px;">
-        <h5>प्रधान अभिलेख अधिकारी <br> रेल डाक सेवा टि.पि. मंडल तिरुपति-517 501 <br>Head Record Officer<br> RMS TP Dn.,
+    <div style="text-align: end;margin-right: 15px;" id="hrosign">
+        <h5 style="font-size: 18px;">प्रधान अभिलेख अधिकारी <br> रेल डाक सेवा टि.पि. मंडल तिरुपति-517 501 <br>Head Record Officer<br> RMS TP Dn.,
             Tirupati - 517501</h5>
     </div>
 
     <script>
-        function bodyLoad() {
-            // alert(`జంబుగోళం డిల్లీ బాబు ఈ కిందివి సరిగ్గా ఉన్నాయో లేడో చూసుకోమని చెబుతున్నాడు....
-            //         1. మీ ప్రింటర్ పవర్ ఆన్ చేసి ఉన్నాడో లేదో చూసుకోండి.
-            //         2. ప్రింటింగ్ కి పేపర్ లోడ్ చేసి ఉన్నాడో లేదో చూసుకోండి.`);
-            alert("Data Transfer Success...!");
-            var today = new Date();
-            let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-            var mdate = `${days[today.getDay() + 1]}, ${today.getDate() + 1} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
+        function printClick() {
 
-            document.getElementById("setTable").innerHTML = `Tirupati RMS/1 Dated : ${mdate} & Working Hours From 17:30 To 06:00`;
+            var today = new Date();
+
+            let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
+
+            document.getElementById("setTable").innerHTML = `Tirupati RMS - 1 Dated : ${mdate} & Working Hrs 17:30 To 06:00`;
 
             var tdhsa = document.getElementById("HSA").value;
             // var tdmsa = document.getElementById("MG").value;
@@ -424,25 +457,18 @@
 
             document.getElementById("mts1test").innerHTML = mts1;
 
-        }
+            document.getElementById('inputContainer').style.display = 'none'
 
-        function ValueReset() {
-            HSA.value = "";
-            // MG.value="";
+            document.getElementById('outputContainer').style.display = 'block'
+            document.getElementById('outputContainer').classList.add('col-12')
 
-            SA1.value = "";
-            SA2.value = "";
-            SA3.value = "";
-
-            MTS1.value = "";
+            window.print()
+            location.reload()
 
         }
 
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 
 </body>
 
