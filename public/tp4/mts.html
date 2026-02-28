@@ -70,7 +70,8 @@
 <body onload="PageLoad()">
     <div class="row">
         <div class="col-3 mt-5 p-4 bg-success position-relative w-50 p-5 rounded rounded-5" style="height: 80vh;">
-            <h1 class="text-center fw-bold bg-danger text-white p-2 rounded rounded-3">MTS ANNEXURE TP - 4 - OUT & IN</h1>
+            <h1 class="text-center fw-bold bg-danger text-white p-2 rounded rounded-3">MTS ANNEXURE TP - 4 - OUT & IN
+            </h1>
             <div style="display: flex;flex-direction: row;justify-content: space-between; align-items: center;">
                 <input type="text" name="" id="MTS" list="emplist" class="form-control  w-75 my-3"
                     placeholder="Enter MTS Name">
@@ -276,10 +277,21 @@
             <div style="text-align:center;">
                 <script>
                     var today = new Date();
+                    
+                    var detailDay = today.getDay() + 1;
+                    if (detailDay === 7) {
+                        detailDay = 0;
+                    }
+
                     let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
                     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
-                    var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
+                    
+                    if(today.getMonth()=='1'&& today.getDate()=='28'){
+                        var mdate1='01'
+                    }
+                    // alert(mdate1)
+                    var mdate = `${days[detailDay]}, ${mdate1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
+                    // var mdate = `${days[detailDay]}, ${today.toLocaleDateString()}`;
                     document.write(`<h6 style="text-align:center;line-height:22px;"><strong>Department of Posts :: India <br>Head Record Office, RMS TP Dn., Tirupati - 517501 <br>
                                     <u>MTS Annexure TP - 4 OUT & IN Dated : ${mdate}</u></strong></h6>`)
                 </script>
@@ -376,6 +388,16 @@
                     </script>
                 </tbody>
                 <tfoot align="center">
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
                     <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>

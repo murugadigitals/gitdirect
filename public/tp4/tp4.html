@@ -105,7 +105,7 @@
 
 </head>
 
-<body onload="">
+<body contenteditable="true">
 
     <header>
         <div class="ashok">
@@ -405,15 +405,19 @@
         </div>
 
         <script>
-            // MG.focus();
+            MA.focus();
             function bodyLoad() {
 
                 // alert("Data Transfer Success...!");
                 alert("Attention Required ....\n\nMake sure that A4 Sheet loaded...")
                 var today = new Date();
                 var detailDay = today.getDay() + 1;
+                // alert(detailDay)
                 if (detailDay === 7) {
                     detailDay = 0;
+                }
+                if (detailDay === 8) {
+                    detailDay = 1;
                 }
 
                 if(today.getDay()==0){
@@ -437,10 +441,19 @@
                 else if(today.getDay()==6){
                     document.getElementById('setNo').innerHTML=`SET : 7 `
                 }
+                else if(today.getDay()==7){
+                    document.getElementById('setNo').innerHTML=`SET : 1 `
+                }
+                
 
                 let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
                 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                var mdate = `${days[detailDay]}, ${today.getDate() + 1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
+                
+                if(today.getMonth()==1 && today.getDate()=='28'){
+                    var mdate1='01'
+                }
+
+                var mdate = `${days[detailDay]}, ${mdate1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
 
                 document.getElementById("dayname").innerHTML = ` Duty On : ${mdate}`;
 
