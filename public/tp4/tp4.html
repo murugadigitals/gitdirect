@@ -453,7 +453,7 @@
                     var mdate1='01'
                 }
 
-                var mdate = `${days[detailDay]}, ${mdate1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
+                var mdate = `${days[detailDay]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
 
                 document.getElementById("dayname").innerHTML = ` Duty On : ${mdate}`;
 
