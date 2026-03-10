@@ -4,37 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tirupati HUB/1</title>
-  
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-    
+    <title>Tirupati HUB - 1</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+
+
     <link rel="stylesheet" href="../../src/fromtotable.css">
+
+    <style>
+        * {
+            font-family: Arial;
+            font-weight: bold !important;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #mainTable,
+        #sname {
+            display: none !important;
+        }
+
+        #keepCenter {
+            position: relative;
+            left: 320px;
+        }
+
+        td,
+        th,
+        tr {
+            border: 1px solid black;
+        }
+
+        @media print {
+
+            #mainTable,
+            #sname {
+                display: block !important;
+            }
+
+            #keepCenter {
+                display: none;
+            }
+
+            .logo {
+                display: block !important;
+            }
+
+            #hrosign,
+            #head {
+                display: block !important;
+            }
+        }
+    </style>
 
 
 </head>
 
 <body>
-    <div class="row text-center">
+    <div class="text-center" style="display: none;" id="head">
         <h5>भारतीय डाक विभाग<br>Department of Posts :: India <br>प्रधान अभिलेख अधिकारी रेल डाक सेवा टि. पि. मंडल तिरुपति
-            कार्यालय - 517501<br>Head Record Office, RMS TP Division., Tirupati - 517501 </h5>
+            कार्यालय - 517501<br>Head Record Office, RMS TP Dn., Tirupati - 517501 </h5>
     </div>
-    <hr>
-    <div id="sname" style="margin-top: 22px;">
-        <table rules="all" border="1" width="720" align="center" contenteditable="true">
-                <tr align="center" style="border: 1px solid black;text-align: center;">
-                    <th align="center">
-                        <h5>SET MEMO</h5>
-                    </th>
-                </tr>
-                <tr align="center" style="border: 1px solid black;text-align: center;">
-                    <th align="center">
-                        <h5 id="setTable">&nbsp;</h5>
-                    </th>
-                </tr>
+
+    <div id="sname" style="margin-top: 20px;">
+        <table cells='0' width="750" style="border-collapse:separate;">
+            <tr style="text-align: center;font-size: 20px;">
+                <th style="border-top-left-radius: 5px;border-top-right-radius: 5px;">
+                    <h5 style="padding-top: 5px;">SET MEMO</h5>
+                </th>
+            </tr>
+            <tr style="text-align: center;font-size: 20px;">
+                <th style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+                    <h5 style="padding-top: 5px;" id="setTable">&nbsp;</h5>
+                </th>
+            </tr>
         </table>
     </div>
+
     <br>
     <div class="row mt-1">
         <datalist id="emp">
@@ -213,258 +266,331 @@
             <option value="Y Purohit">Y Purohit</option>
             <option value="Y Sathish">Y Sathish</option>
             <option value="O/S Arranged">O/S Arranged</option>
+
+            <option value="N/A">N/A</option>
+            <option value="T Manjula">T Manjula</option>
+            <option value="I Penchalaiah">I Penchalaiah</option>
+            <option value="A Sreekanth">A Sreekanth</option>
+            <option value="Nikhil Shukla">Nikhil Shukla</option>
+            <option value="Abhishek Bairava">Abhishek Bairava</option>
+            <option value="Arushi Kumari">Arushi Kumari</option>
+            <option value="A Balaji">A Balaji</option>
+            <option value="U Rajeswari">U Rajeswari</option>
+            <option value="B Shaik Tahira">B Shaik Tahira</option>
+            <option value="A Hemalatha">A Hemalatha</option>
+            <option value="G Balu Aravind">G Balu Aravind</option>
+            <option value="N Pavani">N Pavani</option>
+            <option value="BR Rojavathi">BR Rojavathi</option>
+            <option value="M Rajeswari">M Rajeswari</option>
+            <option value="A Kamakshi">A Kamakshi</option>
+            <option value="K Sreekanth">K Sreekanth</option>
+            <option value="V Swathi">V Swathi</option>
+            <option value="MTV Sai Kumar">MTV Sai Kumar</option>
+
         </datalist>
-        <div class="col-5 text-center">
+        <div class="col-10 text-center" id="keepCenter">
             <formm>
-                <div class="d-flex">
-                    <div class="col-6">
+                <div class="d-flex gap-5">
+                    <div class="col-3">
                         <div class="">
-                            <input type="text" name="HSA" id="HSA" placeholder="HSA" class="form-control" list="emp">
+                            <input type="text" name="HSA" id="txtHsa" placeholder="HSA" class="form-control" list="emp">
+                        </div>
+                        <div class="">
+                            <input type="text" name="SUP" id="txtSuper" placeholder="Supervisor" class="mt-3 form-control"
+                                list="emp" hidden>
                         </div>
                         <div>
-                            <input type="text" name="MSA1" id="MSA1" placeholder="MSA1" class="mt-3 form-control" list="emp">
+                            <input type="text" name="MSA1" id="txtMsa1" placeholder="MSA-1" class="mt-3 form-control"
+                                list="emp">
                         </div>
                         <div>
-                            <input type="text" name="MSA2" id="MSA2" placeholder="MSA2" value="N/A" class="mt-3 form-control" readonly list="emp">
-                        </div>
-
-                        <div>
-                            <input type="text" name="SPSA1" id="SPSA1" placeholder="SPSA-1" class="mt-3 form-control"
-                            list="emp">
+                            <input type="text" name="MSA2" id="txtMsa2" placeholder="MSA-2" class="mt-3 form-control"
+                                list="emp" hidden>
                         </div>
                         <div>
-                            <input type="text" name="SPSA2" id="SPSA2" placeholder="SPSA-2" class="mt-3 form-control"
-                            list="emp">
+                            <input type="text" name="SPSA1" id="txtSpsa1" placeholder="SPSA-1" class="mt-3 form-control"
+                                list="emp">
                         </div>
                         <div>
-                            <input type="text" name="SPSA3" id="SPSA3" placeholder="SPSA-3" class="mt-3 form-control"
-                            list="emp">
+                            <input type="text" name="SPSA2" id="txtSpsa2" placeholder="SPSA-2" class="mt-3 form-control"
+                                list="emp">
                         </div>
                         <div>
-                            <input type="text" name="SPSA4" id="SPSA4" placeholder="SPSA-4" class="mt-3 form-control"
-                            list="emp">
+                            <input type="text" name="SPSA3" id="txtSpsa3" placeholder="SPSA-3" class="mt-3 form-control"
+                                list="emp">
                         </div>
                         <div>
-                            <input type="text" name="SPSA5" id="SPSA5" placeholder="SPSA-5" class="mt-3 form-control"
-                            list="emp">
+                            <input type="text" name="SPSA4" id="txtSpsa4" placeholder="SPSA-4" class="mt-3 form-control"
+                                list="emp">
                         </div>
                         <div>
-                            <input type="text" name="SPSA6" id="SPSA6" placeholder="SPSA-6" class="mt-3 form-control"
-                            list="emp" >
+                            <input type="text" name="SPSA5" id="txtSpsa5" placeholder="SPSA-5" class="mt-3 form-control"
+                                list="emp">
                         </div>
-                        
-
                         <div>
-                            <input type="text" name="PSA1" id="PSA1" placeholder="PSA-1" class="mt-3 form-control" list="emp">
+                            <input type="text" name="SPSA6" id="txtSpsa6" placeholder="SPSA-6" class="mt-3 form-control"
+                                list="emp">
                         </div>
-
                         <div>
-                            <input type="text" name="PSA2" id="PSA2" placeholder="PSA-2" class="mt-3 form-control" list="emp">
+                            <input type="text" name="SPSA7" id="txtSpsa7" placeholder="SPSA-7" class="mt-3 form-control"
+                                list="emp">
+                        </div>
+                        <div>
+                            <input type="text" name="SPSA8" id="txtSpsa8" placeholder="Extra SPSA-8"
+                                class="mt-3 form-control" list="emp" disabled>
                         </div>
 
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-3">
+                        <div>
+                            <input type="text" name="PSA1" id="txtPsa1" placeholder="PSA-1" class="form-control"
+                                list="emp">
+                        </div>
 
                         <div>
-                            <input type="text" name="MTS1" id="MTS1" placeholder="MTS-1" class="form-control" list="emp">
+                            <input type="text" name="PSA2" id="txtPsa2" placeholder="PSA-2" class="mt-3 form-control"
+                                list="emp">
                         </div>
                         <div>
-                            <input type="text" name="MTS2" id="MTS2" placeholder="MTS-2" class="mt-3 form-control" list="emp">
+                            <input list="emp" type="text" name="MG1" id="txtPsa3" placeholder="PSA - 3"
+                                class=" mt-3 form-control">
                         </div>
                         <div>
-                            <input type="text" name="MTS3" id="MTS3" placeholder="MTS-3" class="mt-3 form-control" list="emp">
+                            <input type="text" name="MG2" id="txtPsa4" placeholder="Extra PSA"
+                                class="mt-3 form-control" list="emp" disabled>
+                        </div>
+
+                        <div>
+                            <input type="text" name="MTS1" id="txtMts1" placeholder="MTS-1" class="mt-3 form-control"
+                                list="emp">
                         </div>
                         <div>
-                            <input type="text" name="MTS4" id="MTS4" placeholder="MTS-4" class="mt-3 form-control" list="emp">
+                            <input type="text" name="MTS2" id="txtMts2" placeholder="MTS-2" class="mt-3 form-control"
+                                list="emp">
                         </div>
                         <div>
-                            <input type="text" name="MTS5" id="MTS5" placeholder="MTS-5" class="mt-3 form-control" list="emp">
+                            <input type="text" name="MTS3" id="txtMts3" placeholder="MTS-3" class="mt-3 form-control"
+                                list="emp">
                         </div>
-                        <button class="btn btn-success w-50 mt-3" onclick="bodyLoad()"><span class="bi bi-arrow-right fs-5"> Transfer</span></button>
-                        <button class="btn btn-success w-50 mt-3" id="print" onclick="javascript:print()"><span class="bi bi-printer fs-5"> Print</span></button>
-                        <button class="btn btn-success w-50 mt-3" onclick="ValueReset()" type="reset"><span class="bi bi-x-lg fs-5"> Clear</span></button></button>
+                        <div>
+                            <input type="text" name="MTS4" id="txtMts4" placeholder="MTS-4" class="mt-3 form-control"
+                                list="emp">
+                        </div>
+                        <div>
+                            <input type="text" name="MTS5" id="txtMts5" placeholder="MTS-5" class="mt-3 form-control"
+                                list="emp">
+                        </div>
+                        <div>
+                            <input type="text" name="MTS6" id="txtMts6" placeholder="MTS-6" class="mt-3 form-control"
+                                list="emp">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <button class=" btn btn-success w-50 " onclick="bodyLoad()"><span
+                                class="bi bi-printer-fill fs-5"> Print</span></button>
+                        <button class="btn btn-success w-50 mt-3" id="print" onclick="javascript:print()" hidden><span
+                                class="bi bi-printer fs-5"></span> Print</button>
+                        <button class="btn btn-success w-50 mt-3" onclick="ValueReset()" type="reset" hidden><span
+                                class="bi bi-x-lg fs-5"> Clear</span></button>
                         <a href="../../index.html">
-                            <button class="btn btn-success w-50 mt-3"><span class="bi bi-house-door fs-5"> Home</span></button>
+                            <button class="btn btn-success w-50 mt-3" onclick="PreviewClick()" hidden><span
+                                    class="bi bi-house-door fs-5">
+                                    Preview</span></button>
                         </a>
-                        
+                        <button class=" btn btn-success w-50 my-3" onclick="enableSPSA()"><span
+                                class="bi bi-printer-fill fs-5"> Enable Extra SPSA</span></button>
+                        <button class=" btn btn-success w-50 my-3" onclick="enablePSA()"><span
+                                class="bi bi-printer-fill fs-5"> Enable Extra PSA</span></button>
+
                     </div>
                 </div>
 
-                
-            </form>
+
+                </form>
         </div>
-        <div class="col-6 mainTable">
-            <table class="table-bordered mt-1" width="720" contenteditable="true">
+        <div class="col-2" id="mainTable">
+            <table width="750" contenteditable="true" style="border-collapse: separate;border-spacing: 0px;">
                 <thead>
                     <tr class="toprow">
+                        <th rowspan="2" width="125" style="border-top-left-radius: 7px;">Designation</th>
+                        <th rowspan="2" width="320px">Name of the Official<br>( Shri/Smt/Kum )</th>
                         <th rowspan="2" width="110">Designation</th>
-                        <th rowspan="2" width="290px">Name of the Official<br>( Shri/Smt/Kum )</th>
-                        <th rowspan="2" width="110">Designation</th>
-                        <th rowspan="2" width="290px">Name of the Official<br>( Shri/Smt/Kum )</th>
-                        <th colspan="2" width="120">Working Hours</th>
+                        <th rowspan="2" width="330px">Name of the Official<br>( Shri/Smt/Kum )</th>
+                        <th colspan="2" width="120" style="border-top-right-radius: 7px;">Working Hours</th>
                     </tr>
                     <tr class="toprow">
-                        <th width="100">From</th>
-                        <th width="100">To</th>
+                        <th width="75">From</th>
+                        <th width="75">To</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
                         <td id="rightAlign">HSA &nbsp;</td>
-                        <td id="hsatest" class="indent"></td>
+                        <td id="hsa" style="font-size: 15px;" class="indent"></td>
                         <td id="rightAlign">MTS-1 &nbsp;</td>
-                        <td id="mts1test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
+                        <td class="indent" id="mts1"></td>
+                        <td align="center">08:45:00</td>    
+                        <td align="center">16:45:00</td>
                     </tr>
                     <tr>
-                        <td id="rightAlign">MSA-1 &nbsp;</td>
-                        <td id="msa1test" class="indent"></td>
+                         <td id="rightAlign">&nbsp;</td>
+                        <td id="super" class="indent">&nbsp;</td>
                         <td id="rightAlign">MTS-2 &nbsp;</td>
-                        <td id="mts2test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
+                        <td class="indent" id="mts2"></td>
+                        <td align="center">08:45:00</td>    
+                        <td align="center">16:45:00</td>
                     </tr>
                     <tr>
-                        <td id="rightAlign">MSA-2 &nbsp;</td>
-                        <td id="msa2test" class="indent"></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
                         <td id="rightAlign">MTS-3 &nbsp;</td>
-                        <td id="mts3test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td id="rightAlign">MTS-4 &nbsp;</td>
-                        <td id="mts4test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-1 &nbsp;</td>
-                        <td id="spsa1test" class="indent"></td>
-                        <td id="rightAlign"> APMTS-5 &nbsp;</td>
-                        <td id="mts5test" class="indent"></td>
-                        <td align="center">17:30:00</td>
-                        <td align="center">06:00:00</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-2 &nbsp;</td>
-                        <td id="spsa2test" class="indent"></td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-3 &nbsp;</td>
-                        <td id="spsa3test" class="indent"></td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-4 &nbsp;</td>
-                        <td id="spsa4test" class="indent"></td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-5 &nbsp;</td>
-                        <td id="spsa5test" class="indent"></td>
-                        <td id="rightAlign">GDS-1 &nbsp;</td>
-                        <td id="" class="indent">O/S Arranged</td>
-                        <td align="center">08:45:00<br>14:00:00</td>
-                        <td align="center">09:30:00<br>14:30:00</td>
-                    </tr>
-                    <tr>
-                        <td id="rightAlign">SPSA-6 &nbsp;</td>
-                        <td id="spsa6test" class="indent"></td>
-                        <td id="rightAlign">GDS-2 &nbsp;</td>
-                        <td id="" class="indent">O/S Arranged</td>
-                        <td align="center">11:45:00<br>16:00:00</td>
-                        <td align="center">12:30:00<br>16:30:00</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td class="indent" id="mts3"></td>
+                        <td align="center">08:45:00</td>    
+                        <td align="center">16:45:00</td>
                     </tr>
 
                     <tr>
+                        <td id="rightAlign">MSA-1 &nbsp;</td>
+                        <td id="msa1" class="indent"></td>
+                        <td id="rightAlign">MTS-4 &nbsp;</td>
+                        <td class="indent" id="mts4"></td>
+                        <td align="center">08:45:00</td>    
+                        <td align="center">16:45:00</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">&nbsp;</td>
+                        <td id="msa2" class="indent">&nbsp;</td>
+                        <td id="rightAlign">MTS-5 &nbsp;</td>
+                        <td class="indent" id="mts5"></td>
+                        <td align="center">08:45:00</td>    
+                        <td align="center">16:45:00</td>
+                    </tr>
+                    <tr>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
+                        <td id="rightAlign">AP MTS-6 &nbsp;</td>
+                        <td class="indent" id="mts6"></td>
+                        <td align="center" >08:00:00<br>14:00:00</td>
+                        <td align="center" >11:00:00<br>18:00:00</td>
+                    
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">SPSA-1 &nbsp;</td>
+                        <td id="spsa1" class="indent"></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">SPSA-2 &nbsp;</td>
+                        <td id="spsa2" class="indent"></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">SPSA-3 &nbsp;</td>
+                        <td id="spsa3" class="indent"></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">SPSA-4 &nbsp;</td>
+                        <td id="spsa4" class="indent"></td>
+                        <td id="rightAlign">GDS-1 &nbsp;</td>
+                        <td class="indent">O/S Arranged</td>
+                        <td align="center">10:00:00</td>
+                        <td align="center">15:00:00</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">SPSA-5 &nbsp;</td>
+                        <td id="spsa5" class="indent"></td>
+                        <td id="rightAlign">GDS-2 &nbsp;</td>
+                        <td class="indent">O/S Arranged</td>
+                        <td align="center">10:30:00<br>14:00:00</td>
+                        <td align="center">13:00:00<br>16:30:00</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">SPSA-6 &nbsp;</td>
+                        <td id="spsa6" class="indent"></td>
+                        <td id="rightAlign">GDS-3 &nbsp;</td>
+                        <td class="indent">O/S Arranged</td>
+                        <td align="center">09:00:00</td>
+                        <td align="center">10:00:00</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">SPSA-7 &nbsp;</td>
+                        <td id="spsa7" class="indent"></td>
+                        <td id="rightAlign">GDS-4 &nbsp;</td>
+                        <td class="indent">O/S Arranged</td>
+                        <td align="center">09:00:00</td>
+                        <td align="center">10:00:00</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign" class="extrasorters" id="extra1"></td>
+                        <td id="spsa8" class="indent"></td>
+                        <td id="rightAlign">GDS-5 &nbsp;</td>
+                        <td class="indent">O/S Arranged</td>
+                        <td align="center">09:00:00</td>
+                        <td align="center">10:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td id="rightAlign">GDS-6 &nbsp;</td>
+                        <td class="indent">O/S Arranged</td>
+                        <td align="center">14:00:00</td>
+                        <td align="center">16:00:00</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">PSA-1 &nbsp;</td>
+                        <td id="psa1" class="indent"></td>
+                        <td id="rightAlign">GDS-7 &nbsp;</td>
+                        <td class="indent">O/S Arranged</td>
+                        <td align="center">14:00:00</td>
+                        <td align="center">16:00:00</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">PSA-2 &nbsp;</td>
+                        <td id="psa2" class="indent"></td>
+                        <td id="rightAlign">GDS-8 &nbsp;</td>
+                        <td class="indent">O/S Arranged</td>
+                        <td align="center">14:15:00</td>
+                        <td align="center">16:45:00</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign">PSA-3 &nbsp;</td>
+                        <td id="psa3" class="indent"></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="rightAlign" id="extra2">&nbsp;</td>
+                        <td id="psa4" class="indent"></td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
                     
+                    
                     <tr>
-                        <td id="rightAlign">PSA-1 &nbsp;</td>
-                        <td id="psa1test" class="indent"></td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
+                        <td style="border-bottom-left-radius: 7px;">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="border-bottom-right-radius: 7px;">&nbsp;</td>
+
                     </tr>
-                    <tr>
-                        <td id="rightAlign">PSA-2 &nbsp;</td>
-                        <td id="psa2test" class="indent"></td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                        <td id="rightAlign">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
+
 
                 </tbody>
             </table>
@@ -472,7 +598,7 @@
         </div>
     </div>
 
-    <div class="logo">
+    <div class="logo" style="display: none;">
         <div class="leftlogo">
             <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">
         </div>
@@ -481,91 +607,131 @@
 
         </div>
     </div>
-    <div style="text-align: end;margin-right: 15px;">
-        <h5>प्रधान अभिलेख अधिकारी <br> रेल डाक सेवा टि.पि. मंडल तिरुपति-517 501 <br>Head Record Officer<br> RMS TP Dn.,
-            Tirupati - 517501</h5>
+    <div style="text-align: end;margin-right: 15px;display: none;" id=hrosign>
+        <p>प्रधान अभिलेख अधिकारी <br> रेल डाक सेवा टि.पि. मंडल तिरुपति-517 501 <br>Head Record Officer<br> RMS TP Dn.,
+            Tirupati - 517501</p>
     </div>
 
     <script>
-        HSA.focus();
+        // document.getElementById('rightAlign').innerHTML=''
         function bodyLoad() {
+            alert("Data Transfer Success...!\n\n\nChoose Print Option to Print SET Memo");
 
-            alert("Data Transfer Success...!");
-            var today=new Date();
+
+            var today = new Date();
+
+            let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
             
-            let days=["Sunday","Monday","Tueday","Wednesday","Thursday","Friday","Saturday"];
-            let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-            var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
-           
-            document.getElementById("setTable").innerHTML=`Tirupati HUB-1 Dated : ${mdate} & Working Hours From 08:45 To 16:45`;
+            var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
 
-            var tdhsa = document.getElementById("HSA").value;
-            var tdmsa1 = document.getElementById("MSA1").value;
-            var tdmsa2 = document.getElementById("MSA2").value;
+            document.getElementById("setTable").innerHTML = `Tirupati HUB - 1 Dated : ${mdate+1} & Working Hours From 08:45:00 To 16:45:00`;
 
-            var spsa1 = document.getElementById("SPSA1").value;
-            var spsa2 = document.getElementById("SPSA2").value;
-            var spsa3 = document.getElementById("SPSA3").value;
-            var spsa4 = document.getElementById("SPSA4").value;
-            var spsa5 = document.getElementById("SPSA5").value;
-            var spsa6 = document.getElementById("SPSA6").value;
+            var tdhsa = document.getElementById("txtHsa").value;
+            var tdsup = document.getElementById("txtSuper").value;
 
-            var psa1 = document.getElementById("PSA1").value;
-            var psa2 = document.getElementById("PSA2").value;
+            var tdmsa1 = document.getElementById("txtMsa1").value;
+            var tdmsa2 = document.getElementById("txtMsa2").value;
+
+            var spsa1 = document.getElementById("txtSpsa1").value;
+            var spsa2 = document.getElementById("txtSpsa2").value;
+            var spsa3 = document.getElementById("txtSpsa3").value;
+            var spsa4 = document.getElementById("txtSpsa4").value;
+            var spsa5 = document.getElementById("txtSpsa5").value;
+            var spsa6 = document.getElementById("txtSpsa6").value;
+            var spsa7 = document.getElementById("txtSpsa7").value;
+            var exspsa = document.getElementById("txtSpsa8").value;
+
+            var psa1 = document.getElementById("txtPsa1").value;
+            var psa2 = document.getElementById("txtPsa2").value;
+            var psa3 = document.getElementById("txtPsa3").value;
+            var exPSA = document.getElementById("txtPsa4").value;
+
+            var mts1 = document.getElementById("txtMts1").value;
+            var mts2 = document.getElementById("txtMts2").value;
+            var mts3 = document.getElementById("txtMts3").value;
+            var mts4 = document.getElementById("txtMts4").value;
+            var mts5 = document.getElementById("txtMts5").value;
+            var mts6 = document.getElementById("txtMts6").value;
+
+            document.getElementById("hsa").innerHTML = tdhsa;
+            document.getElementById("super").innerHTML=''
+            // document.getElementById("suptest").innerHTML = tdsup;
+
+            document.getElementById("msa1").innerHTML = tdmsa1;
+            document.getElementById("msa2").innerHTML = ''
+            // document.getElementById("msa2test").innerHTML = tdmsa2;
+
+            document.getElementById("spsa1").innerHTML = spsa1;
+            document.getElementById("spsa2").innerHTML = spsa2;
+            document.getElementById("spsa3").innerHTML = spsa3;
+            document.getElementById("spsa4").innerHTML = spsa4;
+            document.getElementById("spsa5").innerHTML = spsa5;
+            document.getElementById("spsa6").innerHTML = spsa6;
+            document.getElementById("spsa7").innerHTML = spsa7;
+            document.getElementById("spsa8").innerHTML = exspsa;
+
+            document.getElementById("psa1").innerHTML = psa1;
+            document.getElementById("psa2").innerHTML = psa2;
+            document.getElementById("psa3").innerHTML = psa3;
+            document.getElementById("psa4").innerHTML = exPSA;
 
 
-            var mts1 = document.getElementById("MTS1").value;
-            var mts2 = document.getElementById("MTS2").value;
-            var mts3 = document.getElementById("MTS3").value;
-            var mts4 = document.getElementById("MTS4").value;
-            var mts5 = document.getElementById("MTS5").value;
+            document.getElementById("mts1").innerHTML = mts1;
+            document.getElementById("mts2").innerHTML = mts2;
+            document.getElementById("mts3").innerHTML = mts3;
+            document.getElementById("mts4").innerHTML = mts4;
+            document.getElementById("mts5").innerHTML = mts5;
+            document.getElementById("mts6").innerHTML = mts6;
 
-            document.getElementById("hsatest").innerHTML = tdhsa;
-            document.getElementById("msa1test").innerHTML = tdmsa1;
-            document.getElementById("msa2test").innerHTML = tdmsa2;
-
-            document.getElementById("spsa1test").innerHTML = spsa1;
-            document.getElementById("spsa2test").innerHTML = spsa2;
-            document.getElementById("spsa3test").innerHTML = spsa3;
-            document.getElementById("spsa4test").innerHTML = spsa4;
-            document.getElementById("spsa5test").innerHTML = spsa5;
-            document.getElementById("spsa6test").innerHTML = spsa6;
-
-            document.getElementById("psa1test").innerHTML = psa1;
-            document.getElementById("psa2test").innerHTML = psa2;
-
-
-            document.getElementById("mts1test").innerHTML = mts1;
-            document.getElementById("mts2test").innerHTML = mts2;
-            document.getElementById("mts3test").innerHTML = mts3;
-            document.getElementById("mts4test").innerHTML = mts4;
-            document.getElementById("mts5test").innerHTML = mts5;
-
+            window.print()
         }
 
-        function ValueReset(){
-            HSA.value="";
-            MSA1.value="";
-            MSA2.value="";
-            
-            SPSA1.value="";
-            SPSA2.value="";
-            SPSA3.value="";
-            SPSA4.value="";
-            SPSA5.value="";
-            SPSA6.value="";
-
-            PSA1.value="";
-            PSA2.value="";
-
-
-            MTS1.value="";
-            MTS2.value="";
-            MTS3.value="";
-            MTS4.value="";
-            MTS5.value="";
-
+        function enableSPSA(){
+            var extra=document.getElementById('txtSpsa8')
+            extra.removeAttribute('disabled')
+            // document.getElementById('extra1').textContent='Extra SPSA-8 &nbsp;'
         }
+        function enablePSA(){
+            var extra=document.getElementById('txtPsa4')
+            extra.removeAttribute('disabled')
+            // document.getElementById('extra2').innerHTML='Extra PSA &nbsp;'
+        }
+
+        // function ValueReset() {
+        //     var ch = confirm("Do you want to reset all fields...?");
+        //     if (ch === true) {
+        //         HSA.value = "";
+        //         SUP.value = "";
+
+        //         MSA1.value = "";
+        //         MSA2.value = "";
+
+        //         SPSA1.value = "";
+        //         SPSA2.value = "";
+        //         SPSA3.value = "";
+        //         SPSA4.value = "";
+        //         SPSA5.value = "";
+        //         SPSA6.value = "";
+        //         SPSA7.value = "";
+        //         SPSA8.value = "";
+
+        //         PSA1.value = "";
+        //         PSA2.value = "";
+
+        //         MG1.value = "";
+        //         MG2.value = "";
+
+        //         MTS1.value = "";
+        //         MTS2.value = "";
+        //         MTS3.value = "";
+        //         MTS4.value = "";
+        //         MTS5.value = "";
+        //         MTS6.value = "";
+        //         alert("All Fields are Cleared Successfully.........");
+        //     }
+
+        // }
 
     </script>
 

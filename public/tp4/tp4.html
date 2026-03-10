@@ -444,7 +444,7 @@
                 else if(today.getDay()==7){
                     document.getElementById('setNo').innerHTML=`SET : 1 `
                 }
-                
+                               
 
                 let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
                 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -453,7 +453,7 @@
                     var mdate1='01'
                 }
 
-                var mdate = `${days[detailDay]}, ${today.getDate()+1} - ${months[today.getMonth()+1]} - ${today.getFullYear()}`;
+                var mdate = `${days[detailDay]}, ${today.getDate()+1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
 
                 document.getElementById("dayname").innerHTML = ` Duty On : ${mdate}`;
 
