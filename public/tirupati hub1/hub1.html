@@ -532,7 +532,7 @@
                         <td align="center">10:00:00</td>
                     </tr>
                     <tr>
-                        <td id="rightAlign" class="extrasorters" id="extra1"></td>
+                        <td id="extra1" style="text-align: right;"></td>
                         <td id="spsa8" class="indent"></td>
                         <td id="rightAlign">GDS-5 &nbsp;</td>
                         <td class="indent">O/S Arranged</td>
@@ -572,7 +572,7 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td id="rightAlign" id="extra2">&nbsp;</td>
+                        <td id="extra2" style="text-align: right;"></td>
                         <td id="psa4" class="indent"></td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -625,7 +625,7 @@
             
             var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
 
-            document.getElementById("setTable").innerHTML = `Tirupati HUB - 1 Dated : ${mdate+1} & Working Hours From 08:45:00 To 16:45:00`;
+            document.getElementById("setTable").innerHTML = `Tirupati HUB - 1 Dated : ${mdate} & Working Hours From 08:45:00 To 16:45:00`;
 
             var tdhsa = document.getElementById("txtHsa").value;
             var tdsup = document.getElementById("txtSuper").value;
@@ -690,12 +690,12 @@
         function enableSPSA(){
             var extra=document.getElementById('txtSpsa8')
             extra.removeAttribute('disabled')
-            // document.getElementById('extra1').textContent='Extra SPSA-8 &nbsp;'
+            document.getElementById('extra1').innerHTML='Extra SPSA &nbsp;'
         }
         function enablePSA(){
             var extra=document.getElementById('txtPsa4')
             extra.removeAttribute('disabled')
-            // document.getElementById('extra2').innerHTML='Extra PSA &nbsp;'
+            document.getElementById('extra2').innerHTML='Extra PSA &nbsp;'
         }
 
         // function ValueReset() {
