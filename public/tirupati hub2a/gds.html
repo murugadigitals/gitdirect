@@ -54,7 +54,7 @@
 </head>
 
 <body>
-    <h1 class="bg-primary text-dark text-center p-2" id="title1">Select GDS </h1>
+    <h1 class="bg-primary text-white text-center p-2" id="title1">GDS Annexure Tirupati HUB - 2A </h1>
     <datalist id="emp">
         <option value="A Anuradha">A Anuradha</option>
         <option value="A Mani">A Mani</option>
@@ -251,83 +251,55 @@
         <option value="K Sreekanth">K Sreekanth</option>
         <option value="V Swathi">V Swathi</option>
         <option value="MTV Sai Kumar">MTV Sai Kumar</option>
+        <option value="SA Khader Basha">SA Khader Basha</option>
 
     </datalist>
 
     <div class="row">
         <div style="text-align:center;height: 50vh;margin-top: 0px;" id="inputContainer" class="col-6 mx-5">
 
-            <table class="w-75">
-                <caption class="caption-top text-center fs-2 text-danger">Select GDS Names</caption>
-                <tr class="bg-secondary text-white">
-                    <th class="p-2">GDS No</th>
-                    <th>Name of the GDS</th>
-                </tr>
-                <tr>
-                    <td>GDS-1 @ 17:30</td>
-                    <td>
-                        <input type="text" list="emp" value="G Bala Krishna" class="form-control" id="gds1">
-                    </td>
-                </tr>
-                <tr>
-                    <td>GDS-2 @ 17:30</td>
-                    <td>
-                        <input type="text" list="emp" value="S Subramanyam" class="form-control" id="gds2">
-                    </td>
-                </tr>
-                <tr>
-                    <td>GDS-3 @ 18:00</td>
-                    <td>
-                        <input type="text" list="emp" value="B Raja Naik" class="form-control" id="gds3">
-                    </td>
-                </tr>
-                <tr>
-                    <td>GDS-4 @ 20:00</td>
-                    <td>
+            <div class="d-flex justify-content-center align-items-center">
+                <dl style="display: grid;grid-template-columns: 6fr 6fr;" class="bg-success pe-5 p-2 rounded rounded-4">
+                    <dt class="fw-bold fs-3 text-danger text-decoration-underline">GDS Time</dt>
+                    <dd class="fw-bold fs-3 text-danger text-decoration-underline">Select GDS Name</dd>
+
+                    <dt style="margin-top: 10px;" class="text-white">GDS-1 @ 17:30</dt>
+                    <dd><input type="text" list="emp" value="G Bala Krishna" class="form-control" id="gds1"></dd>
+
+                    <dt style="margin-top: 10px;" class="text-white">GDS-2 @ 17:30</dt>
+                    <dd><input type="text" list="emp" value="S Subramanyam" class="form-control" id="gds2"></dd>
+
+                    <dt style="margin-top: 10px;" class="text-white">GDS-3 @ 18:00</dt>
+                    <dd><input type="text" list="emp" value="B Raja Naik" class="form-control" id="gds3"></dd>
+
+                    <dt style="margin-top: 10px;" class="text-white">GDS-4 @ 20:00</dt>
+                    <dd>
                         <input type="text" list="emp" value="J Dilli Babu"
                             title="Jambugolam Dilli Babu - Central Govt Employee" class="form-control" id="gds4">
-                    </td>
-                </tr>
-                <tr>
-                    <td>GDS-5 @ 01:00</td>
-                    <td>
-                        <input type="text" list="emp" value="T Manoj" class="form-control" id="gds5">
-                    </td>
-                </tr>
-                <tr>
-                    <td>GDS-6 @ 01:00</td>
-                    <td>
-                        <input type="text" list="emp" value="T Dilip Kumar" class="form-control" id="gds6">
-                    </td>
-                </tr>
-                <tr>
-                    <td>GDS-7 @ 02:00</td>
-                    <td>
-                        <input type="text" list="emp" value="E Murali" class="form-control" id='gds7'>
-                    </td>
-                </tr>
-                <tr>
-                    <td>GDS-8 @ 03:00</td>
-                    <td>
-                        <input type="text" list="emp" value="MTV Sai Kumar" class="form-control" id='gds8'>
-                    </td>
-                </tr>
-                <tr>
-                    <td>GDS-9 @ 03:00</td>
-                    <td>
-                        <input type="text" list="emp" value="SKM Basha" class="form-control" id='gds9'>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Transfer Data</td>
-                    <td>
-                        <button class="w-75 bg-warning p-2 " onclick="printClick()">Print Set Memo</button>
-                    </td>
-                </tr>
+                    </dd>
 
+                    <dt style="margin-top: 10px;" class="text-white">GDS-5 @ 01:00</dt>
+                    <dd><input type="text" list="emp" value="T Manoj" class="form-control" id="gds5"></dd>
 
-            </table>
+                    <dt style="margin-top: 10px;" class="text-white">GDS-6 @ 01:00</dt>
+                    <dd><input type="text" list="emp" value="T Dilip Kumar" class="form-control" id="gds6"></dd>
+                    
+                    <dt style="margin-top: 10px;" class="text-white">GDS-7 @ 02:00</dt>
+                    <dd><input type="text" list="emp" value="E Murali" class="form-control" id='gds7'></dd>
+                    
+                    <dt style="margin-top: 10px;" class="text-white">GDS-8 @ 03:00</dt>
+                    <dd><input type="text" list="emp" value="MTV Sai Kumar" class="form-control" id='gds8'></dd>
+                    
+                    <dt style="margin-top: 10px;" class="text-white">GDS-9 @ 03:00</dt>
+                    <dd><input type="text" list="emp" value="SKM Basha" class="form-control" id='gds9'></dd>
+                    
+                    <dt style="margin-top: 10px;" class="text-white">Click on Submit </dt>
+                    <dd>
+                        <button class="bg-warning btn w-100" onclick="printClick()">Print Set Memo</button>
+                    </dd>
 
+                </dl>
+            </div>
         </div>
         <div id="outputContainer" class="col-6">
             <script>

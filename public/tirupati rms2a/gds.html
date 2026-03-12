@@ -255,6 +255,7 @@
         <option value="K Sreekanth">K Sreekanth</option>
         <option value="V Swathi">V Swathi</option>
         <option value="MTV Sai Kumar">MTV Sai Kumar</option>
+        <option value="SA Khader Basha">SA Khader Basha</option>
     </datalist>
 
     <div class="row">
@@ -360,6 +361,7 @@
                 document.write(`<p style="line-height:23px;text-align:center">Department of Posts :: India <br>Head Record Office, RMS TP Dn., Tirupati - 517501 <br>
             <u>GDS Annexure Tirupati RMS - 2A Dated : ${mdate}</u></p>`)
             </script>
+            <br>
             <table width="750" style="border-collapse: separate;border-spacing: 0px;">
                 <thead>
                     <tr style="background-color: yellow;" class="text-center">
@@ -453,7 +455,8 @@
                     document.getElementById('outputContainer').classList.add('col-12', 'text-center')
 
                     if (document.getElementById('gds1').value === 'N Hari Prasad') {
-                        alert('success')
+                        document.getElementById('gds1hrs').innerHTML = '-'
+                        document.getElementById('gdstotalhrs').innerHTML = '7'
                     }
                     else {
                         document.getElementById('gds1hrs').innerHTML = '5'
