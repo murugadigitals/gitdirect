@@ -278,10 +278,13 @@
                 <script>
                     var today = new Date();
                     
-                    var detailDay = today.getDay() + 1;
+                    var detailDay = today.getDay() + 2;
                     // alert(detailDay)
                     if (detailDay === 7) {
                         detailDay = 0;
+                    }
+                    if (detailDay === 8) {
+                        detailDay = 1;
                     }
                     
 
@@ -292,7 +295,7 @@
                         var mdate1='01'
                     }
                     // alert(mdate1)
-                    var mdate = `${days[detailDay]}, ${today.getDate()+1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
+                    var mdate = `${days[detailDay]}, ${today.getDate()+2} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
                     // var mdate = `${days[detailDay]}, ${today.toLocaleDateString()}`;
                     document.write(`<h6 style="text-align:center;line-height:22px;"><strong>Department of Posts :: India <br>Head Record Office, RMS TP Dn., Tirupati - 517501 <br>
                                     <u>MTS Annexure TP - 4 OUT & IN Dated : ${mdate}</u></strong></h6>`)
