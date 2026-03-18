@@ -297,7 +297,7 @@
                 var today = new Date();
                 let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
                 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
+                var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
 
                 document.write(`<p style="line-height:23px;text-align:center">Department of Posts :: India <br>Head Record Office, TMO TP Dn., Tirupati - 517501 <br>
             <u>GDS Annexure Tirupati TMO - 1 Dated : ${mdate}</u></p>`)

@@ -100,6 +100,21 @@
             /* background-color: greenyellow; */
             text-decoration: none;
         }
+        @keyframes test {
+            0% {
+                transform: translateX(500px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        #mark{
+            animation-name: test;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
 
         hr {
             height: 5px;
@@ -223,11 +238,13 @@
         </div>
     </header>
     <div class="mb-5">
-        <marquee behavior="" direction="left" onmousemove="stop()" onmouseleave="start()">
+        
+        <!-- <marquee behavior="" direction="right" onmousemove="stop()" onmouseleave="start()">
             <a href="#">
                 <h3 class="bg-dark p-2"> **** Best Viewed in Laptop or Desktops only - For Double SET Memos Click Here ****</h3>
             </a>
-        </marquee>
+        </marquee> -->
+        <h4 id='mark' class="bg-dark px-5 text-white p-1 d-inline-block rounded rounded-2">***Best Viewed in Desktop/Lapton Only..Click Here for Doulble SET Memos***</h4>
     </div>
     <main>
 
