@@ -47,13 +47,11 @@
                 margin-top: -5px;
             }
         }
-
-       
     </style>
 </head>
 
 <body>
-    <h1 class="bg-primary text-dark text-center p-2" id="title1"> GDS Annexure - Tirupati TMO -1 </h1>
+    <h1 class="bg-primary text-dark text-center p-2" id="title1"> GDS Annexure Tirupati TMO -1 </h1>
     <datalist id="emp">
         <option value="A Anuradha">A Anuradha</option>
         <option value="A Mani">A Mani</option>
@@ -297,7 +295,7 @@
                 var today = new Date();
                 let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
                 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                var mdate = `${days[today.getDay()+1]}, ${today.getDate()+1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
+                var mdate = `${days[today.getDay() + 1]}, ${today.getDate() + 1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
 
                 document.write(`<p style="line-height:23px;text-align:center">Department of Posts :: India <br>Head Record Office, TMO TP Dn., Tirupati - 517501 <br>
             <u>GDS Annexure Tirupati TMO - 1 Dated : ${mdate}</u></p>`)
@@ -314,40 +312,40 @@
                         <th style="border-top-right-radius: 7px;">Remarks</th>
                     </tr>
                 </thead>
-                <tbody align="center">
+                <tbody align="center" class="fw-bold">
                     <tr style="font-size: 14px;">
                         <td>1</td>
                         <td style="text-align:left;text-indent:10px" id="tblgds1"></td>
-                        <td>09:00:00</td>
-                        <td>10:30:00</td>
-                        <td id="gds1hrs">1.5</td>
+                        <td>04:00:00</td>
+                        <td>07:00:00</td>
+                        <td id="gds1hrs">-</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr style="font-size: 14px;">
                         <td>2</td>
                         <td style="text-align:left;text-indent:10px" id="tblgds2"></td>
-                        <td>10:30:00</td>
-                        <td>13:00:00</td>
-                        <td>2.5</td>
+                        <td>04:00:00</td>
+                        <td>08:00:00</td>
+                        <td>-</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
-                    
+
                     <tr style="font-size: 14px;">
                         <td>3</td>
                         <td style="text-align:left;text-indent:10px" id="tblgds3"></td>
-                        <td>14:00:00</td>
-                        <td>16:30:00</td>
-                        <td>2.5</td>
+                        <td>04:00:00</td>
+                        <td>08:00:00</td>
+                        <td>-</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
-                    <tr style="font-size: 14px;">
+                    <tr style="font-size: 14px;line-height: 20px;">
                         <td>4</td>
                         <td style="text-align:left;text-indent:10px" id="tblgds4"></td>
                         <td align="center">04:00:00 <br>07:30:00</td>
-                        <td align="center">06:30:00<br>10:00:00</td>
+                        <td align="center">06:30:00<br>09:00:00</td>
                         <td>4</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -356,7 +354,7 @@
                         <td>5</td>
                         <td style="text-align:left;text-indent:10px" id="tblgds5"></td>
                         <td align="center">04:00:00 <br>07:30:00</td>
-                        <td align="center">06:30:00<br>10:00:00</td>
+                        <td align="center">06:30:00<br>09:00:00</td>
                         <td>4</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -365,7 +363,7 @@
                         <td>6</td>
                         <td style="text-align:left;text-indent:10px" id="tblgds6"></td>
                         <td align="center">04:00:00 <br>07:30:00</td>
-                        <td align="center">06:30:00<br>10:00:00</td>
+                        <td align="center">06:30:00<br>09:00:00</td>
                         <td>4</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -381,16 +379,16 @@
                     </tr>
 
                 </tbody>
-                <tfoot align="center">
+                <tfoot align="center" class="fw-bold">
                     <tr style="height: 30px;">
                         <td colspan="4" style="border-bottom-left-radius: 7px;">Total</td>
-                        <td id='gdstotalhrs'>6.5</td>
+                        <td id='gdstotalhrs'>15.5</td>
                         <td>&nbsp;</td>
                         <td style="border-bottom-right-radius: 7px;">&nbsp;</td>
                     </tr>
                 </tfoot>
             </table>
-            
+
             <div class="logo">
                 <div style="position:fixed;top:-3px;right:-15px;z-index: -100;">
                     <img src="../../assests/logo.png" width="140px" height="70px" alt="logo here">

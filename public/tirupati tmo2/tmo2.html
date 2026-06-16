@@ -370,7 +370,7 @@
                     <thead>
                         <tr class="toprow" style="font-size: 18px;">
                             <th rowspan="2" width="150" style="border-top-left-radius:5px">Designation</th>
-                            <th rowspan="2" width="250px">Name of the Official<br>( Shri/Smt/Kum )</th>
+                            <th rowspan="2" width="250px">Name of the Official<br>( Shri | Smt | Kum )</th>
                             <th colspan="2" width="120" style="border-top-right-radius: 5px;">Working Hours</th>
                         </tr>
                         <tr class="toprow" style="font-size: 18px;">
@@ -388,29 +388,29 @@
                         <tr>
                             <td id="rightAlign">Mail Guard &nbsp;</td>
                             <td id="mgtest" class="indent"></td>
-                            <td align="center">14:30:00</td>
-                            <td align="center">21:50:00</td>
+                            <td align="center">11:30:00</td>
+                            <td align="center">19:30:00</td>
                         </tr>
 
                         <tr>
                             <td id="rightAlign">GDS-1 &nbsp;</td>
                             <td id="" class="indent">O/S Arranged</td>
-                            <td align="center">15:30:00</td>
-                            <td align="center">17:30:00</td>
+                            <td align="center">14:00:00</td>
+                            <td align="center">16:00:00</td>
                         </tr>
 
                         <tr>
                             <td id="rightAlign">GDS-2 &nbsp;</td>
                             <td id="" class="indent">O/S Arranged</td>
-                            <td align="center">15:30:00</td>
-                            <td align="center">17:30:00</td>
+                            <td align="center">14:00:00</td>
+                            <td align="center">16:00:00</td>
                         </tr>
 
                         <tr>
                             <td id="rightAlign">( MBC ) GDS-3 &nbsp;</td>
                             <td id="" class="indent">O/S Arranged</td>
-                            <td align="center">15:30:00</td>
-                            <td align="center">17:30:00</td>
+                            <td align="center">14:00:00</td>
+                            <td align="center">17:00:00</td>
                         </tr>
 
                         <tr>
@@ -465,7 +465,7 @@
                 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
                 var mdate = `${days[detailDay]}, ${today.getDate() + 1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
 
-                document.getElementById("setTable").innerHTML = `Tirupati TMO - 2 Dated : ${mdate} & Working Hrs From 14:30 To 21:50 Hrs.`;
+                document.getElementById("setTable").innerHTML = `Tirupati TMO - 2 Dated : ${mdate} & Working Hrs From 11:30 To 19:30 Hrs.`;
                 var tdmg = document.getElementById("MG").value;
 
                 document.getElementById("mgtest").innerHTML = tdmg;
