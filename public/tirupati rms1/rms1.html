@@ -22,7 +22,8 @@
         td {
             border: 1px solid black;
         }
-        *{
+
+        * {
             font-weight: bold;
         }
 
@@ -55,6 +56,7 @@
                 align-items: center;
                 justify-content: center;
             }
+
         }
     </style>
 
@@ -64,21 +66,23 @@
 <body>
 
     <h1 class="bg-success text-white text-center p-3 my-3" id="setname">Tirupati RMS - 1</h1>
-    <h5 class="text-center mt-2" style="font-size: 18px;" id="title">भारतीय डाक विभाग<br>Department of Posts :: India <br>प्रधान अभिलेख अधिकारी रेल
+    <h5 class="text-center mt-2" style="font-size: 18px;" id="title">भारतीय डाक विभाग<br>Department of Posts :: India
+        <br>प्रधान अभिलेख अधिकारी रेल
         डाक सेवा टि. पि. मंडल तिरुपति
-        कार्यालय - 517501<br>Head Record Office, RMS TP Division., Tirupati - 517501 </h5>
+        कार्यालय - 517501<br>Head Record Office, RMS TP Division., Tirupati - 517501
+    </h5>
     <br>
 
     <div id="sname" style="margin-top: 12px;">
         <table width="720" style="border-collapse: separate;" cellspacing="0" cellpadding="10">
-            <tr style="text-align: center;">
+            <tr style="text-align: center;" class="fw-bold">
                 <th style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
-                    <h5 style="padding-top: 5px;font-size: 18px;">SET MEMO</h5>
+                    <h5 style="padding-top: 5px;font-size: 18px;font-weight: bold;">SET MEMO</h5>
                 </th>
             </tr>
-            <tr style="text-align: center;font-size: 20px !important;">
+            <tr style="text-align: center;font-size: 20px !important;" class="fw-bold">
                 <th style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
-                    <h5 id="setTable" style="padding-top: 5px;font-size: 18px;">&nbsp;</h5>
+                    <h5 id="setTable" style="padding-top: 5px;font-size: 18px;font-weight: bold;">&nbsp;</h5>
                 </th>
             </tr>
         </table>
@@ -325,9 +329,9 @@
                 <thead>
                     <tr class="toprow">
                         <th rowspan="2" width="110" style="border-top-left-radius: 10px;">Designation</th>
-                        <th rowspan="2" width="290px">Name of the Official<br>( Shri/Smt/Kum )</th>
+                        <th rowspan="2" width="290px">Name of the Official<br>( Shri | Smt | Kum )</th>
                         <th rowspan="2" width="110">Designation</th>
-                        <th rowspan="2" width="290px">Name of the Official<br>( Shri/Smt/Kum )</th>
+                        <th rowspan="2" width="290px">Name of the Official<br>( Shri | Smt | Kum )</th>
                         <th colspan="2" width="120" style="border-top-right-radius: 10px;">Working Hours</th>
                     </tr>
                     <tr class="toprow">
@@ -391,7 +395,7 @@
                         <td id="rightAlign">GDS-3 &nbsp;</td>
                         <td class="indent">O/S Arranged</td>
                         <td align="center">14:00:00</td>
-                        <td align="center">16:30:00</td>
+                        <td align="center">17:00:00</td>
                     </tr>
 
                     <tr>
@@ -428,9 +432,12 @@
 
         </div>
     </div>
-    <div style="text-align: end;margin-right: 15px;" id="hrosign">
-        <h5 style="font-size: 18px;">प्रधान अभिलेख अधिकारी <br> रेल डाक सेवा टि.पि. मंडल तिरुपति-517 501 <br>Head Record Officer<br> RMS TP Dn.,
-            Tirupati - 517501</h5>
+    <div style="text-align: end;margin-right: 15px;" id="hrosign" class="fw-bold">
+        <h5 style="font-size: 18px;" class="fw-bold">प्रधान अभिलेख अधिकारी <br> रेल डाक सेवा टि.पि. मंडल तिरुपति-517 501
+            <br>Head Record
+            Officer<br> RMS TP Dn.,
+            Tirupati - 517501
+        </h5>
     </div>
 
     <script>
@@ -440,9 +447,9 @@
 
             let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
             let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-            var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
+            var mdate = `${days[today.getDay() + 1]}, ${today.getDate() + 1} - ${months[today.getMonth() + 1]} - ${today.getFullYear()}`;
 
-            document.getElementById("setTable").innerHTML = `Tirupati RMS - 1 Dated : ${mdate} & Working Hrs 17:30 To 06:00`;
+            document.getElementById("setTable").innerHTML = `Tirupati RMS - 1 Dated : ${mdate} & Working Hrs 08:45 To 16:45`;
 
             var tdhsa = document.getElementById("HSA").value;
             // var tdmsa = document.getElementById("MG").value;

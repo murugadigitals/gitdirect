@@ -88,7 +88,7 @@
                 var today = new Date();
                 let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
                 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                var mdate = `${days[today.getDay()]}, ${today.getDate()} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
+                var mdate = `${days[today.getDay() + 1]}, ${today.getDate() + 1} - ${months[today.getMonth()]} - ${today.getFullYear()}`;
 
                 document.getElementById('tableHead').innerHTML = `Department of Posts :: India <br>Head Record Office, RMS TP Dn., Tirupati - 517501 <br>
             <u>OTA Annexure Tirupati RMS - 1 Dated : ${mdate}</u>`
@@ -360,22 +360,22 @@
                     <tr style="background-color: yellow;">
                         <th style="border-top-left-radius: 5px;">S.NO</th>
                         <th width="160">Name of the <br>Official</th>
-                        <th>Duty Hours<br>From</th>
-                        <th>Duty Hours<br>To</th>
                         <th>OTA Hours<br>From</th>
                         <th>OTA Hours<br>To</th>
+                        <th>Duty Hours<br>From</th>
+                        <th>Duty Hours<br>To</th>
                         <th style="border-top-right-radius: 5px;">Signature of the<br>Official</th>
                     </tr>
                 </thead>
-                <tbody align="center" style="text-align: center;">
+                <tbody align="center" style="text-align: center;" class="fw-bold">
 
                     <tr>
                         <td>1</td>
                         <td style="text-align: start;text-indent: 10px;" id="tableMa">N Ashok Kumar</td>
                         <td id="dutyFrom"></td>
                         <td id="dutyTo"></td>
-                        <td>17:30:00</td>
-                        <td>06:00:00</td>
+                        <td>08:45:00</td>
+                        <td>16:45:00</td>
                         <td>&nbsp;</td>
                     </tr>
 
@@ -400,7 +400,7 @@
                     </tr>
 
                 </tbody>
-                <tfoot align="center">
+                <tfoot align="center" class="fw-bold">
                     <tr>
                         <td style="border-bottom-left-radius: 5px;">&nbsp;</td>
                         <td>&nbsp;</td>

@@ -283,19 +283,39 @@
 
                     <dt style="margin-top: 10px;" class="text-white">GDS-6 @ 01:00</dt>
                     <dd><input type="text" list="emp" value="T Dilip Kumar" class="form-control" id="gds6"></dd>
-                    
+
                     <dt style="margin-top: 10px;" class="text-white">GDS-7 @ 02:00</dt>
                     <dd><input type="text" list="emp" value="E Murali" class="form-control" id='gds7'></dd>
-                    
+
                     <dt style="margin-top: 10px;" class="text-white">GDS-8 @ 03:00</dt>
                     <dd><input type="text" list="emp" value="MTV Sai Kumar" class="form-control" id='gds8'></dd>
-                    
+
                     <dt style="margin-top: 10px;" class="text-white">GDS-9 @ 03:00</dt>
                     <dd><input type="text" list="emp" value="SKM Basha" class="form-control" id='gds9'></dd>
-                    
+
                     <dt style="margin-top: 10px;" class="text-white">Click on Submit </dt>
                     <dd>
                         <button class="bg-warning btn w-100" onclick="printClick()">Print Set Memo</button>
+                    </dd>
+                    <dt class="fw-bold fs-5 text-danger text-decoration-underline"
+                        style="position:absolute; top:150px;right:400px;">Raja Naik & Dilli Babu Total Hours
+                    </dt>
+                    <dd style="position:absolute;top: 210px;right: 350px;">
+                        <input type="checkbox" name="rajanaik" id="checkBothNot" class="form-check-input bg-info"><span
+                            class="fs-6 fw-bold form-check-label text-success"> &nbsp;Both Not Available Tick
+                            Me</span><span id="rajaTotal" class="ms-3 text-danger"></span>
+                    </dd>
+
+                    <dd style="position:absolute;top: 250px;right: 350px;">
+                        <input type="checkbox" name="rajanaik" id="checkBoth" class="form-check-input bg-info"><span
+                            class="fs-6 fw-bold form-check-label text-success"> &nbsp;Both Available Tick
+                            Me</span><span id="rajaTotal" class="ms-3 text-danger"></span>
+                    </dd>
+
+                    <dd style="position:absolute;top: 300px;right: 350px;">
+                        <input type="checkbox" name="rajanaik" id="checkOne" class="form-check-input bg-info"><span
+                            class="fs-6 fw-bold form-check-label text-success"> &nbsp;Only One Available Tick
+                            Me</span><span id="rajaTotal" class="ms-3 text-danger"></span>
                     </dd>
 
                 </dl>
@@ -347,7 +367,7 @@
                         <td style="text-align:left;text-indent:10px" id="tblgds3"></td>
                         <td>18:00:00</td>
                         <td>23:00:00</td>
-                        <td>-</td>
+                        <td id="rajaHours">-</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
@@ -356,7 +376,7 @@
                         <td style="text-align:left;text-indent:10px" id="tblgds4"></td>
                         <td>20:00:00</td>
                         <td>01:00:00</td>
-                        <td>-</td>
+                        <td id="dilliHours">-</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
@@ -411,7 +431,7 @@
                 <tfoot align="center">
                     <tr style="height: 30px;">
                         <td colspan="4" style="border-bottom-left-radius: 7px;">Total</td>
-                        <td>31</td>
+                        <td id="gdsTotal">31</td>
                         <td>&nbsp;</td>
                         <td style="border-bottom-right-radius: 7px;">&nbsp;</td>
                     </tr>
@@ -454,6 +474,21 @@
                     // document.getElementById('inputContainer').style.visibility='hidden'
                     // document.getElementById('inputContainer').classList.add('col-12')
                     document.getElementById('outputContainer').classList.add('col-12', 'text-center')
+
+                    if (document.getElementById('checkBothNot').checked) {
+                        document.getElementById('gdsTotal').innerHTML = 41
+                        document.getElementById('rajaHours').innerHTML = "5"
+                        document.getElementById('dilliHours').innerHTML = "5"
+                    }
+                    else if (document.getElementById('checkBoth').checked) {
+                        document.getElementById('gdsTotal').innerHTML = 31
+                        document.getElementById('rajaHours').innerHTML = "-"
+                        document.getElementById('dilliHours').innerHTML = "-"
+                    }
+                    else if (document.getElementById('checkOne').checked) {
+                        document.getElementById('gdsTotal').innerHTML = 36
+                    }
+
 
                     window.print()
                     document.getElementById('inputContainer').style.display = "block"
